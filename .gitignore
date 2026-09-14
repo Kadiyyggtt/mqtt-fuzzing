@@ -1,0 +1,6 @@
+builds/
+tools/
+runs/*/crashes/
+venv/
+*.o
+*.so*
