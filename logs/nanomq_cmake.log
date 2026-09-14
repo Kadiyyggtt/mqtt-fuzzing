@@ -1,0 +1,105 @@
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test NANO_HIDDEN_VISIBILITY
+-- Performing Test NANO_HIDDEN_VISIBILITY - Success
+-- NanoMQ versions --
+-- Configuring for NanoMQ version 0.25.6
+-- Build NanoMQ with ACL support --
+-- MODE [Release] --
+NNG_TESTS=ON
+NNG_TOOLS=ON
+-- Configuring for NNG version 1.11.0
+-- Building static libs.
+-- Performing Test NNG_HIDDEN_VISIBILITY
+-- Performing Test NNG_HIDDEN_VISIBILITY - Success
+-- Looking for strlcpy
+-- Looking for strlcpy - found
+-- Looking for strnlen
+-- Looking for strnlen - found
+-- Looking for strcasecmp
+-- Looking for strcasecmp - found
+-- Looking for strncasecmp
+-- Looking for strncasecmp - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for lockf
+-- Looking for lockf - found
+-- Looking for flock
+-- Looking for flock - found
+-- Looking for getrandom
+-- Looking for getrandom - found
+-- Looking for arc4random_buf
+-- Looking for arc4random_buf - found
+-- Looking for clock_gettime
+-- Looking for clock_gettime - found
+-- Looking for sem_wait in pthread
+-- Looking for sem_wait in pthread - found
+-- Looking for pthread_atfork in pthread
+-- Looking for pthread_atfork in pthread - found
+-- Looking for pthread_set_name_np in pthread
+-- Looking for pthread_set_name_np in pthread - not found
+-- Looking for pthread_setname_np in pthread
+-- Looking for pthread_setname_np in pthread - found
+-- Looking for gethostbyname in nsl
+-- Looking for gethostbyname in nsl - not found
+-- Looking for socket in socket
+-- Looking for socket in socket - not found
+-- Looking for __atomic_load_1 in atomic
+-- Looking for __atomic_load_1 in atomic - found
+-- Looking for AF_UNIX
+-- Looking for AF_UNIX - found
+-- Looking for backtrace_symbols_fd
+-- Looking for backtrace_symbols_fd - found
+-- Performing Test NNG_HAVE_MSG_CONTROL
+-- Performing Test NNG_HAVE_MSG_CONTROL - Success
+-- Looking for eventfd
+-- Looking for eventfd - found
+-- Looking for kqueue
+-- Looking for kqueue - not found
+-- Looking for port_create
+-- Looking for port_create - not found
+-- Looking for epoll_create
+-- Looking for epoll_create - found
+-- Looking for epoll_create1
+-- Looking for epoll_create1 - found
+-- Looking for getpeereid
+-- Looking for getpeereid - not found
+-- Looking for SO_PEERCRED
+-- Looking for SO_PEERCRED - found
+-- Performing Test NNG_HAVE_SOCKPEERCRED
+-- Performing Test NNG_HAVE_SOCKPEERCRED - Failed
+-- Looking for LOCAL_PEERCRED
+-- Looking for LOCAL_PEERCRED - not found
+-- Looking for LOCAL_PEERPID
+-- Looking for LOCAL_PEERPID - not found
+-- Looking for getpeerucred
+-- Looking for getpeerucred - not found
+-- Looking for atomic_flag_test_and_set
+-- Looking for atomic_flag_test_and_set - found
+-- Looking for socketpair
+-- Looking for socketpair - found
+-- Looking for AF_INET6
+-- Looking for AF_INET6 - found
+-- Looking for timespec_get
+-- Looking for timespec_get - not found
+-- Found UnixCommands: /usr/bin/bash
+ Check MQTT_QUIC_CLIENT support:  
+ Check MQTT_QUIC_TRANSPORT support:  
+-- Looking for nl_langinfo
+-- Looking for nl_langinfo - found
+-- Test zt disabled (unconfigured)
+Install prefix: /usr/local
+-- Configuring done (28.1s)
+-- Generating done (1.2s)
+-- Build files have been written to: /home/kadir/mqtt-fuzzing/builds/nanomq-asan/build

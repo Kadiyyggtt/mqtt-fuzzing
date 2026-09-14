@@ -8,3 +8,12 @@ Cozum: Debian genel cekirdegi (linux-image-arm64 6.12.107+deb13-arm64, 48-bit VA
        /boot/firmware/config.txt icine kernel=vmlinuz-deb + initramfs initrd-deb followkernel
 Dogrulama: clang -fsanitize=address test programi heap-buffer-overflow raporu uretti. BASARILI.
 Yedekler: config.txt.yedek, cmdline.txt.yedek
+nanomq 0.25.6 commit: 926179ec41adbb8dbc0a191746ea78d91d53c463  tarih: 2026-08-19 19:29:33 +0800
+flashmq v1.27.1 commit: c371f4e610a56e20a86d21e1801aa4b82b07e3b1  tarih: 2026-08-18 19:30:02 +0200
+nanomq 0.25.6 commit: 926179ec41adbb8dbc0a191746ea78d91d53c463  tarih: 2026-08-19 19:29:33 +0800
+flashmq v1.27.1 commit: c371f4e610a56e20a86d21e1801aa4b82b07e3b1  tarih: 2026-08-18 19:30:02 +0200
+--- Uc broker da ASan'li derlendi ve calisti (2026-09-14) ---
+mosquitto v2.1.2   -> src/mosquitto (3.2M)
+flashmq  v1.27.1   -> build/flashmq (43M)
+nanomq   0.25.6    -> build/nanomq/nanomq (6.1M)
+Hepsinde libasan.so.8 bagli, 1883 portunda calistigi dogrulandi.

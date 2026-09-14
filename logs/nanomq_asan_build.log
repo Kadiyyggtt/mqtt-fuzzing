@@ -1,0 +1,2248 @@
+nohup: ignoring input
+[1/553] Building C object nng/CMakeFiles/nng.dir/src/core/sockfd.c.o
+[2/553] Building C object nng/CMakeFiles/nng.dir/src/nng_legacy.c.o
+[3/553] Building C object nng/CMakeFiles/nng.dir/src/core/device.c.o
+[4/553] Building C object nng/CMakeFiles/nng.dir/src/core/aio.c.o
+[5/553] Building C object nng/CMakeFiles/nng.dir/src/core/file.c.o
+[6/553] Building C object nng/CMakeFiles/nng.dir/src/core/dialer.c.o
+[7/553] Building C object nng/CMakeFiles/nng.dir/src/core/init.c.o
+[8/553] Building C object nng/CMakeFiles/nng.dir/src/core/list.c.o
+[9/553] Building C object nng/CMakeFiles/nng.dir/src/core/idhash.c.o
+[10/553] Building C object nng/CMakeFiles/nng.dir/src/core/lmq.c.o
+[11/553] Building C object nng/CMakeFiles/nng.dir/src/core/listener.c.o
+[12/553] Building C object nng/CMakeFiles/nng.dir/src/core/options.c.o
+[13/553] Building C object nng/CMakeFiles/nng.dir/src/core/msgqueue.c.o
+[14/553] Building C object nng/CMakeFiles/nng.dir/src/core/pollable.c.o
+[15/553] Building C object nng/CMakeFiles/nng.dir/src/core/panic.c.o
+[16/553] Building C object nng/CMakeFiles/nng.dir/src/core/message.c.o
+[17/553] Building C object nng/CMakeFiles/nng.dir/src/core/reap.c.o
+[18/553] Building C object nng/CMakeFiles/nng.dir/src/core/strs.c.o
+[19/553] Building C object nng/CMakeFiles/nng.dir/src/core/pipe.c.o
+[20/553] Building C object nng/CMakeFiles/nng.dir/src/core/stats.c.o
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/core/stats.c: In function ‘nng_stat_find_pipe’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/core/stats.c:470:32: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  470 |         if ((stat->s_val.sv_id == pipeid) && strncmp(stat->s_info->si_name, "pipe", 4) == 0) {
+      |                                ^~
+[21/553] Building C object nng/CMakeFiles/nng.dir/src/core/taskq.c.o
+[22/553] Building C object nng/CMakeFiles/nng.dir/src/core/tcp.c.o
+[23/553] Building C object nng/CMakeFiles/nng.dir/src/core/stream.c.o
+[24/553] Building C object nng/CMakeFiles/nng.dir/src/core/thread.c.o
+[25/553] Building C object nng/CMakeFiles/nng.dir/src/core/udp.c.o
+[26/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_alloc.c.o
+[27/553] Building C object nng/CMakeFiles/nng.dir/src/core/zmalloc.c.o
+[28/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_debug.c.o
+[29/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_clock.c.o
+[30/553] Building C object nng/CMakeFiles/nng.dir/src/core/socket.c.o
+[31/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_atomic.c.o
+[32/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_ipcdial.c.o
+[33/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_file.c.o
+[34/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_ipclisten.c.o
+[35/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_peerid.c.o
+[36/553] Building C object nng/CMakeFiles/nng.dir/src/nng.c.o
+[37/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_pipe.c.o
+[38/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_ipcconn.c.o
+[39/553] Building C object nng/CMakeFiles/nng.dir/src/core/url.c.o
+[40/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_socketpair.c.o
+[41/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_sockaddr.c.o
+[42/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_resolv_gai.c.o
+[43/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_sockfd.c.o
+[44/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_tcplisten.c.o
+[45/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_thread.c.o
+[46/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_rand_arc4random.c.o
+[47/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_tcpconn.c.o
+[48/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_tcpdial.c.o
+[49/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_udp.c.o
+[50/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/bus0/bus.c.o
+[51/553] Building C object nng/CMakeFiles/nng.dir/src/platform/posix/posix_pollq_epoll.c.o
+[52/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/pair1/pair1_poly.c.o
+[53/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/pair0/pair.c.o
+[54/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/pipeline0/push.c.o
+[55/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/pipeline0/pull.c.o
+[56/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/pubsub0/xsub.c.o
+[57/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/pubsub0/pub.c.o
+[58/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/pair1/pair.c.o
+[59/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/reqrep0/xreq.c.o
+[60/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/reqrep0/xrep.c.o
+[61/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/survey0/survey.c.o
+[62/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/survey0/xsurvey.c.o
+[63/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/reqrep0/req.c.o
+[64/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/reqrep0/rep.c.o
+[65/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/pubsub0/sub.c.o
+[66/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/survey0/respond.c.o
+[67/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/survey0/xrespond.c.o
+[68/553] Building C object nng/CMakeFiles/nng.dir/src/sp/transport/inproc/inproc.c.o
+[69/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/mqtt/auth_http.c.o
+[70/553] Building C object nng/CMakeFiles/nng.dir/src/sp/transport/socket/sockfd.c.o
+[71/553] Building C object nng/CMakeFiles/nng.dir/src/sp/transport/ipc/ipc.c.o
+[72/553] Building C object nng/CMakeFiles/nng.dir/src/sp/transport/tcp/tcp.c.o
+[73/553] Building C object nng/CMakeFiles/nng.dir/src/sp/transport/ws/websocket.c.o
+[74/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/mqtt/nmq_mqtt.c.o
+[75/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol.c.o
+[76/553] Building C object nng/CMakeFiles/nng.dir/src/sp/transport/tls/tls.c.o
+[77/553] Building C object nng/CMakeFiles/nng.dir/src/sp/transport.c.o
+[78/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/base64/base64.c.o
+[79/553] Building C object nng/CMakeFiles/nng.dir/src/sp/protocol/mqtt/mqtt_parser.c.o
+[80/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/http/http_public.c.o
+[81/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/http/http_client.c.o
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/http/http_client.c: In function ‘http_dial_free’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/http/http_client.c:55:25: warning: unused parameter ‘aio’ [-Wunused-parameter]
+   55 | http_dial_free(nng_aio *aio, void *arg, int rv)
+      |                ~~~~~~~~~^~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/http/http_client.c:55:45: warning: unused parameter ‘rv’ [-Wunused-parameter]
+   55 | http_dial_free(nng_aio *aio, void *arg, int rv)
+      |                                         ~~~~^~
+[82/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/http/http_chunk.c.o
+[83/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/http/http_schemes.c.o
+[84/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/http/http_conn.c.o
+[85/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/http/http_msg.c.o
+[86/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/sha1/sha1.c.o
+[87/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/util/idhash.c.o
+[88/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/tls/tls_common.c.o
+[89/553] Building C object nng/CMakeFiles/nng.dir/src/sp/transport/mqtt/broker_tcp.c.o
+[90/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/util/platform.c.o
+[91/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/util/options.c.o
+[92/553] Building C object nng/CMakeFiles/nng.dir/src/sp/transport/mqtts/broker_tls.c.o
+[93/553] Building C object nng/CMakeFiles/nng.dir/src/sp/transport/mqttws/nmq_websocket.c.o
+[94/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/mqtt/mqtt_qos_db_api.c.o
+[95/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/base64.c.o
+[96/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/mqtt/mqtt_public.c.o
+[97/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/http/http_server.c.o
+[98/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/cmd.c.o
+[99/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/mqtt/mqtt_msg.c.o
+[100/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/acl_conf.c.o
+[101/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/rule.c.o
+[102/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/websocket/websocket.c.o
+[103/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/file.c.o
+[104/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/env.c.o
+[105/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/cJSON.c.o
+[106/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/scanner.c.o
+[107/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/parser.c.o
+[108/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/hash_table.c.o
+[109/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/mqtt/mqtt_codec.c.o
+[110/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/hocon.c.o
+[111/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/utils.c.o
+[112/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/topics.c.o
+[113/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/log.c.o
+[114/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/md5.c.o
+[115/553] Building C object nng/CMakeFiles/nng.dir/src/mqtt/protocol/mqtt/sqlite_handler.c.o
+[116/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/linkedlist/linkedlist.c.o
+[117/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/mqtt_db.c.o
+[118/553] Building C object nng/CMakeFiles/nng.dir/src/mqtt/protocol/mqtt/mqtt_client.c.o
+[119/553] Building C object nng/CMakeFiles/nng.dir/src/mqtt/transport.c.o
+[120/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/conf_ver2.c.o
+[121/553] Building C object nng/CMakeFiles/nng_testing.dir/src/nng_legacy.c.o
+[122/553] Building C object nng/CMakeFiles/nng.dir/src/mqtt/transport/tcp/mqtt_tcp.c.o
+[123/553] Building C object nng/CMakeFiles/nng.dir/src/mqtt/transport/tls/mqtt_tls.c.o
+[124/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/device.c.o
+[125/553] Building C object nng/CMakeFiles/nng.dir/src/compat/nanomsg/nn.c.o
+[126/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/sockfd.c.o
+[127/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/file.c.o
+[128/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/init.c.o
+[129/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/aio.c.o
+[130/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/dialer.c.o
+[131/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/idhash.c.o
+[132/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/list.c.o
+[133/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/lmq.c.o
+[134/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/listener.c.o
+[135/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/msgqueue.c.o
+[136/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/options.c.o
+[137/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/message.c.o
+[138/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/panic.c.o
+[139/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/pollable.c.o
+[140/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/reap.c.o
+[141/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/pipe.c.o
+[142/553] Building C object nng/CMakeFiles/nng_testing.dir/src/nng.c.o
+[143/553] Building C object nng/CMakeFiles/nng.dir/src/supplemental/nanolib/conf.c.o
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c: In function ‘nmq_acl_cache_reset_cb’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:4747:39: warning: unused parameter ‘v’ [-Wunused-parameter]
+ 4747 | nmq_acl_cache_reset_cb(void *k, void *v, void *arg)
+      |                                 ~~~~~~^
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c: In function ‘conf_parse’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:2854:58: warning: ‘.retain_as_published’ directive output may be truncated writing 20 bytes into a region of size between 14 and 113 [-Wformat-truncation=]
+ 2854 |                 snprintf(key, 128, "%s%s.subscription.%ld.retain_as_published", prefix,
+      |                                                          ^~~~~~~~~~~~~~~~~~~~
+In function ‘conf_bridge_node_parse_subs’,
+    inlined from ‘conf_bridge_node_parse_with_name’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3461:2,
+    inlined from ‘conf_bridge_content_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3504:28,
+    inlined from ‘conf_bridge_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3518:2,
+    inlined from ‘conf_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:653:2:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:2854:17: note: ‘snprintf’ output 36 or more bytes (assuming 135) into a destination of size 128
+ 2854 |                 snprintf(key, 128, "%s%s.subscription.%ld.retain_as_published", prefix,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2855 |                     name, sub_index);
+      |                     ~~~~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c: In function ‘conf_parse’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:2864:58: warning: ‘.retain_handling’ directive output may be truncated writing 16 bytes into a region of size between 14 and 113 [-Wformat-truncation=]
+ 2864 |                 snprintf(key, 128, "%s%s.subscription.%ld.retain_handling", prefix,
+      |                                                          ^~~~~~~~~~~~~~~~
+In function ‘conf_bridge_node_parse_subs’,
+    inlined from ‘conf_bridge_node_parse_with_name’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3461:2,
+    inlined from ‘conf_bridge_content_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3504:28,
+    inlined from ‘conf_bridge_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3518:2,
+    inlined from ‘conf_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:653:2:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:2864:17: note: ‘snprintf’ output 32 or more bytes (assuming 131) into a destination of size 128
+ 2864 |                 snprintf(key, 128, "%s%s.subscription.%ld.retain_handling", prefix,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2865 |                     name, sub_index);
+      |                     ~~~~~~~~~~~~~~~~
+[144/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/strs.c.o
+[145/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/stats.c.o
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/core/stats.c: In function ‘nng_stat_find_pipe’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/core/stats.c:470:32: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  470 |         if ((stat->s_val.sv_id == pipeid) && strncmp(stat->s_info->si_name, "pipe", 4) == 0) {
+      |                                ^~
+[146/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/taskq.c.o
+[147/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/thread.c.o
+[148/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/zmalloc.c.o
+[149/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/stream.c.o
+[150/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/tcp.c.o
+[151/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_alloc.c.o
+[152/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/udp.c.o
+[153/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_debug.c.o
+[154/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_clock.c.o
+[155/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_atomic.c.o
+[156/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/url.c.o
+[157/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_ipcdial.c.o
+[158/553] Building C object nng/CMakeFiles/nng_testing.dir/src/core/socket.c.o
+[159/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_ipcconn.c.o
+[160/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_file.c.o
+[161/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_peerid.c.o
+[162/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_ipclisten.c.o
+[163/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_socketpair.c.o
+[164/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_sockaddr.c.o
+[165/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_pipe.c.o
+[166/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_resolv_gai.c.o
+[167/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_thread.c.o
+[168/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_sockfd.c.o
+[169/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_tcplisten.c.o
+[170/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_rand_arc4random.c.o
+[171/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_tcpconn.c.o
+[172/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_udp.c.o
+[173/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_pollq_epoll.c.o
+[174/553] Building C object nng/CMakeFiles/nng_testing.dir/src/platform/posix/posix_tcpdial.c.o
+[175/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/bus0/bus.c.o
+[176/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/pair0/pair.c.o
+[177/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/pair1/pair1_poly.c.o
+[178/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/pipeline0/push.c.o
+[179/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/pipeline0/pull.c.o
+[180/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/pubsub0/pub.c.o
+[181/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/pair1/pair.c.o
+[182/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/pubsub0/xsub.c.o
+[183/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/reqrep0/xreq.c.o
+[184/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/reqrep0/rep.c.o
+[185/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/pubsub0/sub.c.o
+[186/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/reqrep0/xrep.c.o
+[187/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/survey0/survey.c.o
+[188/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/survey0/xsurvey.c.o
+[189/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/survey0/xrespond.c.o
+[190/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/reqrep0/req.c.o
+[191/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/survey0/respond.c.o
+[192/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/transport/inproc/inproc.c.o
+[193/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/transport/socket/sockfd.c.o
+[194/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/mqtt/auth_http.c.o
+[195/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/transport/ipc/ipc.c.o
+[196/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/mqtt/nmq_mqtt.c.o
+[197/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/transport/tcp/tcp.c.o
+[198/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/transport/ws/websocket.c.o
+[199/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol.c.o
+[200/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/transport/tls/tls.c.o
+[201/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/transport.c.o
+[202/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/base64/base64.c.o
+[203/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/protocol/mqtt/mqtt_parser.c.o
+[204/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/http/http_public.c.o
+[205/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/http/http_client.c.o
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/http/http_client.c: In function ‘http_dial_free’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/http/http_client.c:55:25: warning: unused parameter ‘aio’ [-Wunused-parameter]
+   55 | http_dial_free(nng_aio *aio, void *arg, int rv)
+      |                ~~~~~~~~~^~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/http/http_client.c:55:45: warning: unused parameter ‘rv’ [-Wunused-parameter]
+   55 | http_dial_free(nng_aio *aio, void *arg, int rv)
+      |                                         ~~~~^~
+[206/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/http/http_chunk.c.o
+[207/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/http/http_schemes.c.o
+[208/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/http/http_conn.c.o
+[209/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/transport/mqtts/broker_tls.c.o
+[210/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/http/http_msg.c.o
+[211/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/sha1/sha1.c.o
+[212/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/util/idhash.c.o
+[213/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/tls/tls_common.c.o
+[214/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/util/options.c.o
+[215/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/transport/mqtt/broker_tcp.c.o
+[216/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/util/platform.c.o
+[217/553] Building C object nng/CMakeFiles/nng_testing.dir/src/sp/transport/mqttws/nmq_websocket.c.o
+[218/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/mqtt/mqtt_qos_db_api.c.o
+[219/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/mqtt/mqtt_public.c.o
+[220/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/base64.c.o
+[221/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/http/http_server.c.o
+[222/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/mqtt/mqtt_msg.c.o
+[223/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/cmd.c.o
+[224/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/rule.c.o
+[225/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/websocket/websocket.c.o
+[226/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/mqtt/mqtt_qos_db.c.o
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/mqtt/mqtt_qos_db.c: In function ‘nni_mqtt_qos_db_remove_oldest’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/mqtt/mqtt_qos_db.c:391:9: warning: ‘remove_oldest_msg’ is deprecated [-Wdeprecated-declarations]
+  391 |         remove_oldest_msg(db, table_main, "ts", limit);
+      |         ^~~~~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/mqtt/mqtt_qos_db.c:367:1: note: declared here
+  367 | remove_oldest_msg(
+      | ^~~~~~~~~~~~~~~~~
+[227/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/acl_conf.c.o
+[228/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/file.c.o
+[229/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/env.c.o
+[230/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/cJSON.c.o
+[231/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/mqtt/mqtt_codec.c.o
+[232/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/hash_table.c.o
+[233/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/parser.c.o
+[234/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/scanner.c.o
+[235/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/hocon.c.o
+[236/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/utils.c.o
+[237/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/log.c.o
+[238/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/topics.c.o
+[239/553] Building C object nng/CMakeFiles/nng_testing.dir/src/testing/certs.c.o
+[240/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/md5.c.o
+[241/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/linkedlist/linkedlist.c.o
+[242/553] Building C object nng/CMakeFiles/nng_testing.dir/src/testing/streams.c.o
+[243/553] Building C object nng/CMakeFiles/nng_testing.dir/src/testing/util.c.o
+[244/553] Building C object nng/CMakeFiles/nng_testing.dir/src/mqtt/protocol/mqtt/sqlite_handler.c.o
+[245/553] Building C object nng/CMakeFiles/nng_testing.dir/src/testing/marry.c.o
+[246/553] Building C object nng/CMakeFiles/nng_testing.dir/src/mqtt/protocol/mqtt/mqtt_client.c.o
+[247/553] Building C object nng/CMakeFiles/nng_testing.dir/src/mqtt/transport.c.o
+[248/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/mqtt_db.c.o
+[249/553] Building C object nng/CMakeFiles/nng_testing.dir/src/mqtt/transport/tcp/mqtt_tcp.c.o
+[250/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/conf_ver2.c.o
+[251/553] Building C object nng/CMakeFiles/nng_testing.dir/src/mqtt/transport/tls/mqtt_tls.c.o
+[252/553] Building C object nng/CMakeFiles/nng_testing.dir/src/compat/nanomsg/nn.c.o
+[253/553] Building C object nng/src/core/CMakeFiles/buf_size_test.dir/buf_size_test.c.o
+[254/553] Linking C static library nng/libnng.a
+[255/553] Building C object nng/src/core/CMakeFiles/errors_test.dir/errors_test.c.o
+[256/553] Building C object nng/src/core/CMakeFiles/id_test.dir/id_test.c.o
+[257/553] Building C object nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/conf.c.o
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c: In function ‘nmq_acl_cache_reset_cb’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:4747:39: warning: unused parameter ‘v’ [-Wunused-parameter]
+ 4747 | nmq_acl_cache_reset_cb(void *k, void *v, void *arg)
+      |                                 ~~~~~~^
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c: In function ‘conf_parse’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:2854:58: warning: ‘.retain_as_published’ directive output may be truncated writing 20 bytes into a region of size between 14 and 113 [-Wformat-truncation=]
+ 2854 |                 snprintf(key, 128, "%s%s.subscription.%ld.retain_as_published", prefix,
+      |                                                          ^~~~~~~~~~~~~~~~~~~~
+In function ‘conf_bridge_node_parse_subs’,
+    inlined from ‘conf_bridge_node_parse_with_name’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3461:2,
+    inlined from ‘conf_bridge_content_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3504:28,
+    inlined from ‘conf_bridge_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3518:2,
+    inlined from ‘conf_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:653:2:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:2854:17: note: ‘snprintf’ output 36 or more bytes (assuming 135) into a destination of size 128
+ 2854 |                 snprintf(key, 128, "%s%s.subscription.%ld.retain_as_published", prefix,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2855 |                     name, sub_index);
+      |                     ~~~~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c: In function ‘conf_parse’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:2864:58: warning: ‘.retain_handling’ directive output may be truncated writing 16 bytes into a region of size between 14 and 113 [-Wformat-truncation=]
+ 2864 |                 snprintf(key, 128, "%s%s.subscription.%ld.retain_handling", prefix,
+      |                                                          ^~~~~~~~~~~~~~~~
+In function ‘conf_bridge_node_parse_subs’,
+    inlined from ‘conf_bridge_node_parse_with_name’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3461:2,
+    inlined from ‘conf_bridge_content_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3504:28,
+    inlined from ‘conf_bridge_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:3518:2,
+    inlined from ‘conf_parse’ at /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:653:2:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/conf.c:2864:17: note: ‘snprintf’ output 32 or more bytes (assuming 131) into a destination of size 128
+ 2864 |                 snprintf(key, 128, "%s%s.subscription.%ld.retain_handling", prefix,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2865 |                     name, sub_index);
+      |                     ~~~~~~~~~~~~~~~~
+[258/553] Building C object nng/src/core/CMakeFiles/aio_test.dir/aio_test.c.o
+[259/553] Building C object nng/src/core/CMakeFiles/init_test.dir/init_test.c.o
+[260/553] Building C object nng/src/core/CMakeFiles/list_test.dir/list_test.c.o
+[261/553] Linking C static library nng/libnng_testing.a
+[262/553] Building C object nng/src/core/CMakeFiles/reconnect_test.dir/reconnect_test.c.o
+[263/553] Building C object nng/src/core/CMakeFiles/stats_test.dir/stats_test.c.o
+[264/553] Building C object nng/src/core/CMakeFiles/udp2_test.dir/udp2_test.c.o
+[265/553] Building C object nng/src/core/CMakeFiles/message_test.dir/message_test.c.o
+[266/553] Building C object nng/src/platform/CMakeFiles/platform_test.dir/platform_test.c.o
+[267/553] Building C object nng/src/core/CMakeFiles/sock_test.dir/sock_test.c.o
+[268/553] Building C object nng/src/core/CMakeFiles/url_test.dir/url_test.c.o
+[269/553] Building C object nng/src/platform/CMakeFiles/resolver_test.dir/resolver_test.c.o
+[270/553] Building C object nng/src/platform/CMakeFiles/tcp_stream_test.dir/tcp_stream_test.c.o
+[271/553] Building C object nng/src/platform/CMakeFiles/ipc_stream_test.dir/ipc_stream_test.c.o
+[272/553] Building C object nng/src/platform/posix/CMakeFiles/posix_ipcwinsec_test.dir/posix_ipcwinsec_test.c.o
+[273/553] Building C object nng/src/platform/CMakeFiles/udp_test.dir/udp_test.c.o
+[274/553] Building C object nng/src/sp/CMakeFiles/reconnect_stress_test.dir/reconnect_stress_test.c.o
+[275/553] Building C object nng/src/sp/protocol/bus0/CMakeFiles/bus_test.dir/bus_test.c.o
+[276/553] Building C object nng/src/sp/protocol/pair0/CMakeFiles/pair0_test.dir/pair0_test.c.o
+[277/553] Building C object nng/src/sp/protocol/pipeline0/CMakeFiles/pull_test.dir/pull_test.c.o
+[278/553] Building C object nng/src/sp/protocol/pair1/CMakeFiles/pair1_poly_test.dir/pair1_poly_test.c.o
+[279/553] Building C object nng/src/sp/protocol/pair1/CMakeFiles/pair1_test.dir/pair1_test.c.o
+[280/553] Building C object nng/src/sp/protocol/pipeline0/CMakeFiles/push_test.dir/push_test.c.o
+[281/553] Building C object nng/src/sp/protocol/pubsub0/CMakeFiles/pub_test.dir/pub_test.c.o
+[282/553] Building C object nng/src/sp/protocol/pubsub0/CMakeFiles/xsub_test.dir/xsub_test.c.o
+[283/553] Building C object nng/src/sp/protocol/pubsub0/CMakeFiles/sub_test.dir/sub_test.c.o
+[284/553] Building C object nng/src/sp/protocol/reqrep0/CMakeFiles/xrep_test.dir/xrep_test.c.o
+[285/553] Building C object nng/src/sp/protocol/reqrep0/CMakeFiles/rep_test.dir/rep_test.c.o
+[286/553] Building C object nng/src/sp/protocol/reqrep0/CMakeFiles/xreq_test.dir/xreq_test.c.o
+[287/553] Building C object nng/src/sp/protocol/reqrep0/CMakeFiles/req_test.dir/req_test.c.o
+[288/553] Building C object nng/src/sp/protocol/survey0/CMakeFiles/respond_test.dir/respond_test.c.o
+[289/553] Building C object nng/src/sp/protocol/survey0/CMakeFiles/survey_test.dir/survey_test.c.o
+[290/553] Building C object nng/src/sp/protocol/mqtt/CMakeFiles/mqtt_parser_test.dir/mqtt_parser_test.c.o
+[291/553] Building C object nng/src/sp/protocol/survey0/CMakeFiles/xrespond_test.dir/xrespond_test.c.o
+[292/553] Building C object nng/src/sp/protocol/mqtt/CMakeFiles/auth_http_test.dir/auth_http_test.c.o
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/sp/protocol/mqtt/auth_http_test.c: In function ‘test_auth_http_connect’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/sp/protocol/mqtt/auth_http_test.c:70:9: warning: ‘strncpy’ output truncated before terminating nul copying 31 bytes from a string of the same length [-Wstringop-truncation]
+   70 |         strncpy(conf->auth_req.url, url, strlen(url));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/sp/protocol/mqtt/auth_http_test.c: In function ‘test_auth_http_sub_pub’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/sp/protocol/mqtt/auth_http_test.c:99:9: warning: ‘strncpy’ output truncated before terminating nul copying 29 bytes from a string of the same length [-Wstringop-truncation]
+   99 |         strncpy(conf->acl_req.url, url, strlen(url));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[293/553] Building C object nng/src/sp/protocol/survey0/CMakeFiles/xsurvey_test.dir/xsurvey_test.c.o
+[294/553] Building C object nng/src/sp/transport/socket/CMakeFiles/sockfd_test.dir/sockfd_test.c.o
+[295/553] Building C object nng/src/supplemental/base64/CMakeFiles/base64_test.dir/base64_test.c.o
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c: In function ‘test_encode’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c:46:54: warning: ‘%d’ directive output may be truncated writing between 1 and 11 bytes into a region of size 8 [-Wformat-truncation=]
+   46 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                                                      ^~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c:46:53: note: directive argument in the range [-2147483645, 2147483647]
+   46 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                                                     ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c:46:24: note: ‘snprintf’ output between 2 and 12 bytes into a destination of size 8
+   46 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c: In function ‘test_decode’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c:67:54: warning: ‘%d’ directive output may be truncated writing between 1 and 11 bytes into a region of size 8 [-Wformat-truncation=]
+   67 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                                                      ^~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c:67:53: note: directive argument in the range [-2147483645, 2147483647]
+   67 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                                                     ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c:67:24: note: ‘snprintf’ output between 2 and 12 bytes into a destination of size 8
+   67 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c: In function ‘test_overflow’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c:88:54: warning: ‘%d’ directive output may be truncated writing between 1 and 11 bytes into a region of size 8 [-Wformat-truncation=]
+   88 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                                                      ^~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c:88:53: note: directive argument in the range [-2147483645, 2147483647]
+   88 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                                                     ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/base64/base64_test.c:88:24: note: ‘snprintf’ output between 2 and 12 bytes into a destination of size 8
+   88 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[296/553] Building C object nng/src/supplemental/http/CMakeFiles/http_conn_test.dir/http_conn_test.c.o
+[297/553] Building C object nng/src/sp/transport/ws/CMakeFiles/ws_test.dir/ws_test.c.o
+[298/553] Building C object nng/src/sp/transport/ipc/CMakeFiles/ipc_test.dir/ipc_test.c.o
+[299/553] Building C object nng/src/sp/transport/tcp/CMakeFiles/tcp_test.dir/tcp_test.c.o
+[300/553] Building C object nng/src/supplemental/sha1/CMakeFiles/sha1_test.dir/sha1_test.c.o
+[301/553] Building C object nng/src/supplemental/websocket/CMakeFiles/wssfile_test.dir/wssfile_test.c.o
+[302/553] Building C object nng/src/supplemental/util/CMakeFiles/idhash_test.dir/idhash_test.c.o
+[303/553] Building C object nng/src/supplemental/nanolib/CMakeFiles/dbtree_test.dir/dbtree_test.c.o
+[304/553] Building C object nng/src/supplemental/nanolib/CMakeFiles/cmd_test.dir/cmd_test.c.o
+[305/553] Building C object nng/src/supplemental/nanolib/CMakeFiles/hash_test.dir/hash_test.c.o
+[306/553] Building C object nng/src/supplemental/websocket/CMakeFiles/websocket_test.dir/websocket_test.c.o
+[307/553] Building C object nng/src/supplemental/nanolib/CMakeFiles/env_test.dir/env_test.c.o
+[308/553] Building C object nng/src/supplemental/nanolib/CMakeFiles/conf_test.dir/conf_test.c.o
+[309/553] Building C object nng/src/supplemental/nanolib/CMakeFiles/lib_base64_test.dir/lib_base64_test.c.o
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/lib_base64_test.c: In function ‘test_encode’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/lib_base64_test.c:46:54: warning: ‘%d’ directive output may be truncated writing between 1 and 11 bytes into a region of size 8 [-Wformat-truncation=]
+   46 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                                                      ^~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/lib_base64_test.c:46:53: note: directive argument in the range [-2147483645, 2147483647]
+   46 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                                                     ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/lib_base64_test.c:46:24: note: ‘snprintf’ output between 2 and 12 bytes into a destination of size 8
+   46 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/lib_base64_test.c: In function ‘test_decode’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/lib_base64_test.c:67:54: warning: ‘%d’ directive output may be truncated writing between 1 and 11 bytes into a region of size 8 [-Wformat-truncation=]
+   67 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                                                      ^~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/lib_base64_test.c:67:53: note: directive argument in the range [-2147483645, 2147483647]
+   67 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                                                     ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/src/supplemental/nanolib/lib_base64_test.c:67:24: note: ‘snprintf’ output between 2 and 12 bytes into a destination of size 8
+   67 |                 (void) snprintf(name, sizeof(name), "%d", i);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[310/553] Building C object nng/src/supplemental/mqtt/CMakeFiles/mqtt_test.dir/mqtt_test.c.o
+[311/553] Building C object nng/src/supplemental/nanolib/CMakeFiles/topics_test.dir/topics_test.c.o
+[312/553] Building C object nng/src/tools/perf/CMakeFiles/remote_lat.dir/perf.c.o
+[313/553] Building C object nng/src/tools/nngcat/CMakeFiles/nngcat.dir/nngcat.c.o
+[314/553] Building C object nng/src/supplemental/nanolib/CMakeFiles/rule_test.dir/rule_test.c.o
+[315/553] Building C object nng/src/tools/perf/CMakeFiles/local_lat.dir/perf.c.o
+[316/553] Building C object nng/src/tools/perf/CMakeFiles/local_thr.dir/perf.c.o
+[317/553] Building C object nng/src/tools/perf/CMakeFiles/remote_thr.dir/perf.c.o
+[318/553] Building C object nng/src/supplemental/nanolib/linkedlist/CMakeFiles/linkedlist_test.dir/linkedlist_test.c.o
+[319/553] Building C object nng/src/tools/perf/CMakeFiles/pubdrop.dir/pubdrop.c.o
+[320/553] Building C object nng/src/tools/perf/CMakeFiles/inproc_thr.dir/perf.c.o
+[321/553] Building C object nng/src/tools/perf/CMakeFiles/inproc_lat.dir/perf.c.o
+[322/553] Building C object nng/tests/CMakeFiles/device.dir/device.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/device.c:17:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/device.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:314:14: note: in expansion of macro ‘ConveyTest’
+  314 | #define Test ConveyTest
+      |              ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/device.c:46:17: note: in expansion of macro ‘Convey’
+   46 |                 Convey("We cannot create cooked mode device", {
+      |                 ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:314:14: note: in expansion of macro ‘ConveyTest’
+  314 | #define Test ConveyTest
+      |              ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/device.c:52:17: note: in expansion of macro ‘Convey’
+   52 |                 Convey("We can create a PAIRv1 device", {
+      |                 ^~~~~~
+[323/553] Building C object nng/tests/CMakeFiles/device.dir/convey.c.o
+[324/553] Building C object nng/src/mqtt/transport/tcp/CMakeFiles/mqtt_tcp_test.dir/mqtt_tcp_test.c.o
+[325/553] Building C object nng/tests/CMakeFiles/files.dir/files.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:11:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c: In function ‘test_permissions’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:29:24: warning: variable ‘temp’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+   29 |                 char * temp;
+      |                        ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:114:25: note: in definition of macro ‘conveyRun’
+  114 |                         convey_code                                  \
+      |                         ^~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:27:9: note: in expansion of macro ‘Convey’
+   27 |         Convey("Permissions work", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:30:24: warning: variable ‘file’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+   30 |                 char * file;
+      |                        ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:114:25: note: in definition of macro ‘conveyRun’
+  114 |                         convey_code                                  \
+      |                         ^~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:27:9: note: in expansion of macro ‘Convey’
+   27 |         Convey("Permissions work", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:141:9: note: in expansion of macro ‘Convey’
+  141 |         Convey("We can create a pair of files", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:142:23: warning: variable ‘temp’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  142 |                 char *temp;
+      |                       ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:141:9: note: in expansion of macro ‘Convey’
+  141 |         Convey("We can create a pair of files", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:143:23: warning: variable ‘mydir’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  143 |                 char *mydir;
+      |                       ^~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:141:9: note: in expansion of macro ‘Convey’
+  141 |         Convey("We can create a pair of files", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:144:23: warning: variable ‘a’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  144 |                 char *a;
+      |                       ^
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:141:9: note: in expansion of macro ‘Convey’
+  141 |         Convey("We can create a pair of files", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:145:23: warning: variable ‘b’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  145 |                 char *b;
+      |                       ^
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:141:9: note: in expansion of macro ‘Convey’
+  141 |         Convey("We can create a pair of files", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:146:23: warning: variable ‘c’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  146 |                 char *c;
+      |                       ^
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:141:9: note: in expansion of macro ‘Convey’
+  141 |         Convey("We can create a pair of files", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:147:23: warning: variable ‘d’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  147 |                 char *d;
+      |                       ^
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:141:9: note: in expansion of macro ‘Convey’
+  141 |         Convey("We can create a pair of files", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:234:9: note: in expansion of macro ‘Convey’
+  234 |         Convey("Zero length files work", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:235:24: warning: variable ‘temp’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  235 |                 char * temp;
+      |                        ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:234:9: note: in expansion of macro ‘Convey’
+  234 |         Convey("Zero length files work", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:236:24: warning: variable ‘empty’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  236 |                 char * empty;
+      |                        ^~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/files.c:234:9: note: in expansion of macro ‘Convey’
+  234 |         Convey("Zero length files work", {
+      |         ^~~~~~
+[326/553] Building C object nng/src/compat/nanomsg/CMakeFiles/compat_msg_test.dir/compat_msg_test.c.o
+[327/553] Building C object nng/tests/CMakeFiles/files.dir/convey.c.o
+[328/553] Building C object nng/tests/CMakeFiles/httpclient.dir/convey.c.o
+[329/553] Building C object nng/src/compat/nanomsg/CMakeFiles/compat_tcp_test.dir/compat_tcp_test.c.o
+[330/553] Building C object nng/tests/CMakeFiles/httpserver.dir/convey.c.o
+[331/553] Building C object nng/tests/CMakeFiles/ipc.dir/convey.c.o
+[332/553] Building C object nng/tests/CMakeFiles/inproc.dir/convey.c.o
+[333/553] Building C object nng/tests/CMakeFiles/ipcsupp.dir/ipcsupp.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/ipcsupp.c:16:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/ipcsupp.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/ipcsupp.c:22:9: note: in expansion of macro ‘Convey’
+   22 |         Convey("We can create a dialer and listener", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/ipcsupp.c:44:45: warning: variable ‘c1’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+   44 |                                 nng_stream *c1   = NULL;
+      |                                             ^~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/ipcsupp.c:22:9: note: in expansion of macro ‘Convey’
+   22 |         Convey("We can create a dialer and listener", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/ipcsupp.c:37:17: note: in expansion of macro ‘Convey’
+   37 |                 Convey("Listener listens", {
+      |                 ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/ipcsupp.c:40:25: note: in expansion of macro ‘Convey’
+   40 |                         Convey("We can dial it", {
+      |                         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/ipcsupp.c:45:45: warning: variable ‘c2’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+   45 |                                 nng_stream *c2   = NULL;
+      |                                             ^~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/ipcsupp.c:22:9: note: in expansion of macro ‘Convey’
+   22 |         Convey("We can create a dialer and listener", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/ipcsupp.c:37:17: note: in expansion of macro ‘Convey’
+   37 |                 Convey("Listener listens", {
+      |                 ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/ipcsupp.c:40:25: note: in expansion of macro ‘Convey’
+   40 |                         Convey("We can dial it", {
+      |                         ^~~~~~
+[334/553] Building C object nng/tests/CMakeFiles/ipcsupp.dir/convey.c.o
+[335/553] Building C object nng/tests/CMakeFiles/inproc.dir/inproc.c.o
+[336/553] Building C object nng/tests/CMakeFiles/nonblock.dir/nonblock.c.o
+[337/553] Building C object nng/tests/CMakeFiles/httpclient.dir/httpclient.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpclient.c:26:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpclient.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpclient.c:38:9: note: in expansion of macro ‘Convey’
+   38 |         Convey("Given a TCP connection to example.com", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpclient.c:89:45: warning: variable ‘data’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+   89 |                                 void *      data;
+      |                                             ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpclient.c:38:9: note: in expansion of macro ‘Convey’
+   38 |         Convey("Given a TCP connection to example.com", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpclient.c:65:17: note: in expansion of macro ‘Convey’
+   65 |                 Convey("We can initiate a message", {
+      |                 ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpclient.c:87:25: note: in expansion of macro ‘Convey’
+   87 |                         Convey("The message contents are correct", {
+      |                         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpclient.c:121:9: note: in expansion of macro ‘Convey’
+  121 |         Convey("Given a client", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpclient.c:247:9: note: in expansion of macro ‘Convey’
+  247 |         Convey("Given a client (chunked)", {
+      |         ^~~~~~
+[338/553] Building C object nng/tests/CMakeFiles/multistress.dir/multistress.c.o
+[339/553] Building C object nng/tests/CMakeFiles/multistress.dir/convey.c.o
+[340/553] Building C object nng/tests/CMakeFiles/ipc.dir/ipc.c.o
+[341/553] Building C object nng/tests/CMakeFiles/options.dir/options.c.o
+[342/553] Building C object nng/tests/CMakeFiles/nonblock.dir/convey.c.o
+[343/553] Building C object nng/tests/CMakeFiles/pipe.dir/pipe.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/pipe.c:19:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/pipe.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/pipe.c:118:9: note: in expansion of macro ‘Convey’
+  118 |         Convey("We can create a pipeline", {
+      |         ^~~~~~
+[344/553] Building C object nng/tests/CMakeFiles/pipe.dir/convey.c.o
+[345/553] Building C object nng/tests/CMakeFiles/options.dir/convey.c.o
+[346/553] Building C object nng/tests/CMakeFiles/pollfd.dir/pollfd.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/pollfd.c:38:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/pollfd.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/pollfd.c:42:9: note: in expansion of macro ‘Convey’
+   42 |         Convey("Given a connected pair of sockets", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/pollfd.c:116:9: note: in expansion of macro ‘Convey’
+  116 |         Convey("We cannot get a send FD for PULL", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/pollfd.c:124:9: note: in expansion of macro ‘Convey’
+  124 |         Convey("We cannot get a recv FD for PUSH", {
+      |         ^~~~~~
+[347/553] Building C object nng/tests/CMakeFiles/scalability.dir/scalability.c.o
+[348/553] Building C object nng/tests/CMakeFiles/pollfd.dir/convey.c.o
+[349/553] Building C object nng/tests/CMakeFiles/synch.dir/synch.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/synch.c:14:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/synch.c: In function ‘test_sync’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/synch.c:42:9: note: in expansion of macro ‘Convey’
+   42 |         Convey("Mutexes work", {
+      |         ^~~~~~
+[350/553] Building C object nng/tests/CMakeFiles/scalability.dir/convey.c.o
+[351/553] Building C object nng/tests/CMakeFiles/synch.dir/convey.c.o
+[352/553] Building C object nng/tests/CMakeFiles/tcpsupp.dir/tcpsupp.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcpsupp.c:15:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcpsupp.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcpsupp.c:19:9: note: in expansion of macro ‘Convey’
+   19 |         Convey("We can create a dialer and listener", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcpsupp.c:52:45: warning: variable ‘c1’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+   52 |                                 nng_stream *c1   = NULL;
+      |                                             ^~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcpsupp.c:19:9: note: in expansion of macro ‘Convey’
+   19 |         Convey("We can create a dialer and listener", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcpsupp.c:28:17: note: in expansion of macro ‘Convey’
+   28 |                 Convey("Listener listens (wildcard)", {
+      |                 ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcpsupp.c:48:25: note: in expansion of macro ‘Convey’
+   48 |                         Convey("We can dial it", {
+      |                         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcpsupp.c:53:45: warning: variable ‘c2’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+   53 |                                 nng_stream *c2   = NULL;
+      |                                             ^~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcpsupp.c:19:9: note: in expansion of macro ‘Convey’
+   19 |         Convey("We can create a dialer and listener", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcpsupp.c:28:17: note: in expansion of macro ‘Convey’
+   28 |                 Convey("Listener listens (wildcard)", {
+      |                 ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcpsupp.c:48:25: note: in expansion of macro ‘Convey’
+   48 |                         Convey("We can dial it", {
+      |                         ^~~~~~
+[353/553] Building C object nng/tests/CMakeFiles/tls.dir/convey.c.o
+[354/553] Building C object nng/tests/CMakeFiles/tcpsupp.dir/convey.c.o
+[355/553] Building C object nng/tests/CMakeFiles/mqtt_tcp.dir/convey.c.o
+[356/553] Building C object nng/tests/CMakeFiles/tcp.dir/convey.c.o
+[357/553] Building C object nng/tests/CMakeFiles/mqtt_broker_tcp.dir/convey.c.o
+[358/553] Building C object nng/tests/CMakeFiles/tcp.dir/tcp.c.o
+[359/553] Building C object nng/tests/CMakeFiles/mqttv5_broker_tcp.dir/convey.c.o
+[360/553] Building C object nng/tests/CMakeFiles/mqtt_tcp.dir/mqtt_tcp.c.o
+[361/553] Building C object nng/tests/CMakeFiles/mqtt_broker_tcp.dir/mqtt_broker_tcp.c.o
+[362/553] Building C object nng/tests/CMakeFiles/tcp6.dir/convey.c.o
+[363/553] Building C object nng/tests/CMakeFiles/tls.dir/tls.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c:22:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c:292:9: note: in expansion of macro ‘Convey’
+  292 |         Convey("We cannot connect to wild cards", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c:303:9: note: in expansion of macro ‘Convey’
+  303 |         Convey("We can bind to wild card", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c:356:9: note: in expansion of macro ‘Convey’
+  356 |         Convey("Malformed TLS addresses do not panic", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c:380:9: note: in expansion of macro ‘Convey’
+  380 |         Convey("We can use local interface to connect", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c:404:9: note: in expansion of macro ‘Convey’
+  404 |         Convey("Botched local interfaces fail reasonably", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c:413:9: note: in expansion of macro ‘Convey’
+  413 |         Convey("Can't specify address that isn't ours", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c:452:9: note: in expansion of macro ‘Convey’
+  452 |         Convey("No verify works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c:497:9: note: in expansion of macro ‘Convey’
+  497 |         Convey("Valid verify works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c:546:9: note: in expansion of macro ‘Convey’
+  546 |         Convey("No delay option", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tls.c:596:9: note: in expansion of macro ‘Convey’
+  596 |         Convey("Keepalive option", {
+      |         ^~~~~~
+[364/553] Building C object nng/tests/CMakeFiles/ws.dir/convey.c.o
+[365/553] Building C object nng/tests/CMakeFiles/mqttv5_broker_tcp.dir/mqttv5_broker_tcp.c.o
+[366/553] Building C object nng/tests/CMakeFiles/reqctx.dir/reqctx.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/reqctx.c:18:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/reqctx.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/reqctx.c:99:9: note: in expansion of macro ‘Convey’
+   99 |         Convey("We can use REQ contexts concurrently", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/reqctx.c:230:9: note: in expansion of macro ‘Convey’
+  230 |         Convey("Given a socket and a context", {
+      |         ^~~~~~
+[367/553] Building C object nng/tests/CMakeFiles/wss.dir/convey.c.o
+[368/553] Building C object nng/tests/CMakeFiles/tcp6.dir/tcp6.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcp6.c:16:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcp6.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/tcp6.c:86:9: note: in expansion of macro ‘Convey’
+   86 |         Convey("Malformed TCPv6 addresses do not panic", {
+      |         ^~~~~~
+[369/553] Building C object nng/tests/CMakeFiles/reqstress.dir/reqstress.c.o
+[370/553] Building C object nng/tests/CMakeFiles/compat_block.dir/compat_block.c.o
+[371/553] Building C object nng/tests/CMakeFiles/httpserver.dir/httpserver.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/trantest.h:21,
+                 from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:18:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:188:9: note: in expansion of macro ‘Convey’
+  188 |         Convey("We can start an HTTP server", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:217:42: warning: variable ‘h’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  217 |                         nng_http_conn *  h;
+      |                                          ^
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:188:9: note: in expansion of macro ‘Convey’
+  188 |         Convey("We can start an HTTP server", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:215:17: note: in expansion of macro ‘Convey’
+  215 |                 Convey("We can connect a client to it", {
+      |                 ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:287:9: note: in expansion of macro ‘Convey’
+  287 |         Convey("Directory serving works (root)", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:290:26: warning: variable ‘tmpdir’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  290 |                 char *   tmpdir;
+      |                          ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:287:9: note: in expansion of macro ‘Convey’
+  287 |         Convey("Directory serving works (root)", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:291:26: warning: variable ‘workdir’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  291 |                 char *   workdir;
+      |                          ^~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:287:9: note: in expansion of macro ‘Convey’
+  287 |         Convey("Directory serving works (root)", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:292:26: warning: variable ‘file1’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  292 |                 char *   file1;
+      |                          ^~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:287:9: note: in expansion of macro ‘Convey’
+  287 |         Convey("Directory serving works (root)", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:293:26: warning: variable ‘file2’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  293 |                 char *   file2;
+      |                          ^~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:287:9: note: in expansion of macro ‘Convey’
+  287 |         Convey("Directory serving works (root)", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:294:26: warning: variable ‘file3’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  294 |                 char *   file3;
+      |                          ^~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:287:9: note: in expansion of macro ‘Convey’
+  287 |         Convey("Directory serving works (root)", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:295:26: warning: variable ‘subdir1’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  295 |                 char *   subdir1;
+      |                          ^~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:287:9: note: in expansion of macro ‘Convey’
+  287 |         Convey("Directory serving works (root)", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:296:26: warning: variable ‘subdir2’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  296 |                 char *   subdir2;
+      |                          ^~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:287:9: note: in expansion of macro ‘Convey’
+  287 |         Convey("Directory serving works (root)", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:509:9: note: in expansion of macro ‘Convey’
+  509 |         Convey("Directory serving works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:512:26: warning: variable ‘tmpdir’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  512 |                 char *   tmpdir;
+      |                          ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:509:9: note: in expansion of macro ‘Convey’
+  509 |         Convey("Directory serving works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:513:26: warning: variable ‘workdir’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  513 |                 char *   workdir;
+      |                          ^~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:509:9: note: in expansion of macro ‘Convey’
+  509 |         Convey("Directory serving works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:514:26: warning: variable ‘file1’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  514 |                 char *   file1;
+      |                          ^~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:509:9: note: in expansion of macro ‘Convey’
+  509 |         Convey("Directory serving works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:515:26: warning: variable ‘file2’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  515 |                 char *   file2;
+      |                          ^~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:509:9: note: in expansion of macro ‘Convey’
+  509 |         Convey("Directory serving works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:516:26: warning: variable ‘file3’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  516 |                 char *   file3;
+      |                          ^~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:509:9: note: in expansion of macro ‘Convey’
+  509 |         Convey("Directory serving works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:517:26: warning: variable ‘subdir1’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  517 |                 char *   subdir1;
+      |                          ^~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:509:9: note: in expansion of macro ‘Convey’
+  509 |         Convey("Directory serving works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:518:26: warning: variable ‘subdir2’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  518 |                 char *   subdir2;
+      |                          ^~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:509:9: note: in expansion of macro ‘Convey’
+  509 |         Convey("Directory serving works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:714:9: note: in expansion of macro ‘Convey’
+  714 |         Convey("Multiple tree handlers works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:717:26: warning: variable ‘tmpdir’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  717 |                 char *   tmpdir;
+      |                          ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:714:9: note: in expansion of macro ‘Convey’
+  714 |         Convey("Multiple tree handlers works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:718:26: warning: variable ‘workdir’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  718 |                 char *   workdir;
+      |                          ^~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:714:9: note: in expansion of macro ‘Convey’
+  714 |         Convey("Multiple tree handlers works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:719:26: warning: variable ‘workdir2’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  719 |                 char *   workdir2;
+      |                          ^~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:714:9: note: in expansion of macro ‘Convey’
+  714 |         Convey("Multiple tree handlers works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:720:26: warning: variable ‘file1’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  720 |                 char *   file1;
+      |                          ^~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:714:9: note: in expansion of macro ‘Convey’
+  714 |         Convey("Multiple tree handlers works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:721:26: warning: variable ‘file2’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  721 |                 char *   file2;
+      |                          ^~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:714:9: note: in expansion of macro ‘Convey’
+  714 |         Convey("Multiple tree handlers works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:809:9: note: in expansion of macro ‘Convey’
+  809 |         Convey("Custom POST handler works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:880:9: note: in expansion of macro ‘Convey’
+  880 |         Convey("Redirect handler works", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/httpserver.c:999:9: note: in expansion of macro ‘Convey’
+  999 |         Convey("Root tree handler works", {
+      |         ^~~~~~
+[372/553] Building C object nng/tests/CMakeFiles/reqctx.dir/convey.c.o
+[373/553] Building C object nng/tests/CMakeFiles/compat_bug777.dir/compat_bug777.c.o
+[374/553] Building C object nng/tests/CMakeFiles/compat_block.dir/compat_testutil.c.o
+[375/553] Building C object nng/tests/CMakeFiles/compat_bug777.dir/compat_testutil.c.o
+[376/553] Building C object nng/tests/CMakeFiles/compat_bus.dir/compat_bus.c.o
+[377/553] Building C object nng/tests/CMakeFiles/compat_bus.dir/compat_testutil.c.o
+[378/553] Building C object nng/tests/CMakeFiles/reqstress.dir/convey.c.o
+[379/553] Building C object nng/tests/CMakeFiles/compat_cmsg.dir/compat_cmsg.c.o
+[380/553] Building C object nng/tests/CMakeFiles/ws.dir/ws.c.o
+[381/553] Building C object nng/tests/CMakeFiles/compat_msg.dir/compat_msg.c.o
+[382/553] Building C object nng/tests/CMakeFiles/compat_cmsg.dir/compat_testutil.c.o
+[383/553] Building C object nng/tests/CMakeFiles/compat_msg.dir/compat_testutil.c.o
+[384/553] Building C object nng/tests/CMakeFiles/compat_iovec.dir/compat_iovec.c.o
+[385/553] Building C object nng/tests/CMakeFiles/compat_device.dir/compat_device.c.o
+[386/553] Building C object nng/tests/CMakeFiles/compat_pair.dir/compat_pair.c.o
+[387/553] Building C object nng/tests/CMakeFiles/compat_iovec.dir/compat_testutil.c.o
+[388/553] Building C object nng/tests/CMakeFiles/compat_device.dir/compat_testutil.c.o
+[389/553] Building C object nng/tests/CMakeFiles/wss.dir/wss.c.o
+[390/553] Building C object nng/tests/CMakeFiles/compat_pipeline.dir/compat_pipeline.c.o
+[391/553] Building C object nng/tests/CMakeFiles/compat_pair.dir/compat_testutil.c.o
+[392/553] Building C object nng/tests/CMakeFiles/compat_poll.dir/compat_poll.c.o
+[393/553] Building C object nng/tests/CMakeFiles/compat_reqrep.dir/compat_reqrep.c.o
+[394/553] Building C object nng/tests/CMakeFiles/compat_pipeline.dir/compat_testutil.c.o
+[395/553] Building C object nng/tests/CMakeFiles/compat_poll.dir/compat_testutil.c.o
+[396/553] Building C object nng/tests/CMakeFiles/compat_survey.dir/compat_survey.c.o
+[397/553] Building C object nng/tests/CMakeFiles/compat_reqrep.dir/compat_testutil.c.o
+[398/553] Building C object nng/tests/CMakeFiles/compat_reqttl.dir/compat_reqttl.c.o
+[399/553] Building C object nng/tests/CMakeFiles/compat_shutdown.dir/compat_shutdown.c.o
+[400/553] Building C object nng/tests/CMakeFiles/compat_survey.dir/compat_testutil.c.o
+[401/553] Building C object nng/tests/CMakeFiles/compat_reqttl.dir/compat_testutil.c.o
+[402/553] Building C object nng/tests/CMakeFiles/compat_surveyttl.dir/compat_surveyttl.c.o
+[403/553] Building CXX object nng/tests/CMakeFiles/cplusplus_pair.dir/cplusplus_pair.cc.o
+[404/553] Building C object nanomq/CMakeFiles/nanomq.dir/process.c.o
+[405/553] Building C object nng/tests/CMakeFiles/compat_shutdown.dir/compat_testutil.c.o
+[406/553] Building C object nng/tests/CMakeFiles/compat_options.dir/compat_options.c.o
+In file included from /home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/compat_options.c:14:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/compat_options.c: In function ‘conveyMainImpl’:
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:105:36: warning: variable ‘convey_break’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  105 |                 int                convey_break = 0;                 \
+      |                                    ^~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/compat_options.c:25:9: note: in expansion of macro ‘Convey’
+   25 |         Convey("Given a compat NN_REP socket", {
+      |         ^~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/compat_options.c:26:21: warning: variable ‘repsock’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+   26 |                 int repsock;
+      |                     ^~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:166:25: note: in definition of macro ‘ConveyMain’
+  166 |                         code             \
+      |                         ^~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:190:17: note: in expansion of macro ‘conveyRun’
+  190 |                 conveyRun(name, code, &convey_rv);  \
+      |                 ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:203:47: note: in expansion of macro ‘ConveyTest’
+  203 | #define ConveyTestMain(name, code) ConveyMain(ConveyTest(name, code))
+      |                                               ^~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:313:18: note: in expansion of macro ‘ConveyTestMain’
+  313 | #define TestMain ConveyTestMain
+      |                  ^~~~~~~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/convey.h:243:28: note: in expansion of macro ‘conveyRun’
+  243 | #define Convey(name, code) conveyRun(name, code, NULL)
+      |                            ^~~~~~~~~
+/home/kadir/mqtt-fuzzing/builds/nanomq-asan/nng/tests/compat_options.c:25:9: note: in expansion of macro ‘Convey’
+   25 |         Convey("Given a compat NN_REP socket", {
+      |         ^~~~~~
+[407/553] Building C object nng/tests/CMakeFiles/compat_surveyttl.dir/compat_testutil.c.o
+[408/553] Building C object nanomq/CMakeFiles/nanomq.dir/unsub_handler.c.o
+[409/553] Building C object nanomq/CMakeFiles/nanomq.dir/hashmap.c.o
+[410/553] Building C object nng/tests/CMakeFiles/compat_options.dir/convey.c.o
+[411/553] Building C object nanomq/CMakeFiles/nanomq.dir/sub_handler.c.o
+[412/553] Building C object nanomq/CMakeFiles/nanomq.dir/pub_handler.c.o
+[413/553] Building C object nanomq/CMakeFiles/nanomq.dir/web_server.c.o
+[414/553] Building C object nanomq/CMakeFiles/nanomq.dir/nanomq_rule.c.o
+[415/553] Building C object nanomq/CMakeFiles/nanomq.dir/aws_bridge.c.o
+[416/553] Building C object nanomq/CMakeFiles/nanomq.dir/webhook_post.c.o
+[417/553] Building C object nanomq/CMakeFiles/nanomq.dir/webhook_inproc.c.o
+[418/553] Building C object nanomq/CMakeFiles/nanomq.dir/cmd_proc.c.o
+[419/553] Building C object nanomq/CMakeFiles/nanomq.dir/acl_handler.c.o
+[420/553] Building C object nanomq/CMakeFiles/nanomq.dir/acl_hazard.c.o
+[421/553] Building C object nanomq/CMakeFiles/nanomq.dir/mqtt_api.c.o
+[422/553] Building C object nanomq/CMakeFiles/nanomq.dir/nanomq.c.o
+[423/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/bench.c.o
+[424/553] Building C object nanomq/CMakeFiles/nanomq.dir/bridge.c.o
+[425/553] Building C object nanomq/CMakeFiles/nanomq.dir/apps/nng_bridge.c.o
+[426/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/iceoryx_client.c.o
+[427/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/nftp_client.c.o
+[428/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/main.c.o
+[429/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/nnb_opt.c.o
+[430/553] Building C object nanomq/CMakeFiles/nanomq.dir/conf_api.c.o
+[431/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/proxy.c.o
+[432/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/nngcat.c.o
+[433/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/rule_ctrl.c.o
+[434/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/nng_proxy.c.o
+[435/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/zmq_gateway.c.o
+[436/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/rest_api.c.o
+[437/553] Linking C executable nng/src/core/aio_test
+[438/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/web_server.c.o
+[439/553] Linking C executable nng/src/core/buf_size_test
+[440/553] Building C object nanomq_cli/CMakeFiles/nanomq_cli.dir/client.c.o
+[441/553] Linking C executable nng/src/core/id_test
+[442/553] Linking C executable nng/src/core/list_test
+[443/553] Linking C executable nng/src/core/errors_test
+[444/553] Linking C executable nng/src/core/init_test
+[445/553] Linking C executable nng/src/core/message_test
+[446/553] Linking C executable nng/src/core/reconnect_test
+[447/553] Linking C executable nng/src/core/stats_test
+[448/553] Linking C executable nng/src/core/sock_test
+[449/553] Linking C executable nng/src/core/udp2_test
+[450/553] Linking C executable nng/src/core/url_test
+[451/553] Building C object nanomq/CMakeFiles/nanomq.dir/apps/broker.c.o
+[452/553] Building C object nanomq/CMakeFiles/nanomq.dir/rest_api.c.o
+[453/553] Linking C executable nng/src/platform/resolver_test
+[454/553] Linking C executable nng/src/platform/platform_test
+[455/553] Linking C executable nng/src/platform/udp_test
+[456/553] Linking C executable nng/src/platform/tcp_stream_test
+[457/553] Linking C executable nng/src/platform/ipc_stream_test
+[458/553] Linking C executable nng/src/platform/posix/posix_ipcwinsec_test
+[459/553] Linking C executable nng/src/sp/protocol/bus0/bus_test
+[460/553] Linking C executable nng/src/sp/reconnect_stress_test
+[461/553] Linking C executable nng/src/sp/protocol/pair1/pair1_test
+[462/553] Linking C executable nng/src/sp/protocol/pair0/pair0_test
+[463/553] Linking C executable nng/src/sp/protocol/pair1/pair1_poly_test
+[464/553] Linking C executable nng/src/sp/protocol/pipeline0/pull_test
+[465/553] Linking C executable nng/src/sp/protocol/pubsub0/pub_test
+[466/553] Linking C executable nng/src/sp/protocol/pipeline0/push_test
+[467/553] Linking C executable nng/src/sp/protocol/pubsub0/sub_test
+[468/553] Linking C executable nng/src/sp/protocol/pubsub0/xsub_test
+[469/553] Linking C executable nng/src/sp/protocol/reqrep0/xrep_test
+[470/553] Linking C executable nng/src/sp/protocol/reqrep0/req_test
+[471/553] Linking C executable nng/src/sp/protocol/reqrep0/rep_test
+[472/553] Linking C executable nng/src/sp/protocol/survey0/survey_test
+[473/553] Linking C executable nng/src/sp/protocol/reqrep0/xreq_test
+[474/553] Linking C executable nng/src/sp/protocol/survey0/xrespond_test
+[475/553] Linking C executable nng/src/sp/protocol/survey0/respond_test
+[476/553] Linking C executable nng/src/sp/protocol/mqtt/mqtt_parser_test
+[477/553] Linking C executable nng/src/sp/protocol/survey0/xsurvey_test
+[478/553] Linking C executable nng/src/supplemental/base64/base64_test
+[479/553] Linking C executable nng/src/sp/transport/socket/sockfd_test
+[480/553] Linking C executable nng/src/sp/transport/ipc/ipc_test
+[481/553] Linking C executable nng/src/supplemental/sha1/sha1_test
+[482/553] Linking C executable nng/src/supplemental/http/http_conn_test
+[483/553] Linking C executable nng/src/sp/transport/tcp/tcp_test
+[484/553] Linking C executable nng/src/sp/protocol/mqtt/auth_http_test
+[485/553] Linking C executable nng/src/sp/transport/ws/ws_test
+[486/553] Linking C executable nng/src/supplemental/util/idhash_test
+[487/553] Linking C executable nng/src/supplemental/websocket/wssfile_test
+[488/553] Linking C executable nng/src/supplemental/websocket/websocket_test
+[489/553] Linking C executable nng/src/supplemental/nanolib/hash_test
+[490/553] Linking C executable nng/src/supplemental/mqtt/mqtt_test
+[491/553] Linking C executable nng/src/supplemental/nanolib/dbtree_test
+[492/553] Linking C executable nng/src/supplemental/nanolib/cmd_test
+[493/553] Linking C executable nng/src/supplemental/nanolib/env_test
+[494/553] Linking C executable nng/src/supplemental/nanolib/lib_base64_test
+[495/553] Linking C executable nng/src/supplemental/nanolib/conf_test
+[496/553] Linking C executable nng/src/supplemental/nanolib/topics_test
+[497/553] Linking C executable nng/src/tools/perf/remote_lat
+[498/553] Linking C executable nng/src/tools/perf/local_thr
+[499/553] Linking C executable nng/src/supplemental/nanolib/rule_test
+[500/553] Linking C executable nng/src/supplemental/nanolib/linkedlist/linkedlist_test
+[501/553] Linking C executable nng/src/tools/perf/local_lat
+[502/553] Linking C executable nng/src/tools/nngcat/nngcat
+[503/553] Linking C executable nng/src/tools/perf/pubdrop
+[504/553] Linking C executable nng/src/tools/perf/remote_thr
+[505/553] Linking C executable nng/src/mqtt/transport/tcp/mqtt_tcp_test
+[506/553] Linking C executable nng/src/tools/perf/inproc_thr
+[507/553] Linking C executable nng/src/compat/nanomsg/compat_msg_test
+[508/553] Linking C executable nng/src/tools/perf/inproc_lat
+[509/553] Linking C executable nng/tests/device
+[510/553] Linking C executable nng/src/compat/nanomsg/compat_tcp_test
+[511/553] Linking C executable nng/tests/files
+[512/553] Linking C executable nng/tests/ipcsupp
+[513/553] Linking C executable nng/tests/httpclient
+[514/553] Linking C executable nng/tests/inproc
+[515/553] Linking C executable nng/tests/httpserver
+[516/553] Linking C executable nng/tests/ipc
+[517/553] Linking C executable nng/tests/nonblock
+[518/553] Linking C executable nng/tests/options
+[519/553] Linking C executable nng/tests/scalability
+[520/553] Linking C executable nng/tests/synch
+[521/553] Linking C executable nng/tests/pollfd
+[522/553] Linking C executable nng/tests/pipe
+[523/553] Linking C executable nng/tests/multistress
+[524/553] Linking C executable nng/tests/tls
+[525/553] Linking C executable nng/tests/tcpsupp
+[526/553] Linking C executable nng/tests/mqtt_tcp
+[527/553] Linking C executable nng/tests/mqtt_broker_tcp
+[528/553] Linking C executable nng/tests/tcp
+[529/553] Linking C executable nng/tests/mqttv5_broker_tcp
+[530/553] Linking C executable nng/tests/reqstress
+[531/553] Linking C executable nng/tests/reqctx
+[532/553] Linking C executable nng/tests/ws
+[533/553] Linking C executable nng/tests/wss
+[534/553] Linking C executable nng/tests/tcp6
+[535/553] Linking C executable nng/tests/compat_block
+[536/553] Linking C executable nng/tests/compat_iovec
+[537/553] Linking C executable nng/tests/compat_bug777
+[538/553] Linking C executable nng/tests/compat_cmsg
+[539/553] Linking C executable nng/tests/compat_msg
+[540/553] Linking C executable nng/tests/compat_bus
+[541/553] Linking C executable nng/tests/compat_pipeline
+[542/553] Linking C executable nng/tests/compat_pair
+[543/553] Linking C executable nng/tests/compat_device
+[544/553] Linking C executable nng/tests/compat_poll
+[545/553] Linking C executable nng/tests/compat_survey
+[546/553] Linking C executable nng/tests/compat_reqrep
+[547/553] Linking C executable nng/tests/compat_surveyttl
+[548/553] Linking C executable nng/tests/compat_shutdown
+[549/553] Linking C executable nng/tests/compat_reqttl
+[550/553] Linking CXX executable nng/tests/cplusplus_pair
+[551/553] Linking C executable nng/tests/compat_options
+[552/553] Linking C executable nanomq_cli/nanomq_cli
+[553/553] Linking C executable nanomq/nanomq

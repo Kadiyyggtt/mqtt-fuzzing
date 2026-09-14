@@ -1,0 +1,21 @@
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+Determined RELPATH: ./
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test COMPILER_RT_HAS_MSSE4_2_FLAG
+-- Performing Test COMPILER_RT_HAS_MSSE4_2_FLAG - Failed
+-- Configuring done (6.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/kadir/mqtt-fuzzing/builds/flashmq-asan/build
