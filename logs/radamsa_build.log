@@ -1,0 +1,44 @@
+mkdir -p lib
+cd lib && git clone https://gitlab.com/owl-lisp/hex.git
+Cloning into 'hex'...
+test -x bin/ol || make bin/ol
+make[1]: Entering directory '/home/kadir/mqtt-fuzzing/tools/radamsa'
+test -f ol.c.gz || wget -O ol.c.gz https://haltp.org/files/ol-0.2.2.c.gz || curl -L -o ol.c.gz https://haltp.org/files/ol-0.2.2.c.gz
+--2026-09-14 21:47:38--  https://haltp.org/files/ol-0.2.2.c.gz
+Resolving haltp.org (haltp.org)... 95.216.5.207
+Connecting to haltp.org (haltp.org)|95.216.5.207|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 341773 (334K) [application/octet-stream]
+Saving to: ‘ol.c.gz’
+
+     0K .......... .......... .......... .......... .......... 14%  563K 1s
+    50K .......... .......... .......... .......... .......... 29%  567K 0s
+   100K .......... .......... .......... .......... .......... 44% 10.6M 0s
+   150K .......... .......... .......... .......... .......... 59%  579K 0s
+   200K .......... .......... .......... .......... .......... 74% 13.1M 0s
+   250K .......... .......... .......... .......... .......... 89% 9.02M 0s
+   300K .......... .......... .......... ...                  100% 14.3M=0.3s
+
+2026-09-14 21:47:39 (1.17 MB/s) - ‘ol.c.gz’ saved [341773/341773]
+
+gzip -d < ol.c.gz > ol.c
+mkdir -p bin
+cc -Wall -O3 -o bin/ol ol.c
+ol.c: In function ‘adjust_heap’:
+ol.c:20690:38: warning: pointer ‘old’ may be used after ‘realloc’ [-Wuse-after-free]
+20690 |       wdiff delta = (word)memstart - (word)old;
+      |                                      ^~~~~~~~~
+ol.c:20685:15: note: call to ‘realloc’ here
+20685 |    memstart = realloc(memstart, new_words*W);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/home/kadir/mqtt-fuzzing/tools/radamsa'
+bin/ol -O1 -o radamsa.c rad/main.scm
+mkdir -p bin
+cc -Wall -O3  -o bin/radamsa radamsa.c
+radamsa.c: In function ‘adjust_heap’:
+radamsa.c:6511:38: warning: pointer ‘old’ may be used after ‘realloc’ [-Wuse-after-free]
+ 6511 |       wdiff delta = (word)memstart - (word)old;
+      |                                      ^~~~~~~~~
+radamsa.c:6506:15: note: call to ‘realloc’ here
+ 6506 |    memstart = realloc(memstart, new_words*W);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

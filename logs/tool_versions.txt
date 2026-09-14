@@ -1,0 +1,10 @@
+radamsa commit: 5c32c29e9f7d5f0c7fef10fa9a969f78e4bde95f  tarih: 2026-02-11 15:46:10 +0200
+Radamsa 0.8a
+mosquitto commit: 6aaba32614eb1160ddbfeafd616f9f67e7914a41  tarih: 2026-09-03 13:43:20 +0100
+mosquitto v2.1.2 commit: 99fa50f30e325609394c324c8ff71cfbbe95d8ab  tarih: 2026-02-09 09:29:02 +0000
+--- 2026-09-14 gece: ASan sorunu COZULDU ---
+Sorun: rpt-rpi cekirdegi 39-bit VA, ASan 47-bit istiyor. HWASan da ayni sebeple calismadi.
+Cozum: Debian genel cekirdegi (linux-image-arm64 6.12.107+deb13-arm64, 48-bit VA)
+       /boot/firmware/config.txt icine kernel=vmlinuz-deb + initramfs initrd-deb followkernel
+Dogrulama: clang -fsanitize=address test programi heap-buffer-overflow raporu uretti. BASARILI.
+Yedekler: config.txt.yedek, cmdline.txt.yedek
