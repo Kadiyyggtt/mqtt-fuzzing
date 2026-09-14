@@ -1,0 +1,27 @@
+=== 2026-09-14T18:39:57Z SISTEM KUNYESI ===
+Linux kadir 6.18.34+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.18.34-1+rpt1 (2026-06-09) aarch64 GNU/Linux
+cores: 4
+               total        used        free      shared  buff/cache   available
+Mem:           905Mi       183Mi       127Mi       4.2Mi       670Mi       721Mi
+Swap:          904Mi          0B       904Mi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk0p2   59G  3.2G   53G   6% /
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.7
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+Debian clang version 19.1.7 (3+b1)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/lib/llvm-19/bin
+gcc (Debian 14.2.0-19) 14.2.0
+cmake version 3.31.6
+Python 3.13.5
+Revision	: a020d3
+Model		: Raspberry Pi 3 Model B Plus Rev 1.3
