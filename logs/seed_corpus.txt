@@ -1,0 +1,64 @@
+=== TOHUM KORPUSU 2026-09-15T16:16:24Z ===
+--- istemci->broker (mutasyon tohumlari) ---
+connect_01_5a48086c4358.bin                     14 bayt  5a48086c4358e8ef
+connect_02_2f647366f30f.bin                     18 bayt  2f647366f30f128a
+connect_03_8452acf5b899.bin                     23 bayt  8452acf5b8992d8e
+connect_03_8c7e410e60e2.bin                     24 bayt  8c7e410e60e2e0be
+connect_04_b5067b0c7e49.bin                     34 bayt  b5067b0c7e499fae
+connect_04_e5aa32d69820.bin                     18 bayt  e5aa32d698204155
+connect_05_16a97cd39091.bin                     14 bayt  16a97cd3909130d6
+connect_50_props_01_6b5adbc78f91.bin            29 bayt  6b5adbc78f91ccb2
+connect_50_props_02_59d4b7fd07a8.bin            47 bayt  59d4b7fd07a88d8e
+disconnect_01_be81fe4316df.bin                   2 bayt  be81fe4316df9b2c
+disconnect_02_1e52b5049dcf.bin                   3 bayt  1e52b5049dcf003d
+pingreq_01_e9aff84fdb69.bin                      2 bayt  e9aff84fdb699ca7
+puback_01_5bc47f506b6f.bin                       4 bayt  5bc47f506b6fc139
+pubcomp_01_67a8192d42b0.bin                      4 bayt  67a8192d42b07c2e
+publish_01_11e3891a562e.bin                     17 bayt  11e3891a562e2cc3
+publish_01_a925c2279f93.bin                     19 bayt  a925c2279f936198
+publish_02_e48adb5f0621.bin                     16 bayt  e48adb5f06218ad9
+publish_02_e4aba2fe7504.bin                     33 bayt  e4aba2fe750417ce
+publish_03_4506869a5cba.bin                     27 bayt  4506869a5cba63b4
+publish_03_ab7c1d4e2d96.bin                     16 bayt  ab7c1d4e2d966b53
+publish_04_21ccab2836e3.bin                     17 bayt  21ccab2836e326a5
+publish_04_fe53a6a0e5e4.bin                     28 bayt  fe53a6a0e5e410e5
+publish_05_43e9f5c3b416.bin                     13 bayt  43e9f5c3b4166310
+publish_05_7972a82e3c82.bin                     18 bayt  7972a82e3c82fe71
+publish_06_0e53a91963fe.bin                     16 bayt  0e53a91963fef061
+publish_06_ede2ec413007.bin                     17 bayt  ede2ec4130078604
+publish_07_094cb9c1c51a.bin                     17 bayt  094cb9c1c51a87c5
+publish_50_props_01_03805af25901.bin            38 bayt  03805af25901bd47
+publish_50_props_02_cfa548c8d2f4.bin            37 bayt  cfa548c8d2f4341e
+pubrec_01_bead22cc7099.bin                       4 bayt  bead22cc7099deea
+pubrel_01_bf569d2b39cd.bin                       4 bayt  bf569d2b39cdf198
+subscribe_01_9a4440bf6153.bin                   13 bayt  9a4440bf61538cec
+subscribe_01_ffe01d51ffa5.bin                   17 bayt  ffe01d51ffa51269
+subscribe_02_4f3aa65d96b8.bin                   12 bayt  4f3aa65d96b838ee
+subscribe_02_82c639a9e4b7.bin                   13 bayt  82c639a9e4b7dcf7
+subscribe_03_8b5d4ae0d68a.bin                   13 bayt  8b5d4ae0d68a2660
+subscribe_50_props_01_72e295acd3f0.bin          20 bayt  72e295acd3f01c21
+unsubscribe_311_01_4538eed025c1.bin             27 bayt  4538eed025c1e982
+unsubscribe_311_02_86935d5f4f66.bin             16 bayt  86935d5f4f66833c
+--- broker->istemci (O4 standart ihlali testleri) ---
+connack_01_b3e0adaf40f1.bin                      4 bayt  b3e0adaf40f19d19
+connack_02_6ac6c7fe5445.bin                     60 bayt  6ac6c7fe544576b8
+connack_02_76e8b58d644d.bin                     60 bayt  76e8b58d644d753d
+connack_03_96298cee4a45.bin                     60 bayt  96298cee4a45c6c6
+connack_04_7af53ac3555a.bin                     60 bayt  7af53ac3555a6ef0
+connack_05_bb7e10eccb5b.bin                     60 bayt  bb7e10eccb5b9bff
+connack_06_de7d1a0711af.bin                     60 bayt  de7d1a0711af5376
+connack_07_d5116a5d91b3.bin                     60 bayt  d5116a5d91b36291
+pingresp_01_683914de4c70.bin                     2 bayt  683914de4c707d21
+suback_01_7cc83629a65f.bin                       5 bayt  7cc83629a65fb45f
+suback_02_21f7314598e8.bin                       5 bayt  21f7314598e8b7fa
+suback_02_ce8a4917bdba.bin                       6 bayt  ce8a4917bdba7638
+
+=== KORPUS DOGRULAMA 2026-09-15T16:22:58Z ===
+39 istemci tohumu, uc brokerda mutasyonsuz gonderildi:
+  Mosquitto v2.1.2 : 21 yanitli, 18 sessiz, 0 HATA
+  NanoMQ 0.25.6    : 21 yanitli, 18 sessiz, 0 HATA
+  FlashMQ v1.27.1  : 21 yanitli, 18 sessiz, 0 HATA
+Uc broker ozdes sonuc verdi -> korpus gecerli.
+Not: FlashMQ yapilandirma dosyasi gerektiriyor (scripts/flashmq.conf).
+Not: v5 property tohumlari 3.1.1 CONNECT ile sessiz kaliyor; harness'ta
+     her tohuma uygun surumde CONNECT gonderilecek.
