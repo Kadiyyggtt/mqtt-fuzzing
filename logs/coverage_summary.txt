@@ -1,0 +1,18 @@
+=== Mosquitto gcov Coverage ===
+Tarih: Fri 18 Sep 19:04:19 +03 2026
+Seed sayısı: 39
+Reading tracefile /tmp/mosquitto_cov.info.
+Summary coverage rate:
+  source files: 95
+  lines.......: 19.2% (2388 of 12468 lines)
+  functions...: 40.2% (239 of 594 functions)
+Message summary:
+  no messages were reported
+FlashMQ v1.27.1 gcov Coverage:
+  lines: 3.8% (713/18599)
+  functions: 3.7% (488/13022)
+  source files: 197
+NanoMQ 0.25.6 gcov Coverage:
+  lines: 6.0% (2717/45415)
+  functions: 10.0% (355/3540)
+  source files: 137

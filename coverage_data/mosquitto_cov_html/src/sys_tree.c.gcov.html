@@ -1,0 +1,376 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Mosquitto v2.1.2 Coverage - Seed Corpus - src/sys_tree.c</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory src">src</a> - sys_tree.c<span style="font-size: 80%;"> (source / <a href="sys_tree.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Mosquitto v2.1.2 Coverage - Seed Corpus</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">96.1&nbsp;%</td>
+            <td class="headerCovTableEntry">77</td>
+            <td class="headerCovTableEntry">74</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2026-09-18 19:04:10</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryMed">83.3&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+                  <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span>              : /*</span>
+<span id="L2"><span class="lineNum">       2</span>              : Copyright (c) 2009-2021 Roger Light &lt;roger@atchoo.org&gt;</span>
+<span id="L3"><span class="lineNum">       3</span>              : </span>
+<span id="L4"><span class="lineNum">       4</span>              : All rights reserved. This program and the accompanying materials</span>
+<span id="L5"><span class="lineNum">       5</span>              : are made available under the terms of the Eclipse Public License 2.0</span>
+<span id="L6"><span class="lineNum">       6</span>              : and Eclipse Distribution License v1.0 which accompany this distribution.</span>
+<span id="L7"><span class="lineNum">       7</span>              : </span>
+<span id="L8"><span class="lineNum">       8</span>              : The Eclipse Public License is available at</span>
+<span id="L9"><span class="lineNum">       9</span>              :    https://www.eclipse.org/legal/epl-2.0/</span>
+<span id="L10"><span class="lineNum">      10</span>              : and the Eclipse Distribution License is available at</span>
+<span id="L11"><span class="lineNum">      11</span>              :   http://www.eclipse.org/org/documents/edl-v10.php.</span>
+<span id="L12"><span class="lineNum">      12</span>              : </span>
+<span id="L13"><span class="lineNum">      13</span>              : SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause</span>
+<span id="L14"><span class="lineNum">      14</span>              : </span>
+<span id="L15"><span class="lineNum">      15</span>              : Contributors:</span>
+<span id="L16"><span class="lineNum">      16</span>              :    Roger Light - initial implementation and documentation.</span>
+<span id="L17"><span class="lineNum">      17</span>              : */</span>
+<span id="L18"><span class="lineNum">      18</span>              : </span>
+<span id="L19"><span class="lineNum">      19</span>              : #ifdef WITH_SYS_TREE</span>
+<span id="L20"><span class="lineNum">      20</span>              : </span>
+<span id="L21"><span class="lineNum">      21</span>              : #include &quot;config.h&quot;</span>
+<span id="L22"><span class="lineNum">      22</span>              : </span>
+<span id="L23"><span class="lineNum">      23</span>              : #include &lt;math.h&gt;</span>
+<span id="L24"><span class="lineNum">      24</span>              : #include &lt;stdio.h&gt;</span>
+<span id="L25"><span class="lineNum">      25</span>              : #include &lt;inttypes.h&gt;</span>
+<span id="L26"><span class="lineNum">      26</span>              : #include &lt;limits.h&gt;</span>
+<span id="L27"><span class="lineNum">      27</span>              : #include &lt;inttypes.h&gt;</span>
+<span id="L28"><span class="lineNum">      28</span>              : </span>
+<span id="L29"><span class="lineNum">      29</span>              : #include &quot;mosquitto_broker_internal.h&quot;</span>
+<span id="L30"><span class="lineNum">      30</span>              : #include &quot;sys_tree.h&quot;</span>
+<span id="L31"><span class="lineNum">      31</span>              : </span>
+<span id="L32"><span class="lineNum">      32</span>              : #define BUFLEN 100</span>
+<span id="L33"><span class="lineNum">      33</span>              : </span>
+<span id="L34"><span class="lineNum">      34</span>              : #define SYS_TREE_QOS 2</span>
+<span id="L35"><span class="lineNum">      35</span>              : </span>
+<span id="L36"><span class="lineNum">      36</span>              : #define METRIC_LOAD_1MIN 1</span>
+<span id="L37"><span class="lineNum">      37</span>              : #define METRIC_LOAD_5MIN 2</span>
+<span id="L38"><span class="lineNum">      38</span>              : #define METRIC_LOAD_15MIN 3</span>
+<span id="L39"><span class="lineNum">      39</span>              : </span>
+<span id="L40"><span class="lineNum">      40</span>              : struct metric {</span>
+<span id="L41"><span class="lineNum">      41</span>              :         int64_t current;</span>
+<span id="L42"><span class="lineNum">      42</span>              :         int64_t next;</span>
+<span id="L43"><span class="lineNum">      43</span>              :         const char *topic, *topic_alias;</span>
+<span id="L44"><span class="lineNum">      44</span>              :         bool is_max;</span>
+<span id="L45"><span class="lineNum">      45</span>              : };</span>
+<span id="L46"><span class="lineNum">      46</span>              : </span>
+<span id="L47"><span class="lineNum">      47</span>              : struct metric_load {</span>
+<span id="L48"><span class="lineNum">      48</span>              :         double current;</span>
+<span id="L49"><span class="lineNum">      49</span>              :         const char *topic;</span>
+<span id="L50"><span class="lineNum">      50</span>              :         int load_ref;</span>
+<span id="L51"><span class="lineNum">      51</span>              :         uint8_t interval;</span>
+<span id="L52"><span class="lineNum">      52</span>              : };</span>
+<span id="L53"><span class="lineNum">      53</span>              : </span>
+<span id="L54"><span class="lineNum">      54</span>              : struct metric metrics[mosq_metric_max] = {</span>
+<span id="L55"><span class="lineNum">      55</span>              :         { 1, 0, &quot;$SYS/broker/clients/total&quot;, NULL, false }, /* mosq_gauge_clients_total */</span>
+<span id="L56"><span class="lineNum">      56</span>              :         { 1, 0, &quot;$SYS/broker/clients/maximum&quot;, NULL, true }, /* metric_clients_maximum */</span>
+<span id="L57"><span class="lineNum">      57</span>              :         { 1, 0, &quot;$SYS/broker/clients/disconnected&quot;, &quot;$SYS/broker/clients/inactive&quot;, false }, /* mosq_gauge_clients_disconnected */</span>
+<span id="L58"><span class="lineNum">      58</span>              :         { 1, 0, &quot;$SYS/broker/clients/connected&quot;, &quot;$SYS/broker/clients/active&quot;, false }, /* mosq_gauge_clients_connected */</span>
+<span id="L59"><span class="lineNum">      59</span>              :         { 1, 0, &quot;$SYS/broker/clients/expired&quot;, NULL, false }, /* mosq_counter_clients_expired */</span>
+<span id="L60"><span class="lineNum">      60</span>              :         { 1, 0, &quot;$SYS/broker/messages/stored&quot;, &quot;$SYS/broker/store/messages/count&quot;, false }, /* mosq_gauge_message_store_count */</span>
+<span id="L61"><span class="lineNum">      61</span>              :         { 1, 0, &quot;$SYS/broker/store/messages/bytes&quot;, NULL, false }, /* mosq_gauge_message_store_bytes */</span>
+<span id="L62"><span class="lineNum">      62</span>              :         { 1, 0, &quot;$SYS/broker/subscriptions/count&quot;, NULL, false }, /* mosq_gauge_subscription_count */</span>
+<span id="L63"><span class="lineNum">      63</span>              :         { 1, 0, &quot;$SYS/broker/shared_subscriptions/count&quot;, NULL, false }, /* mosq_gauge_shared_subscription_count */</span>
+<span id="L64"><span class="lineNum">      64</span>              :         { 1, 0, &quot;$SYS/broker/retained messages/count&quot;, NULL, false }, /* mosq_gauge_retained_message_count */</span>
+<span id="L65"><span class="lineNum">      65</span>              : #ifdef WITH_MEMORY_TRACKING</span>
+<span id="L66"><span class="lineNum">      66</span>              :         { 1, 0, &quot;$SYS/broker/heap/current&quot;, NULL, false }, /* mosq_gauge_heap_current */</span>
+<span id="L67"><span class="lineNum">      67</span>              :         { 1, 0, &quot;$SYS/broker/heap/maximum&quot;, NULL, true }, /* mosq_gauge_heap_maximum */</span>
+<span id="L68"><span class="lineNum">      68</span>              : #else</span>
+<span id="L69"><span class="lineNum">      69</span>              :         { 1, 0, NULL, NULL, 0 }, /* mosq_gauge_heap_current */</span>
+<span id="L70"><span class="lineNum">      70</span>              :         { 1, 0, NULL, NULL, 0 }, /* mosq_gauge_heap_maximum */</span>
+<span id="L71"><span class="lineNum">      71</span>              : #endif</span>
+<span id="L72"><span class="lineNum">      72</span>              :         { 1, 0, &quot;$SYS/broker/messages/received&quot;, NULL, false }, /* mosq_counter_messages_received */</span>
+<span id="L73"><span class="lineNum">      73</span>              :         { 1, 0, &quot;$SYS/broker/messages/sent&quot;, NULL, false }, /* mosq_counter_messages_sent */</span>
+<span id="L74"><span class="lineNum">      74</span>              :         { 1, 0, &quot;$SYS/broker/bytes/received&quot;, NULL, false }, /* mosq_counter_bytes_received */</span>
+<span id="L75"><span class="lineNum">      75</span>              :         { 1, 0, &quot;$SYS/broker/bytes/sent&quot;, NULL, false }, /* mosq_counter_bytes_sent */</span>
+<span id="L76"><span class="lineNum">      76</span>              :         { 1, 0, &quot;$SYS/broker/publish/bytes/received&quot;, NULL, false }, /* mosq_counter_pub_bytes_received */</span>
+<span id="L77"><span class="lineNum">      77</span>              :         { 1, 0, &quot;$SYS/broker/publish/bytes/sent&quot;, NULL, false }, /* mosq_counter_pub_bytes_sent */</span>
+<span id="L78"><span class="lineNum">      78</span>              :         { 1, 0, &quot;$SYS/broker/packet/out/count&quot;, NULL, false }, /* mosq_gauge_out_packet_count */</span>
+<span id="L79"><span class="lineNum">      79</span>              :         { 1, 0, &quot;$SYS/broker/packet/out/bytes&quot;, NULL, false }, /* mosq_gauge_out_packet_bytes */</span>
+<span id="L80"><span class="lineNum">      80</span>              :         { 1, 0, &quot;$SYS/broker/connections/socket/count&quot;, NULL, false }, /* mosq_counter_socket_connections */</span>
+<span id="L81"><span class="lineNum">      81</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_connect_received */</span>
+<span id="L82"><span class="lineNum">      82</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_connect_sent */</span>
+<span id="L83"><span class="lineNum">      83</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_connack_received */</span>
+<span id="L84"><span class="lineNum">      84</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_connack_sent */</span>
+<span id="L85"><span class="lineNum">      85</span>              :         { 1, 0, &quot;$SYS/broker/publish/messages/dropped&quot;, NULL, false }, /* mosq_counter_mqtt_publish_dropped */</span>
+<span id="L86"><span class="lineNum">      86</span>              :         { 1, 0, &quot;$SYS/broker/publish/messages/received&quot;, NULL, false }, /* mosq_counter_mqtt_publish_received */</span>
+<span id="L87"><span class="lineNum">      87</span>              :         { 1, 0, &quot;$SYS/broker/publish/messages/sent&quot;, NULL, false }, /* mosq_counter_mqtt_publish_sent */</span>
+<span id="L88"><span class="lineNum">      88</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_puback_received */</span>
+<span id="L89"><span class="lineNum">      89</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_puback_sent */</span>
+<span id="L90"><span class="lineNum">      90</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_pubrec_received */</span>
+<span id="L91"><span class="lineNum">      91</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_pubrec_sent */</span>
+<span id="L92"><span class="lineNum">      92</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_pubrel_received */</span>
+<span id="L93"><span class="lineNum">      93</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_pubrel_sent */</span>
+<span id="L94"><span class="lineNum">      94</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_pubcomp_received */</span>
+<span id="L95"><span class="lineNum">      95</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_pubcomp_sent */</span>
+<span id="L96"><span class="lineNum">      96</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_subscribe_received */</span>
+<span id="L97"><span class="lineNum">      97</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_subscribe_sent */</span>
+<span id="L98"><span class="lineNum">      98</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_suback_received */</span>
+<span id="L99"><span class="lineNum">      99</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_suback_sent */</span>
+<span id="L100"><span class="lineNum">     100</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_unsubscribe_received */</span>
+<span id="L101"><span class="lineNum">     101</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_unsubscribe_sent */</span>
+<span id="L102"><span class="lineNum">     102</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_unsuback_received */</span>
+<span id="L103"><span class="lineNum">     103</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_unsuback_sent */</span>
+<span id="L104"><span class="lineNum">     104</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_pingreq_received */</span>
+<span id="L105"><span class="lineNum">     105</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_pingreq_sent */</span>
+<span id="L106"><span class="lineNum">     106</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_pingresp_received */</span>
+<span id="L107"><span class="lineNum">     107</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_pingresp_sent */</span>
+<span id="L108"><span class="lineNum">     108</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_disconnect_received */</span>
+<span id="L109"><span class="lineNum">     109</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_disconnect_sent */</span>
+<span id="L110"><span class="lineNum">     110</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_auth_received */</span>
+<span id="L111"><span class="lineNum">     111</span>              :         { 1, 0, NULL, NULL, false }, /* mosq_counter_mqtt_auth_sent */</span>
+<span id="L112"><span class="lineNum">     112</span>              : };</span>
+<span id="L113"><span class="lineNum">     113</span>              : </span>
+<span id="L114"><span class="lineNum">     114</span>              : struct metric_load metric_loads[mosq_metric_load_max] = {</span>
+<span id="L115"><span class="lineNum">     115</span>              :         { 0.0, &quot;$SYS/broker/load/messages/received/1min&quot;, mosq_counter_messages_received, METRIC_LOAD_1MIN }, /* metric_load_messages_received_1min */</span>
+<span id="L116"><span class="lineNum">     116</span>              :         { 0.0, &quot;$SYS/broker/load/messages/received/5min&quot;, mosq_counter_messages_received, METRIC_LOAD_5MIN }, /* metric_load_messages_received_5min */</span>
+<span id="L117"><span class="lineNum">     117</span>              :         { 0.0, &quot;$SYS/broker/load/messages/received/15min&quot;, mosq_counter_messages_received, METRIC_LOAD_15MIN }, /* metric_load_messages_received_15min */</span>
+<span id="L118"><span class="lineNum">     118</span>              :         { 0.0, &quot;$SYS/broker/load/messages/sent/1min&quot;, mosq_counter_messages_sent, METRIC_LOAD_1MIN }, /* metric_load_messages_sent_1min */</span>
+<span id="L119"><span class="lineNum">     119</span>              :         { 0.0, &quot;$SYS/broker/load/messages/sent/5min&quot;, mosq_counter_messages_sent, METRIC_LOAD_5MIN }, /* metric_load_messages_sent_5min */</span>
+<span id="L120"><span class="lineNum">     120</span>              :         { 0.0, &quot;$SYS/broker/load/messages/sent/15min&quot;, mosq_counter_messages_sent, METRIC_LOAD_15MIN }, /* metric_load_messages_sent_15min */</span>
+<span id="L121"><span class="lineNum">     121</span>              :         { 0.0, &quot;$SYS/broker/load/publish/dropped/1min&quot;, mosq_counter_mqtt_publish_dropped, METRIC_LOAD_1MIN }, /* metric_load_pub_messages_dropped_1min */</span>
+<span id="L122"><span class="lineNum">     122</span>              :         { 0.0, &quot;$SYS/broker/load/publish/dropped/5min&quot;, mosq_counter_mqtt_publish_dropped, METRIC_LOAD_5MIN }, /* metric_load_pub_messages_dropped_5min */</span>
+<span id="L123"><span class="lineNum">     123</span>              :         { 0.0, &quot;$SYS/broker/load/publish/dropped/15min&quot;, mosq_counter_mqtt_publish_dropped, METRIC_LOAD_15MIN }, /* metric_load_pub_messages_dropped_15min */</span>
+<span id="L124"><span class="lineNum">     124</span>              :         { 0.0, &quot;$SYS/broker/load/publish/received/1min&quot;, mosq_counter_mqtt_publish_received, METRIC_LOAD_1MIN }, /* metric_load_pub_messages_received_1min */</span>
+<span id="L125"><span class="lineNum">     125</span>              :         { 0.0, &quot;$SYS/broker/load/publish/received/5min&quot;, mosq_counter_mqtt_publish_received, METRIC_LOAD_5MIN }, /* metric_load_pub_messages_received_5min */</span>
+<span id="L126"><span class="lineNum">     126</span>              :         { 0.0, &quot;$SYS/broker/load/publish/received/15min&quot;, mosq_counter_mqtt_publish_received, METRIC_LOAD_15MIN }, /* metric_load_pub_messages_received_15min */</span>
+<span id="L127"><span class="lineNum">     127</span>              :         { 0.0, &quot;$SYS/broker/load/publish/sent/1min&quot;, mosq_counter_mqtt_publish_sent, METRIC_LOAD_1MIN }, /* metric_load_pub_messages_sent_1min */</span>
+<span id="L128"><span class="lineNum">     128</span>              :         { 0.0, &quot;$SYS/broker/load/publish/sent/5min&quot;, mosq_counter_mqtt_publish_sent, METRIC_LOAD_5MIN }, /* metric_load_pub_messages_sent_5min */</span>
+<span id="L129"><span class="lineNum">     129</span>              :         { 0.0, &quot;$SYS/broker/load/publish/sent/15min&quot;, mosq_counter_mqtt_publish_sent, METRIC_LOAD_15MIN }, /* metric_load_pub_messages_sent_15min */</span>
+<span id="L130"><span class="lineNum">     130</span>              :         { 0.0, &quot;$SYS/broker/load/bytes/received/1min&quot;, mosq_counter_bytes_received, METRIC_LOAD_1MIN }, /* metric_load_bytes_received_1min */</span>
+<span id="L131"><span class="lineNum">     131</span>              :         { 0.0, &quot;$SYS/broker/load/bytes/received/5min&quot;, mosq_counter_bytes_received, METRIC_LOAD_5MIN }, /* metric_load_bytes_received_5min */</span>
+<span id="L132"><span class="lineNum">     132</span>              :         { 0.0, &quot;$SYS/broker/load/bytes/received/15min&quot;, mosq_counter_bytes_received, METRIC_LOAD_15MIN }, /* metric_load_bytes_received_15min */</span>
+<span id="L133"><span class="lineNum">     133</span>              :         { 0.0, &quot;$SYS/broker/load/bytes/sent/1min&quot;, mosq_counter_bytes_sent, METRIC_LOAD_1MIN }, /* metric_load_bytes_sent_1min */</span>
+<span id="L134"><span class="lineNum">     134</span>              :         { 0.0, &quot;$SYS/broker/load/bytes/sent/5min&quot;, mosq_counter_bytes_sent, METRIC_LOAD_5MIN }, /* metric_load_bytes_sent_5min */</span>
+<span id="L135"><span class="lineNum">     135</span>              :         { 0.0, &quot;$SYS/broker/load/bytes/sent/15min&quot;, mosq_counter_bytes_sent, METRIC_LOAD_15MIN }, /* metric_load_bytes_sent_15min */</span>
+<span id="L136"><span class="lineNum">     136</span>              :         { 0.0, &quot;$SYS/broker/load/sockets/1min&quot;, mosq_counter_socket_connections, METRIC_LOAD_1MIN }, /* metric_load_socket_connections_1min */</span>
+<span id="L137"><span class="lineNum">     137</span>              :         { 0.0, &quot;$SYS/broker/load/sockets/5min&quot;, mosq_counter_socket_connections, METRIC_LOAD_5MIN }, /* metric_load_socket_connections_5min */</span>
+<span id="L138"><span class="lineNum">     138</span>              :         { 0.0, &quot;$SYS/broker/load/sockets/15min&quot;, mosq_counter_socket_connections, METRIC_LOAD_15MIN }, /* metric_load_socket_connections_15min */</span>
+<span id="L139"><span class="lineNum">     139</span>              :         { 0.0, &quot;$SYS/broker/load/connections/1min&quot;, mosq_counter_mqtt_connect_received, METRIC_LOAD_1MIN }, /* metric_load_connections_1min */</span>
+<span id="L140"><span class="lineNum">     140</span>              :         { 0.0, &quot;$SYS/broker/load/connections/5min&quot;, mosq_counter_mqtt_connect_received, METRIC_LOAD_5MIN }, /* metric_load_connections_5min */</span>
+<span id="L141"><span class="lineNum">     141</span>              :         { 0.0, &quot;$SYS/broker/load/connections/15min&quot;, mosq_counter_mqtt_connect_received, METRIC_LOAD_15MIN }, /* metric_load_connections_15min */</span>
+<span id="L142"><span class="lineNum">     142</span>              : };</span>
+<span id="L143"><span class="lineNum">     143</span>              : </span>
+<span id="L144"><span class="lineNum">     144</span>              : static time_t start_time = 0;</span>
+<span id="L145"><span class="lineNum">     145</span>              : static time_t last_update = 0;</span>
+<span id="L146"><span class="lineNum">     146</span>              : </span>
+<span id="L147"><span class="lineNum">     147</span>              : </span>
+<span id="L148"><span class="lineNum">     148</span> <span class="tlaUNC">           0 : time_t broker_uptime(void)</span></span>
+<span id="L149"><span class="lineNum">     149</span>              : {</span>
+<span id="L150"><span class="lineNum">     150</span> <span class="tlaUNC">           0 :         return db.now_s - start_time;</span></span>
+<span id="L151"><span class="lineNum">     151</span>              : }</span>
+<span id="L152"><span class="lineNum">     152</span>              : </span>
+<span id="L153"><span class="lineNum">     153</span>              : </span>
+<span id="L154"><span class="lineNum">     154</span> <span class="tlaGNC">        1188 : static void calc_load(char *buf, double exponent, double i_mult, struct metric_load *m, bool force)</span></span>
+<span id="L155"><span class="lineNum">     155</span>              : {</span>
+<span id="L156"><span class="lineNum">     156</span>              :         double new_value;</span>
+<span id="L157"><span class="lineNum">     157</span>              :         uint32_t len;</span>
+<span id="L158"><span class="lineNum">     158</span>              :         double interval;</span>
+<span id="L159"><span class="lineNum">     159</span>              : </span>
+<span id="L160"><span class="lineNum">     160</span> <span class="tlaGNC">        1188 :         interval = (double)(metrics[m-&gt;load_ref].next - metrics[m-&gt;load_ref].current)*i_mult;</span></span>
+<span id="L161"><span class="lineNum">     161</span> <span class="tlaGNC">        1188 :         new_value = interval + exponent*(m-&gt;current - interval);</span></span>
+<span id="L162"><span class="lineNum">     162</span> <span class="tlaGNC">        1188 :         if(fabs(new_value - (m-&gt;current)) &gt;= 0.01 || force){</span></span>
+<span id="L163"><span class="lineNum">     163</span> <span class="tlaGNC">        1068 :                 len = (uint32_t)snprintf(buf, BUFLEN, &quot;%.2f&quot;, new_value);</span></span>
+<span id="L164"><span class="lineNum">     164</span> <span class="tlaGNC">        1068 :                 db__messages_easy_queue(NULL, m-&gt;topic, SYS_TREE_QOS, len, buf, 1, MSG_EXPIRY_INFINITE, NULL);</span></span>
+<span id="L165"><span class="lineNum">     165</span>              :         }</span>
+<span id="L166"><span class="lineNum">     166</span> <span class="tlaGNC">        1188 :         m-&gt;current = new_value;</span></span>
+<span id="L167"><span class="lineNum">     167</span> <span class="tlaGNC">        1188 : }</span></span>
+<span id="L168"><span class="lineNum">     168</span>              : </span>
+<span id="L169"><span class="lineNum">     169</span>              : </span>
+<span id="L170"><span class="lineNum">     170</span> <span class="tlaGNC">          39 : void sys_tree__init(void)</span></span>
+<span id="L171"><span class="lineNum">     171</span>              : {</span>
+<span id="L172"><span class="lineNum">     172</span>              :         char buf[BUFLEN];</span>
+<span id="L173"><span class="lineNum">     173</span>              :         uint32_t len;</span>
+<span id="L174"><span class="lineNum">     174</span>              : </span>
+<span id="L175"><span class="lineNum">     175</span> <span class="tlaGNC">          39 :         if(db.config-&gt;sys_interval == 0){</span></span>
+<span id="L176"><span class="lineNum">     176</span> <span class="tlaUNC">           0 :                 return;</span></span>
+<span id="L177"><span class="lineNum">     177</span>              :         }</span>
+<span id="L178"><span class="lineNum">     178</span>              : </span>
+<span id="L179"><span class="lineNum">     179</span>              :         /* Set static $SYS messages */</span>
+<span id="L180"><span class="lineNum">     180</span> <span class="tlaGNC">          39 :         len = (uint32_t)snprintf(buf, 64, &quot;mosquitto version %s&quot;, VERSION);</span></span>
+<span id="L181"><span class="lineNum">     181</span> <span class="tlaGNC">          39 :         db__messages_easy_queue(NULL, &quot;$SYS/broker/version&quot;, SYS_TREE_QOS, len, buf, 1, MSG_EXPIRY_INFINITE, NULL);</span></span>
+<span id="L182"><span class="lineNum">     182</span>              : </span>
+<span id="L183"><span class="lineNum">     183</span> <span class="tlaGNC">          39 :         start_time = mosquitto_time();</span></span>
+<span id="L184"><span class="lineNum">     184</span> <span class="tlaGNC">          39 :         last_update = start_time;</span></span>
+<span id="L185"><span class="lineNum">     185</span>              : </span>
+<span id="L186"><span class="lineNum">     186</span> <span class="tlaGNC">          39 :         sys_tree__update(true);</span></span>
+<span id="L187"><span class="lineNum">     187</span>              : </span>
+<span id="L188"><span class="lineNum">     188</span>              :         /* Force published load values to 0 */</span>
+<span id="L189"><span class="lineNum">     189</span> <span class="tlaGNC">        1092 :         for(int i=0; i&lt;mosq_metric_load_max; i++){</span></span>
+<span id="L190"><span class="lineNum">     190</span> <span class="tlaGNC">        1053 :                 if(metric_loads[i].interval == METRIC_LOAD_1MIN){</span></span>
+<span id="L191"><span class="lineNum">     191</span> <span class="tlaGNC">         351 :                         calc_load(buf, 0.0, 0.0, &amp;metric_loads[i], true);</span></span>
+<span id="L192"><span class="lineNum">     192</span> <span class="tlaGNC">         702 :                 }else if(metric_loads[i].interval == METRIC_LOAD_5MIN){</span></span>
+<span id="L193"><span class="lineNum">     193</span> <span class="tlaGNC">         351 :                         calc_load(buf, 0.0, 0.0, &amp;metric_loads[i], true);</span></span>
+<span id="L194"><span class="lineNum">     194</span>              :                 }else{</span>
+<span id="L195"><span class="lineNum">     195</span> <span class="tlaGNC">         351 :                         calc_load(buf, 0.0, 0.0, &amp;metric_loads[i], true);</span></span>
+<span id="L196"><span class="lineNum">     196</span>              :                 }</span>
+<span id="L197"><span class="lineNum">     197</span>              :         }</span>
+<span id="L198"><span class="lineNum">     198</span>              : }</span>
+<span id="L199"><span class="lineNum">     199</span>              : </span>
+<span id="L200"><span class="lineNum">     200</span>              : </span>
+<span id="L201"><span class="lineNum">     201</span> <span class="tlaGNC">         141 : void metrics__int_inc(enum mosq_metric_type m, int64_t value)</span></span>
+<span id="L202"><span class="lineNum">     202</span>              : {</span>
+<span id="L203"><span class="lineNum">     203</span> <span class="tlaGNC">         141 :         if(m &lt; mosq_metric_max){</span></span>
+<span id="L204"><span class="lineNum">     204</span> <span class="tlaGNC">         141 :                 metrics[m].next += value;</span></span>
+<span id="L205"><span class="lineNum">     205</span>              :         }</span>
+<span id="L206"><span class="lineNum">     206</span> <span class="tlaGNC">         141 : }</span></span>
+<span id="L207"><span class="lineNum">     207</span>              : </span>
+<span id="L208"><span class="lineNum">     208</span>              : </span>
+<span id="L209"><span class="lineNum">     209</span> <span class="tlaGNC">         252 : void metrics__int_dec(enum mosq_metric_type m, int64_t value)</span></span>
+<span id="L210"><span class="lineNum">     210</span>              : {</span>
+<span id="L211"><span class="lineNum">     211</span> <span class="tlaGNC">         252 :         if(m &lt; mosq_metric_max){</span></span>
+<span id="L212"><span class="lineNum">     212</span> <span class="tlaGNC">         252 :                 metrics[m].next -= value;</span></span>
+<span id="L213"><span class="lineNum">     213</span>              :         }</span>
+<span id="L214"><span class="lineNum">     214</span> <span class="tlaGNC">         252 : }</span></span>
+<span id="L215"><span class="lineNum">     215</span>              : </span>
+<span id="L216"><span class="lineNum">     216</span>              : </span>
+<span id="L217"><span class="lineNum">     217</span>              : /* Send messages for the $SYS hierarchy if the last update is longer than</span>
+<span id="L218"><span class="lineNum">     218</span>              :  * 'interval' seconds ago.</span>
+<span id="L219"><span class="lineNum">     219</span>              :  * 'interval' is the amount of seconds between updates. If 0, then no periodic</span>
+<span id="L220"><span class="lineNum">     220</span>              :  * messages are sent for the $SYS hierarchy.</span>
+<span id="L221"><span class="lineNum">     221</span>              :  * 'start_time' is the result of time() that the broker was started at.</span>
+<span id="L222"><span class="lineNum">     222</span>              :  */</span>
+<span id="L223"><span class="lineNum">     223</span> <span class="tlaGNC">         169 : void sys_tree__update(bool force)</span></span>
+<span id="L224"><span class="lineNum">     224</span>              : {</span>
+<span id="L225"><span class="lineNum">     225</span>              :         time_t uptime;</span>
+<span id="L226"><span class="lineNum">     226</span>              :         char buf[BUFLEN];</span>
+<span id="L227"><span class="lineNum">     227</span>              :         uint32_t len;</span>
+<span id="L228"><span class="lineNum">     228</span>              :         time_t next_event;</span>
+<span id="L229"><span class="lineNum">     229</span>              :         static time_t last_update_real = 0;</span>
+<span id="L230"><span class="lineNum">     230</span>              : </span>
+<span id="L231"><span class="lineNum">     231</span> <span class="tlaGNC">         169 :         if(db.config-&gt;sys_interval){</span></span>
+<span id="L232"><span class="lineNum">     232</span> <span class="tlaGNC">         169 :                 next_event = db.config-&gt;sys_interval - db.now_real_s % db.config-&gt;sys_interval - 1;</span></span>
+<span id="L233"><span class="lineNum">     233</span> <span class="tlaGNC">         169 :                 if(next_event &lt;= 0){</span></span>
+<span id="L234"><span class="lineNum">     234</span> <span class="tlaGNC">          25 :                         next_event = db.config-&gt;sys_interval;</span></span>
+<span id="L235"><span class="lineNum">     235</span>              :                 }</span>
+<span id="L236"><span class="lineNum">     236</span> <span class="tlaGNC">         169 :                 loop__update_next_event(next_event*1000);</span></span>
+<span id="L237"><span class="lineNum">     237</span>              :         }</span>
+<span id="L238"><span class="lineNum">     238</span>              : </span>
+<span id="L239"><span class="lineNum">     239</span> <span class="tlaGNC">         169 :         if(db.config-&gt;sys_interval</span></span>
+<span id="L240"><span class="lineNum">     240</span> <span class="tlaGNC">         169 :                         &amp;&amp; ((db.now_real_s % db.config-&gt;sys_interval == 0 &amp;&amp; last_update_real != db.now_real_s) || force)){</span></span>
+<span id="L241"><span class="lineNum">     241</span>              : </span>
+<span id="L242"><span class="lineNum">     242</span> <span class="tlaGNC">          44 :                 uptime = db.now_s - start_time;</span></span>
+<span id="L243"><span class="lineNum">     243</span> <span class="tlaGNC">          44 :                 len = (uint32_t)snprintf(buf, BUFLEN, &quot;%&quot; PRIu64 &quot; seconds&quot;, (uint64_t)uptime);</span></span>
+<span id="L244"><span class="lineNum">     244</span> <span class="tlaGNC">          44 :                 db__messages_easy_queue(NULL, &quot;$SYS/broker/uptime&quot;, SYS_TREE_QOS, len, buf, 1, MSG_EXPIRY_INFINITE, NULL);</span></span>
+<span id="L245"><span class="lineNum">     245</span>              : </span>
+<span id="L246"><span class="lineNum">     246</span>              :                 /*  Update metrics values where not otherwise updated */</span>
+<span id="L247"><span class="lineNum">     247</span> <span class="tlaGNC">          44 :                 metrics[mosq_gauge_message_store_count].next = db.msg_store_count;</span></span>
+<span id="L248"><span class="lineNum">     248</span> <span class="tlaGNC">          44 :                 metrics[mosq_gauge_message_store_bytes].next = (int64_t)db.msg_store_bytes;</span></span>
+<span id="L249"><span class="lineNum">     249</span> <span class="tlaGNC">          44 :                 metrics[mosq_gauge_subscriptions].next = db.subscription_count;</span></span>
+<span id="L250"><span class="lineNum">     250</span> <span class="tlaGNC">          44 :                 metrics[mosq_gauge_shared_subscriptions].next = db.shared_subscription_count;</span></span>
+<span id="L251"><span class="lineNum">     251</span> <span class="tlaGNC">          44 :                 metrics[mosq_gauge_retained_messages].next = db.retained_count;</span></span>
+<span id="L252"><span class="lineNum">     252</span>              : #ifdef WITH_MEMORY_TRACKING</span>
+<span id="L253"><span class="lineNum">     253</span> <span class="tlaGNC">          44 :                 metrics[mosq_gauge_heap_current].next = (int64_t)mosquitto_memory_used();</span></span>
+<span id="L254"><span class="lineNum">     254</span> <span class="tlaGNC">          44 :                 metrics[mosq_counter_heap_maximum].next = (int64_t)mosquitto_max_memory_used();</span></span>
+<span id="L255"><span class="lineNum">     255</span>              : #endif</span>
+<span id="L256"><span class="lineNum">     256</span> <span class="tlaGNC">          44 :                 metrics[mosq_gauge_clients_total].next = HASH_CNT(hh_id, db.contexts_by_id);</span></span>
+<span id="L257"><span class="lineNum">     257</span> <span class="tlaGNC">          44 :                 metrics[mosq_counter_clients_maximum].next = HASH_CNT(hh_id, db.contexts_by_id);</span></span>
+<span id="L258"><span class="lineNum">     258</span> <span class="tlaGNC">          44 :                 metrics[mosq_gauge_clients_connected].next = HASH_CNT(hh_sock, db.contexts_by_sock);</span></span>
+<span id="L259"><span class="lineNum">     259</span> <span class="tlaGNC">          44 :                 metrics[mosq_gauge_clients_disconnected].next = HASH_CNT(hh_id, db.contexts_by_id) - HASH_CNT(hh_sock, db.contexts_by_sock);</span></span>
+<span id="L260"><span class="lineNum">     260</span>              : </span>
+<span id="L261"><span class="lineNum">     261</span>              :                 /* Handle loads first, because they reference other metrics and need next != current */</span>
+<span id="L262"><span class="lineNum">     262</span> <span class="tlaGNC">          44 :                 if(db.now_s &gt; last_update){</span></span>
+<span id="L263"><span class="lineNum">     263</span> <span class="tlaGNC">           5 :                         double i_mult = 60.0/(double)(db.now_s-last_update);</span></span>
+<span id="L264"><span class="lineNum">     264</span>              : </span>
+<span id="L265"><span class="lineNum">     265</span> <span class="tlaGNC">           5 :                         double exponent_1min = exp(-1.0*(double)(db.now_s-last_update)/60.0);</span></span>
+<span id="L266"><span class="lineNum">     266</span> <span class="tlaGNC">           5 :                         double exponent_5min = exp(-1.0*(double)(db.now_s-last_update)/300.0);</span></span>
+<span id="L267"><span class="lineNum">     267</span> <span class="tlaGNC">           5 :                         double exponent_15min = exp(-1.0*(double)(db.now_s-last_update)/900.0);</span></span>
+<span id="L268"><span class="lineNum">     268</span>              : </span>
+<span id="L269"><span class="lineNum">     269</span> <span class="tlaGNC">         140 :                         for(int i=0; i&lt;mosq_metric_load_max; i++){</span></span>
+<span id="L270"><span class="lineNum">     270</span> <span class="tlaGNC">         135 :                                 if(metric_loads[i].interval == METRIC_LOAD_1MIN){</span></span>
+<span id="L271"><span class="lineNum">     271</span> <span class="tlaGNC">          45 :                                         calc_load(buf, exponent_1min, i_mult, &amp;metric_loads[i], false);</span></span>
+<span id="L272"><span class="lineNum">     272</span> <span class="tlaGNC">          90 :                                 }else if(metric_loads[i].interval == METRIC_LOAD_5MIN){</span></span>
+<span id="L273"><span class="lineNum">     273</span> <span class="tlaGNC">          45 :                                         calc_load(buf, exponent_5min, i_mult, &amp;metric_loads[i], false);</span></span>
+<span id="L274"><span class="lineNum">     274</span>              :                                 }else{</span>
+<span id="L275"><span class="lineNum">     275</span> <span class="tlaGNC">          45 :                                         calc_load(buf, exponent_15min, i_mult, &amp;metric_loads[i], false);</span></span>
+<span id="L276"><span class="lineNum">     276</span>              :                                 }</span>
+<span id="L277"><span class="lineNum">     277</span>              :                         }</span>
+<span id="L278"><span class="lineNum">     278</span>              :                 }</span>
+<span id="L279"><span class="lineNum">     279</span>              : </span>
+<span id="L280"><span class="lineNum">     280</span> <span class="tlaGNC">        2332 :                 for(int i=0; i&lt;mosq_metric_max; i++){</span></span>
+<span id="L281"><span class="lineNum">     281</span> <span class="tlaGNC">        2288 :                         if((metrics[i].is_max &amp;&amp; metrics[i].next &gt; metrics[i].current) ||</span></span>
+<span id="L282"><span class="lineNum">     282</span> <span class="tlaGNC">        2244 :                                         (!metrics[i].is_max &amp;&amp; metrics[i].next != metrics[i].current)){</span></span>
+<span id="L283"><span class="lineNum">     283</span>              : </span>
+<span id="L284"><span class="lineNum">     284</span> <span class="tlaGNC">        2029 :                                 metrics[i].current = metrics[i].next;</span></span>
+<span id="L285"><span class="lineNum">     285</span> <span class="tlaGNC">        2029 :                                 len = (uint32_t)snprintf(buf, BUFLEN, &quot;%lu&quot;, metrics[i].current);</span></span>
+<span id="L286"><span class="lineNum">     286</span> <span class="tlaGNC">        2029 :                                 if(metrics[i].topic){</span></span>
+<span id="L287"><span class="lineNum">     287</span> <span class="tlaGNC">         937 :                                         db__messages_easy_queue(NULL, metrics[i].topic, SYS_TREE_QOS, len, buf, 1, MSG_EXPIRY_INFINITE, NULL);</span></span>
+<span id="L288"><span class="lineNum">     288</span>              :                                 }</span>
+<span id="L289"><span class="lineNum">     289</span> <span class="tlaGNC">        2029 :                                 if(metrics[i].topic_alias){</span></span>
+<span id="L290"><span class="lineNum">     290</span> <span class="tlaGNC">         132 :                                         db__messages_easy_queue(NULL, metrics[i].topic_alias, SYS_TREE_QOS, len, buf, 1, MSG_EXPIRY_INFINITE, NULL);</span></span>
+<span id="L291"><span class="lineNum">     291</span>              :                                 }</span>
+<span id="L292"><span class="lineNum">     292</span>              :                         }</span>
+<span id="L293"><span class="lineNum">     293</span>              :                 }</span>
+<span id="L294"><span class="lineNum">     294</span>              : </span>
+<span id="L295"><span class="lineNum">     295</span> <span class="tlaGNC">          44 :                 last_update = db.now_s;</span></span>
+<span id="L296"><span class="lineNum">     296</span> <span class="tlaGNC">          44 :                 last_update_real = db.now_real_s;</span></span>
+<span id="L297"><span class="lineNum">     297</span>              :         }</span>
+<span id="L298"><span class="lineNum">     298</span> <span class="tlaGNC">         169 : }</span></span>
+<span id="L299"><span class="lineNum">     299</span>              : </span>
+<span id="L300"><span class="lineNum">     300</span>              : #endif</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.0-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

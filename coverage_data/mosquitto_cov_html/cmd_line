@@ -1,0 +1,1 @@
+genhtml /tmp/mosquitto_cov.info --output-directory /tmp/mosquitto_cov_html/ --title 'Mosquitto v2.1.2 Coverage - Seed Corpus'

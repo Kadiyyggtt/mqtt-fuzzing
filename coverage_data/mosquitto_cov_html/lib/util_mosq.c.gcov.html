@@ -1,0 +1,362 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Mosquitto v2.1.2 Coverage - Seed Corpus - lib/util_mosq.c</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory lib">lib</a> - util_mosq.c<span style="font-size: 80%;"> (source / <a href="util_mosq.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Mosquitto v2.1.2 Coverage - Seed Corpus</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">13.5&nbsp;%</td>
+            <td class="headerCovTableEntry">52</td>
+            <td class="headerCovTableEntry">7</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2026-09-18 19:04:10</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryLo">25.0&nbsp;%</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+                  <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span>              : /*</span>
+<span id="L2"><span class="lineNum">       2</span>              : Copyright (c) 2009-2021 Roger Light &lt;roger@atchoo.org&gt;</span>
+<span id="L3"><span class="lineNum">       3</span>              : </span>
+<span id="L4"><span class="lineNum">       4</span>              : All rights reserved. This program and the accompanying materials</span>
+<span id="L5"><span class="lineNum">       5</span>              : are made available under the terms of the Eclipse Public License 2.0</span>
+<span id="L6"><span class="lineNum">       6</span>              : and Eclipse Distribution License v1.0 which accompany this distribution.</span>
+<span id="L7"><span class="lineNum">       7</span>              : </span>
+<span id="L8"><span class="lineNum">       8</span>              : The Eclipse Public License is available at</span>
+<span id="L9"><span class="lineNum">       9</span>              :    https://www.eclipse.org/legal/epl-2.0/</span>
+<span id="L10"><span class="lineNum">      10</span>              : and the Eclipse Distribution License is available at</span>
+<span id="L11"><span class="lineNum">      11</span>              :   http://www.eclipse.org/org/documents/edl-v10.php.</span>
+<span id="L12"><span class="lineNum">      12</span>              : </span>
+<span id="L13"><span class="lineNum">      13</span>              : SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause</span>
+<span id="L14"><span class="lineNum">      14</span>              : </span>
+<span id="L15"><span class="lineNum">      15</span>              : Contributors:</span>
+<span id="L16"><span class="lineNum">      16</span>              :    Roger Light - initial implementation and documentation.</span>
+<span id="L17"><span class="lineNum">      17</span>              : */</span>
+<span id="L18"><span class="lineNum">      18</span>              : </span>
+<span id="L19"><span class="lineNum">      19</span>              : #include &quot;config.h&quot;</span>
+<span id="L20"><span class="lineNum">      20</span>              : </span>
+<span id="L21"><span class="lineNum">      21</span>              : #include &lt;assert.h&gt;</span>
+<span id="L22"><span class="lineNum">      22</span>              : #include &lt;ctype.h&gt;</span>
+<span id="L23"><span class="lineNum">      23</span>              : #include &lt;string.h&gt;</span>
+<span id="L24"><span class="lineNum">      24</span>              : </span>
+<span id="L25"><span class="lineNum">      25</span>              : #ifdef WIN32</span>
+<span id="L26"><span class="lineNum">      26</span>              : #  include &lt;winsock2.h&gt;</span>
+<span id="L27"><span class="lineNum">      27</span>              : #  include &lt;aclapi.h&gt;</span>
+<span id="L28"><span class="lineNum">      28</span>              : #  include &lt;io.h&gt;</span>
+<span id="L29"><span class="lineNum">      29</span>              : #  include &lt;lmcons.h&gt;</span>
+<span id="L30"><span class="lineNum">      30</span>              : #else</span>
+<span id="L31"><span class="lineNum">      31</span>              : #  include &lt;sys/stat.h&gt;</span>
+<span id="L32"><span class="lineNum">      32</span>              : #endif</span>
+<span id="L33"><span class="lineNum">      33</span>              : </span>
+<span id="L34"><span class="lineNum">      34</span>              : #ifdef WITH_TLS</span>
+<span id="L35"><span class="lineNum">      35</span>              : #  include &lt;openssl/bn.h&gt;</span>
+<span id="L36"><span class="lineNum">      36</span>              : #endif</span>
+<span id="L37"><span class="lineNum">      37</span>              : </span>
+<span id="L38"><span class="lineNum">      38</span>              : #ifdef WITH_BROKER</span>
+<span id="L39"><span class="lineNum">      39</span>              : #include &quot;mosquitto_broker_internal.h&quot;</span>
+<span id="L40"><span class="lineNum">      40</span>              : #else</span>
+<span id="L41"><span class="lineNum">      41</span>              : #  include &quot;callbacks.h&quot;</span>
+<span id="L42"><span class="lineNum">      42</span>              : #endif</span>
+<span id="L43"><span class="lineNum">      43</span>              : </span>
+<span id="L44"><span class="lineNum">      44</span>              : #include &quot;mosquitto.h&quot;</span>
+<span id="L45"><span class="lineNum">      45</span>              : #include &quot;net_mosq.h&quot;</span>
+<span id="L46"><span class="lineNum">      46</span>              : #include &quot;send_mosq.h&quot;</span>
+<span id="L47"><span class="lineNum">      47</span>              : #include &quot;tls_mosq.h&quot;</span>
+<span id="L48"><span class="lineNum">      48</span>              : #include &quot;util_mosq.h&quot;</span>
+<span id="L49"><span class="lineNum">      49</span>              : </span>
+<span id="L50"><span class="lineNum">      50</span>              : #if defined(WITH_WEBSOCKETS) &amp;&amp; WITH_WEBSOCKETS == WS_IS_LWS</span>
+<span id="L51"><span class="lineNum">      51</span>              : #include &lt;libwebsockets.h&gt;</span>
+<span id="L52"><span class="lineNum">      52</span>              : #endif</span>
+<span id="L53"><span class="lineNum">      53</span>              : </span>
+<span id="L54"><span class="lineNum">      54</span>              : </span>
+<span id="L55"><span class="lineNum">      55</span> <span class="tlaUNC">           0 : int mosquitto__check_keepalive(struct mosquitto *mosq)</span></span>
+<span id="L56"><span class="lineNum">      56</span>              : {</span>
+<span id="L57"><span class="lineNum">      57</span>              :         time_t next_msg_out;</span>
+<span id="L58"><span class="lineNum">      58</span>              :         time_t last_msg_in;</span>
+<span id="L59"><span class="lineNum">      59</span>              :         time_t now;</span>
+<span id="L60"><span class="lineNum">      60</span>              : #ifndef WITH_BROKER</span>
+<span id="L61"><span class="lineNum">      61</span>              :         int rc;</span>
+<span id="L62"><span class="lineNum">      62</span>              : #endif</span>
+<span id="L63"><span class="lineNum">      63</span>              :         enum mosquitto_client_state state;</span>
+<span id="L64"><span class="lineNum">      64</span>              : </span>
+<span id="L65"><span class="lineNum">      65</span> <span class="tlaUNC">           0 :         assert(mosq);</span></span>
+<span id="L66"><span class="lineNum">      66</span>              : #ifdef WITH_BROKER</span>
+<span id="L67"><span class="lineNum">      67</span> <span class="tlaUNC">           0 :         now = db.now_s;</span></span>
+<span id="L68"><span class="lineNum">      68</span>              : #else</span>
+<span id="L69"><span class="lineNum">      69</span>              :         now = mosquitto_time();</span>
+<span id="L70"><span class="lineNum">      70</span>              : #endif</span>
+<span id="L71"><span class="lineNum">      71</span>              : </span>
+<span id="L72"><span class="lineNum">      72</span>              : #if defined(WITH_BROKER) &amp;&amp; defined(WITH_BRIDGE)</span>
+<span id="L73"><span class="lineNum">      73</span>              :         /* Check if a lazy bridge should be timed out due to idle. */</span>
+<span id="L74"><span class="lineNum">      74</span> <span class="tlaUNC">           0 :         if(mosq-&gt;bridge &amp;&amp; mosq-&gt;bridge-&gt;start_type == bst_lazy</span></span>
+<span id="L75"><span class="lineNum">      75</span> <span class="tlaUNC">           0 :                         &amp;&amp; net__is_connected(mosq)</span></span>
+<span id="L76"><span class="lineNum">      76</span> <span class="tlaUNC">           0 :                         &amp;&amp; now - mosq-&gt;next_msg_out - mosq-&gt;keepalive &gt;= mosq-&gt;bridge-&gt;idle_timeout){</span></span>
+<span id="L77"><span class="lineNum">      77</span>              : </span>
+<span id="L78"><span class="lineNum">      78</span> <span class="tlaUNC">           0 :                 log__printf(mosq, MOSQ_LOG_NOTICE, &quot;Bridge connection %s has exceeded idle timeout, disconnecting.&quot;, mosq-&gt;id);</span></span>
+<span id="L79"><span class="lineNum">      79</span> <span class="tlaUNC">           0 :                 net__socket_close(mosq);</span></span>
+<span id="L80"><span class="lineNum">      80</span> <span class="tlaUNC">           0 :                 return MOSQ_ERR_SUCCESS;</span></span>
+<span id="L81"><span class="lineNum">      81</span>              :         }</span>
+<span id="L82"><span class="lineNum">      82</span>              : #endif</span>
+<span id="L83"><span class="lineNum">      83</span>              :         COMPAT_pthread_mutex_lock(&amp;mosq-&gt;msgtime_mutex);</span>
+<span id="L84"><span class="lineNum">      84</span> <span class="tlaUNC">           0 :         next_msg_out = mosq-&gt;next_msg_out;</span></span>
+<span id="L85"><span class="lineNum">      85</span> <span class="tlaUNC">           0 :         last_msg_in = mosq-&gt;last_msg_in;</span></span>
+<span id="L86"><span class="lineNum">      86</span>              :         COMPAT_pthread_mutex_unlock(&amp;mosq-&gt;msgtime_mutex);</span>
+<span id="L87"><span class="lineNum">      87</span> <span class="tlaUNC">           0 :         if(mosq-&gt;keepalive &amp;&amp; net__is_connected(mosq) &amp;&amp;</span></span>
+<span id="L88"><span class="lineNum">      88</span> <span class="tlaUNC">           0 :                         (now &gt;= next_msg_out || now - last_msg_in &gt;= mosq-&gt;keepalive)){</span></span>
+<span id="L89"><span class="lineNum">      89</span>              : </span>
+<span id="L90"><span class="lineNum">      90</span> <span class="tlaUNC">           0 :                 state = mosquitto__get_state(mosq);</span></span>
+<span id="L91"><span class="lineNum">      91</span> <span class="tlaUNC">           0 :                 if(state == mosq_cs_active &amp;&amp; mosq-&gt;ping_t == 0){</span></span>
+<span id="L92"><span class="lineNum">      92</span> <span class="tlaUNC">           0 :                         send__pingreq(mosq);</span></span>
+<span id="L93"><span class="lineNum">      93</span>              :                         /* Reset last msg times to give the server time to send a pingresp */</span>
+<span id="L94"><span class="lineNum">      94</span>              :                         COMPAT_pthread_mutex_lock(&amp;mosq-&gt;msgtime_mutex);</span>
+<span id="L95"><span class="lineNum">      95</span> <span class="tlaUNC">           0 :                         mosq-&gt;last_msg_in = now;</span></span>
+<span id="L96"><span class="lineNum">      96</span> <span class="tlaUNC">           0 :                         mosq-&gt;next_msg_out = now + mosq-&gt;keepalive;</span></span>
+<span id="L97"><span class="lineNum">      97</span>              :                         COMPAT_pthread_mutex_unlock(&amp;mosq-&gt;msgtime_mutex);</span>
+<span id="L98"><span class="lineNum">      98</span>              :                 }else{</span>
+<span id="L99"><span class="lineNum">      99</span>              : #ifdef WITH_BROKER</span>
+<span id="L100"><span class="lineNum">     100</span>              : #  ifdef WITH_BRIDGE</span>
+<span id="L101"><span class="lineNum">     101</span> <span class="tlaUNC">           0 :                         if(mosq-&gt;bridge){</span></span>
+<span id="L102"><span class="lineNum">     102</span> <span class="tlaUNC">           0 :                                 context__send_will(mosq);</span></span>
+<span id="L103"><span class="lineNum">     103</span>              :                         }</span>
+<span id="L104"><span class="lineNum">     104</span>              : #  endif</span>
+<span id="L105"><span class="lineNum">     105</span> <span class="tlaUNC">           0 :                         net__socket_close(mosq);</span></span>
+<span id="L106"><span class="lineNum">     106</span>              : #else</span>
+<span id="L107"><span class="lineNum">     107</span>              :                         net__socket_close(mosq);</span>
+<span id="L108"><span class="lineNum">     108</span>              :                         state = mosquitto__get_state(mosq);</span>
+<span id="L109"><span class="lineNum">     109</span>              :                         if(state == mosq_cs_disconnecting){</span>
+<span id="L110"><span class="lineNum">     110</span>              :                                 rc = MOSQ_ERR_SUCCESS;</span>
+<span id="L111"><span class="lineNum">     111</span>              :                         }else{</span>
+<span id="L112"><span class="lineNum">     112</span>              :                                 rc = MOSQ_ERR_KEEPALIVE;</span>
+<span id="L113"><span class="lineNum">     113</span>              :                         }</span>
+<span id="L114"><span class="lineNum">     114</span>              :                         callback__on_disconnect(mosq, rc, NULL);</span>
+<span id="L115"><span class="lineNum">     115</span>              : </span>
+<span id="L116"><span class="lineNum">     116</span>              :                         return rc;</span>
+<span id="L117"><span class="lineNum">     117</span>              : #endif</span>
+<span id="L118"><span class="lineNum">     118</span>              :                 }</span>
+<span id="L119"><span class="lineNum">     119</span>              :         }</span>
+<span id="L120"><span class="lineNum">     120</span> <span class="tlaUNC">           0 :         return MOSQ_ERR_SUCCESS;</span></span>
+<span id="L121"><span class="lineNum">     121</span>              : }</span>
+<span id="L122"><span class="lineNum">     122</span>              : </span>
+<span id="L123"><span class="lineNum">     123</span>              : </span>
+<span id="L124"><span class="lineNum">     124</span> <span class="tlaUNC">           0 : uint16_t mosquitto__mid_generate(struct mosquitto *mosq)</span></span>
+<span id="L125"><span class="lineNum">     125</span>              : {</span>
+<span id="L126"><span class="lineNum">     126</span>              :         /* FIXME - this would be better with atomic increment, but this is safer</span>
+<span id="L127"><span class="lineNum">     127</span>              :          * for now for a bug fix release.</span>
+<span id="L128"><span class="lineNum">     128</span>              :          *</span>
+<span id="L129"><span class="lineNum">     129</span>              :          * If this is changed to use atomic increment, callers of this function</span>
+<span id="L130"><span class="lineNum">     130</span>              :          * will have to be aware that they may receive a 0 result, which may not be</span>
+<span id="L131"><span class="lineNum">     131</span>              :          * used as a mid.</span>
+<span id="L132"><span class="lineNum">     132</span>              :          */</span>
+<span id="L133"><span class="lineNum">     133</span>              :         uint16_t mid;</span>
+<span id="L134"><span class="lineNum">     134</span> <span class="tlaUNC">           0 :         assert(mosq);</span></span>
+<span id="L135"><span class="lineNum">     135</span>              : </span>
+<span id="L136"><span class="lineNum">     136</span>              :         COMPAT_pthread_mutex_lock(&amp;mosq-&gt;mid_mutex);</span>
+<span id="L137"><span class="lineNum">     137</span> <span class="tlaUNC">           0 :         mosq-&gt;last_mid++;</span></span>
+<span id="L138"><span class="lineNum">     138</span> <span class="tlaUNC">           0 :         if(mosq-&gt;last_mid == 0){</span></span>
+<span id="L139"><span class="lineNum">     139</span> <span class="tlaUNC">           0 :                 mosq-&gt;last_mid++;</span></span>
+<span id="L140"><span class="lineNum">     140</span>              :         }</span>
+<span id="L141"><span class="lineNum">     141</span> <span class="tlaUNC">           0 :         mid = mosq-&gt;last_mid;</span></span>
+<span id="L142"><span class="lineNum">     142</span>              :         COMPAT_pthread_mutex_unlock(&amp;mosq-&gt;mid_mutex);</span>
+<span id="L143"><span class="lineNum">     143</span>              : </span>
+<span id="L144"><span class="lineNum">     144</span> <span class="tlaUNC">           0 :         return mid;</span></span>
+<span id="L145"><span class="lineNum">     145</span>              : }</span>
+<span id="L146"><span class="lineNum">     146</span>              : </span>
+<span id="L147"><span class="lineNum">     147</span>              : </span>
+<span id="L148"><span class="lineNum">     148</span>              : #ifdef WITH_TLS</span>
+<span id="L149"><span class="lineNum">     149</span>              : </span>
+<span id="L150"><span class="lineNum">     150</span>              : </span>
+<span id="L151"><span class="lineNum">     151</span>              : int mosquitto__hex2bin_sha1(const char *hex, unsigned char **bin)</span>
+<span id="L152"><span class="lineNum">     152</span>              : {</span>
+<span id="L153"><span class="lineNum">     153</span>              :         unsigned char *sha, tmp[SHA_DIGEST_LENGTH];</span>
+<span id="L154"><span class="lineNum">     154</span>              : </span>
+<span id="L155"><span class="lineNum">     155</span>              :         if(mosquitto__hex2bin(hex, tmp, SHA_DIGEST_LENGTH) != SHA_DIGEST_LENGTH){</span>
+<span id="L156"><span class="lineNum">     156</span>              :                 return MOSQ_ERR_INVAL;</span>
+<span id="L157"><span class="lineNum">     157</span>              :         }</span>
+<span id="L158"><span class="lineNum">     158</span>              : </span>
+<span id="L159"><span class="lineNum">     159</span>              :         sha = mosquitto_malloc(SHA_DIGEST_LENGTH);</span>
+<span id="L160"><span class="lineNum">     160</span>              :         if(!sha){</span>
+<span id="L161"><span class="lineNum">     161</span>              :                 return MOSQ_ERR_NOMEM;</span>
+<span id="L162"><span class="lineNum">     162</span>              :         }</span>
+<span id="L163"><span class="lineNum">     163</span>              :         memcpy(sha, tmp, SHA_DIGEST_LENGTH);</span>
+<span id="L164"><span class="lineNum">     164</span>              :         *bin = sha;</span>
+<span id="L165"><span class="lineNum">     165</span>              :         return MOSQ_ERR_SUCCESS;</span>
+<span id="L166"><span class="lineNum">     166</span>              : }</span>
+<span id="L167"><span class="lineNum">     167</span>              : </span>
+<span id="L168"><span class="lineNum">     168</span>              : </span>
+<span id="L169"><span class="lineNum">     169</span>              : int mosquitto__hex2bin(const char *hex, unsigned char *bin, int bin_max_len)</span>
+<span id="L170"><span class="lineNum">     170</span>              : {</span>
+<span id="L171"><span class="lineNum">     171</span>              :         BIGNUM *bn = NULL;</span>
+<span id="L172"><span class="lineNum">     172</span>              :         int len;</span>
+<span id="L173"><span class="lineNum">     173</span>              :         int leading_zero = 0;</span>
+<span id="L174"><span class="lineNum">     174</span>              :         size_t i = 0;</span>
+<span id="L175"><span class="lineNum">     175</span>              : </span>
+<span id="L176"><span class="lineNum">     176</span>              :         /* Count the number of leading zero */</span>
+<span id="L177"><span class="lineNum">     177</span>              :         for(i=0; i&lt;strlen(hex); i=i+2){</span>
+<span id="L178"><span class="lineNum">     178</span>              :                 if(strncmp(hex + i, &quot;00&quot;, 2) == 0){</span>
+<span id="L179"><span class="lineNum">     179</span>              :                         if(leading_zero &gt;= bin_max_len){</span>
+<span id="L180"><span class="lineNum">     180</span>              :                                 return 0;</span>
+<span id="L181"><span class="lineNum">     181</span>              :                         }</span>
+<span id="L182"><span class="lineNum">     182</span>              :                         /* output leading zero to bin */</span>
+<span id="L183"><span class="lineNum">     183</span>              :                         bin[leading_zero] = 0;</span>
+<span id="L184"><span class="lineNum">     184</span>              :                         leading_zero++;</span>
+<span id="L185"><span class="lineNum">     185</span>              :                 }else{</span>
+<span id="L186"><span class="lineNum">     186</span>              :                         break;</span>
+<span id="L187"><span class="lineNum">     187</span>              :                 }</span>
+<span id="L188"><span class="lineNum">     188</span>              :         }</span>
+<span id="L189"><span class="lineNum">     189</span>              : </span>
+<span id="L190"><span class="lineNum">     190</span>              :         if(BN_hex2bn(&amp;bn, hex) == 0){</span>
+<span id="L191"><span class="lineNum">     191</span>              :                 if(bn){</span>
+<span id="L192"><span class="lineNum">     192</span>              :                         BN_free(bn);</span>
+<span id="L193"><span class="lineNum">     193</span>              :                 }</span>
+<span id="L194"><span class="lineNum">     194</span>              :                 return 0;</span>
+<span id="L195"><span class="lineNum">     195</span>              :         }</span>
+<span id="L196"><span class="lineNum">     196</span>              :         if(BN_num_bytes(bn) + leading_zero &gt; bin_max_len){</span>
+<span id="L197"><span class="lineNum">     197</span>              :                 BN_free(bn);</span>
+<span id="L198"><span class="lineNum">     198</span>              :                 return 0;</span>
+<span id="L199"><span class="lineNum">     199</span>              :         }</span>
+<span id="L200"><span class="lineNum">     200</span>              : </span>
+<span id="L201"><span class="lineNum">     201</span>              :         len = BN_bn2bin(bn, bin + leading_zero);</span>
+<span id="L202"><span class="lineNum">     202</span>              :         BN_free(bn);</span>
+<span id="L203"><span class="lineNum">     203</span>              :         return len + leading_zero;</span>
+<span id="L204"><span class="lineNum">     204</span>              : }</span>
+<span id="L205"><span class="lineNum">     205</span>              : #endif</span>
+<span id="L206"><span class="lineNum">     206</span>              : </span>
+<span id="L207"><span class="lineNum">     207</span>              : </span>
+<span id="L208"><span class="lineNum">     208</span> <span class="tlaUNC">           0 : void util__increment_receive_quota(struct mosquitto *mosq)</span></span>
+<span id="L209"><span class="lineNum">     209</span>              : {</span>
+<span id="L210"><span class="lineNum">     210</span> <span class="tlaUNC">           0 :         if(mosq-&gt;msgs_in.inflight_quota &lt; mosq-&gt;msgs_in.inflight_maximum){</span></span>
+<span id="L211"><span class="lineNum">     211</span> <span class="tlaUNC">           0 :                 mosq-&gt;msgs_in.inflight_quota++;</span></span>
+<span id="L212"><span class="lineNum">     212</span>              :         }</span>
+<span id="L213"><span class="lineNum">     213</span> <span class="tlaUNC">           0 : }</span></span>
+<span id="L214"><span class="lineNum">     214</span>              : </span>
+<span id="L215"><span class="lineNum">     215</span>              : </span>
+<span id="L216"><span class="lineNum">     216</span> <span class="tlaUNC">           0 : void util__increment_send_quota(struct mosquitto *mosq)</span></span>
+<span id="L217"><span class="lineNum">     217</span>              : {</span>
+<span id="L218"><span class="lineNum">     218</span> <span class="tlaUNC">           0 :         if(mosq-&gt;msgs_out.inflight_quota &lt; mosq-&gt;msgs_out.inflight_maximum){</span></span>
+<span id="L219"><span class="lineNum">     219</span> <span class="tlaUNC">           0 :                 mosq-&gt;msgs_out.inflight_quota++;</span></span>
+<span id="L220"><span class="lineNum">     220</span>              :         }</span>
+<span id="L221"><span class="lineNum">     221</span> <span class="tlaUNC">           0 : }</span></span>
+<span id="L222"><span class="lineNum">     222</span>              : </span>
+<span id="L223"><span class="lineNum">     223</span>              : </span>
+<span id="L224"><span class="lineNum">     224</span> <span class="tlaUNC">           0 : void util__decrement_receive_quota(struct mosquitto *mosq)</span></span>
+<span id="L225"><span class="lineNum">     225</span>              : {</span>
+<span id="L226"><span class="lineNum">     226</span> <span class="tlaUNC">           0 :         if(mosq-&gt;msgs_in.inflight_quota &gt; 0){</span></span>
+<span id="L227"><span class="lineNum">     227</span> <span class="tlaUNC">           0 :                 mosq-&gt;msgs_in.inflight_quota--;</span></span>
+<span id="L228"><span class="lineNum">     228</span>              :         }</span>
+<span id="L229"><span class="lineNum">     229</span> <span class="tlaUNC">           0 : }</span></span>
+<span id="L230"><span class="lineNum">     230</span>              : </span>
+<span id="L231"><span class="lineNum">     231</span>              : </span>
+<span id="L232"><span class="lineNum">     232</span> <span class="tlaUNC">           0 : void util__decrement_send_quota(struct mosquitto *mosq)</span></span>
+<span id="L233"><span class="lineNum">     233</span>              : {</span>
+<span id="L234"><span class="lineNum">     234</span> <span class="tlaUNC">           0 :         if(mosq-&gt;msgs_out.inflight_quota &gt; 0){</span></span>
+<span id="L235"><span class="lineNum">     235</span> <span class="tlaUNC">           0 :                 mosq-&gt;msgs_out.inflight_quota--;</span></span>
+<span id="L236"><span class="lineNum">     236</span>              :         }</span>
+<span id="L237"><span class="lineNum">     237</span> <span class="tlaUNC">           0 : }</span></span>
+<span id="L238"><span class="lineNum">     238</span>              : </span>
+<span id="L239"><span class="lineNum">     239</span>              : </span>
+<span id="L240"><span class="lineNum">     240</span> <span class="tlaGNC">         123 : int mosquitto__set_state(struct mosquitto *mosq, enum mosquitto_client_state state)</span></span>
+<span id="L241"><span class="lineNum">     241</span>              : {</span>
+<span id="L242"><span class="lineNum">     242</span>              :         COMPAT_pthread_mutex_lock(&amp;mosq-&gt;state_mutex);</span>
+<span id="L243"><span class="lineNum">     243</span>              : #ifdef WITH_BROKER</span>
+<span id="L244"><span class="lineNum">     244</span> <span class="tlaGNC">         123 :         if(mosq-&gt;state != mosq_cs_disused)</span></span>
+<span id="L245"><span class="lineNum">     245</span>              : #endif</span>
+<span id="L246"><span class="lineNum">     246</span>              :         {</span>
+<span id="L247"><span class="lineNum">     247</span> <span class="tlaGNC">          87 :                 mosq-&gt;state = state;</span></span>
+<span id="L248"><span class="lineNum">     248</span>              :         }</span>
+<span id="L249"><span class="lineNum">     249</span>              :         COMPAT_pthread_mutex_unlock(&amp;mosq-&gt;state_mutex);</span>
+<span id="L250"><span class="lineNum">     250</span>              : </span>
+<span id="L251"><span class="lineNum">     251</span> <span class="tlaGNC">         123 :         return MOSQ_ERR_SUCCESS;</span></span>
+<span id="L252"><span class="lineNum">     252</span>              : }</span>
+<span id="L253"><span class="lineNum">     253</span>              : </span>
+<span id="L254"><span class="lineNum">     254</span> <span class="tlaGNC">          99 : enum mosquitto_client_state mosquitto__get_state(struct mosquitto *mosq)</span></span>
+<span id="L255"><span class="lineNum">     255</span>              : {</span>
+<span id="L256"><span class="lineNum">     256</span>              :         enum mosquitto_client_state state;</span>
+<span id="L257"><span class="lineNum">     257</span>              : </span>
+<span id="L258"><span class="lineNum">     258</span>              :         COMPAT_pthread_mutex_lock(&amp;mosq-&gt;state_mutex);</span>
+<span id="L259"><span class="lineNum">     259</span> <span class="tlaGNC">          99 :         state = mosq-&gt;state;</span></span>
+<span id="L260"><span class="lineNum">     260</span>              :         COMPAT_pthread_mutex_unlock(&amp;mosq-&gt;state_mutex);</span>
+<span id="L261"><span class="lineNum">     261</span>              : </span>
+<span id="L262"><span class="lineNum">     262</span> <span class="tlaGNC">          99 :         return state;</span></span>
+<span id="L263"><span class="lineNum">     263</span>              : }</span>
+<span id="L264"><span class="lineNum">     264</span>              : </span>
+<span id="L265"><span class="lineNum">     265</span>              : #ifndef WITH_BROKER</span>
+<span id="L266"><span class="lineNum">     266</span>              : </span>
+<span id="L267"><span class="lineNum">     267</span>              : </span>
+<span id="L268"><span class="lineNum">     268</span>              : void mosquitto__set_request_disconnect(struct mosquitto *mosq, bool request_disconnect)</span>
+<span id="L269"><span class="lineNum">     269</span>              : {</span>
+<span id="L270"><span class="lineNum">     270</span>              :         COMPAT_pthread_mutex_lock(&amp;mosq-&gt;state_mutex);</span>
+<span id="L271"><span class="lineNum">     271</span>              :         mosq-&gt;request_disconnect = request_disconnect;</span>
+<span id="L272"><span class="lineNum">     272</span>              :         COMPAT_pthread_mutex_unlock(&amp;mosq-&gt;state_mutex);</span>
+<span id="L273"><span class="lineNum">     273</span>              : }</span>
+<span id="L274"><span class="lineNum">     274</span>              : </span>
+<span id="L275"><span class="lineNum">     275</span>              : </span>
+<span id="L276"><span class="lineNum">     276</span>              : bool mosquitto__get_request_disconnect(struct mosquitto *mosq)</span>
+<span id="L277"><span class="lineNum">     277</span>              : {</span>
+<span id="L278"><span class="lineNum">     278</span>              :         bool request_disconnect;</span>
+<span id="L279"><span class="lineNum">     279</span>              : </span>
+<span id="L280"><span class="lineNum">     280</span>              :         COMPAT_pthread_mutex_lock(&amp;mosq-&gt;state_mutex);</span>
+<span id="L281"><span class="lineNum">     281</span>              :         request_disconnect = mosq-&gt;request_disconnect;</span>
+<span id="L282"><span class="lineNum">     282</span>              :         COMPAT_pthread_mutex_unlock(&amp;mosq-&gt;state_mutex);</span>
+<span id="L283"><span class="lineNum">     283</span>              : </span>
+<span id="L284"><span class="lineNum">     284</span>              :         return request_disconnect;</span>
+<span id="L285"><span class="lineNum">     285</span>              : }</span>
+<span id="L286"><span class="lineNum">     286</span>              : #endif</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.0-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

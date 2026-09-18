@@ -1,0 +1,407 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - FlashMQ v1.27.1 Coverage - Seed Corpus - FlashMQ/client.h</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory FlashMQ">FlashMQ</a> - client.h<span style="font-size: 80%;"> (source / <a href="client.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">FlashMQ v1.27.1 Coverage - Seed Corpus</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">33</td>
+            <td class="headerCovTableEntry">0</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2026-09-18 19:59:15</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry">0</td>
+          </tr>
+                  <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span>              : /*</span>
+<span id="L2"><span class="lineNum">       2</span>              : This file is part of FlashMQ (https://www.flashmq.org)</span>
+<span id="L3"><span class="lineNum">       3</span>              : Copyright (C) 2021-2023 Wiebe Cazemier</span>
+<span id="L4"><span class="lineNum">       4</span>              : </span>
+<span id="L5"><span class="lineNum">       5</span>              : FlashMQ is free software: you can redistribute it and/or modify</span>
+<span id="L6"><span class="lineNum">       6</span>              : it under the terms of The Open Software License 3.0 (OSL-3.0).</span>
+<span id="L7"><span class="lineNum">       7</span>              : </span>
+<span id="L8"><span class="lineNum">       8</span>              : See LICENSE for license details.</span>
+<span id="L9"><span class="lineNum">       9</span>              : */</span>
+<span id="L10"><span class="lineNum">      10</span>              : </span>
+<span id="L11"><span class="lineNum">      11</span>              : #ifndef CLIENT_H</span>
+<span id="L12"><span class="lineNum">      12</span>              : #define CLIENT_H</span>
+<span id="L13"><span class="lineNum">      13</span>              : </span>
+<span id="L14"><span class="lineNum">      14</span>              : #include &lt;fcntl.h&gt;</span>
+<span id="L15"><span class="lineNum">      15</span>              : #include &lt;unistd.h&gt;</span>
+<span id="L16"><span class="lineNum">      16</span>              : #include &lt;vector&gt;</span>
+<span id="L17"><span class="lineNum">      17</span>              : #include &lt;mutex&gt;</span>
+<span id="L18"><span class="lineNum">      18</span>              : #include &lt;iostream&gt;</span>
+<span id="L19"><span class="lineNum">      19</span>              : #include &lt;time.h&gt;</span>
+<span id="L20"><span class="lineNum">      20</span>              : #include &lt;optional&gt;</span>
+<span id="L21"><span class="lineNum">      21</span>              : </span>
+<span id="L22"><span class="lineNum">      22</span>              : #include &lt;openssl/ssl.h&gt;</span>
+<span id="L23"><span class="lineNum">      23</span>              : #include &lt;openssl/err.h&gt;</span>
+<span id="L24"><span class="lineNum">      24</span>              : </span>
+<span id="L25"><span class="lineNum">      25</span>              : #include &quot;forward_declarations.h&quot;</span>
+<span id="L26"><span class="lineNum">      26</span>              : </span>
+<span id="L27"><span class="lineNum">      27</span>              : #include &quot;mqttpacket.h&quot;</span>
+<span id="L28"><span class="lineNum">      28</span>              : #include &quot;cirbuf.h&quot;</span>
+<span id="L29"><span class="lineNum">      29</span>              : #include &quot;types.h&quot;</span>
+<span id="L30"><span class="lineNum">      30</span>              : #include &quot;iowrapper.h&quot;</span>
+<span id="L31"><span class="lineNum">      31</span>              : #include &quot;bridgeconfig.h&quot;</span>
+<span id="L32"><span class="lineNum">      32</span>              : #include &quot;enums.h&quot;</span>
+<span id="L33"><span class="lineNum">      33</span>              : #include &quot;fdmanaged.h&quot;</span>
+<span id="L34"><span class="lineNum">      34</span>              : #include &quot;mutexowned.h&quot;</span>
+<span id="L35"><span class="lineNum">      35</span>              : #include &quot;fmqssl.h&quot;</span>
+<span id="L36"><span class="lineNum">      36</span>              : #include &quot;threaddata.h&quot;</span>
+<span id="L37"><span class="lineNum">      37</span>              : </span>
+<span id="L38"><span class="lineNum">      38</span>              : #include &quot;publishcopyfactory.h&quot;</span>
+<span id="L39"><span class="lineNum">      39</span>              : </span>
+<span id="L40"><span class="lineNum">      40</span>              : #define MQTT_HEADER_LENGH 2</span>
+<span id="L41"><span class="lineNum">      41</span>              : </span>
+<span id="L42"><span class="lineNum">      42</span>              : /**</span>
+<span id="L43"><span class="lineNum">      43</span>              :  * @brief The StowedClient struct stores the client when doing an extended authentication, and we need to keep the info around how</span>
+<span id="L44"><span class="lineNum">      44</span>              :  * the client will be registered once the authentication succeeds.</span>
+<span id="L45"><span class="lineNum">      45</span>              :  */</span>
+<span id="L46"><span class="lineNum">      46</span>              : struct StowedClientRegistrationData</span>
+<span id="L47"><span class="lineNum">      47</span>              : {</span>
+<span id="L48"><span class="lineNum">      48</span>              :     const bool clean_start;</span>
+<span id="L49"><span class="lineNum">      49</span>              :     const uint16_t clientReceiveMax;</span>
+<span id="L50"><span class="lineNum">      50</span>              :     const uint32_t sessionExpiryInterval;</span>
+<span id="L51"><span class="lineNum">      51</span>              : </span>
+<span id="L52"><span class="lineNum">      52</span>              :     StowedClientRegistrationData(bool clean_start, uint16_t clientReceiveMax, uint32_t sessionExpiryInterval);</span>
+<span id="L53"><span class="lineNum">      53</span>              : };</span>
+<span id="L54"><span class="lineNum">      54</span>              : </span>
+<span id="L55"><span class="lineNum">      55</span>              : enum class DisconnectStage</span>
+<span id="L56"><span class="lineNum">      56</span>              : {</span>
+<span id="L57"><span class="lineNum">      57</span>              :     NotInitiated,</span>
+<span id="L58"><span class="lineNum">      58</span>              :     SendPendingAppData, // Set this before making a client ready to write, and EPOLLOUT will take care of it.</span>
+<span id="L59"><span class="lineNum">      59</span>              :     Now</span>
+<span id="L60"><span class="lineNum">      60</span>              : };</span>
+<span id="L61"><span class="lineNum">      61</span>              : </span>
+<span id="L62"><span class="lineNum">      62</span>              : struct AsyncAuthResult</span>
+<span id="L63"><span class="lineNum">      63</span>              : {</span>
+<span id="L64"><span class="lineNum">      64</span>              :     AuthResult result;</span>
+<span id="L65"><span class="lineNum">      65</span>              :     std::string authMethod;</span>
+<span id="L66"><span class="lineNum">      66</span>              :     std::string authData;</span>
+<span id="L67"><span class="lineNum">      67</span>              : </span>
+<span id="L68"><span class="lineNum">      68</span>              : public:</span>
+<span id="L69"><span class="lineNum">      69</span>              :     AsyncAuthResult(AuthResult result, const std::string authMethod, const std::string &amp;authData);</span>
+<span id="L70"><span class="lineNum">      70</span>              : };</span>
+<span id="L71"><span class="lineNum">      71</span>              : </span>
+<span id="L72"><span class="lineNum">      72</span>              : class Client</span>
+<span id="L73"><span class="lineNum">      73</span>              : {</span>
+<span id="L74"><span class="lineNum">      74</span>              :     struct OutgoingTopicAliases</span>
+<span id="L75"><span class="lineNum">      75</span>              :     {</span>
+<span id="L76"><span class="lineNum">      76</span>              :         uint16_t cur_alias = 0;</span>
+<span id="L77"><span class="lineNum">      77</span>              :         std::unordered_map&lt;std::string, uint16_t&gt; aliases;</span>
+<span id="L78"><span class="lineNum">      78</span>              :     };</span>
+<span id="L79"><span class="lineNum">      79</span>              : </span>
+<span id="L80"><span class="lineNum">      80</span>              :     struct WriteBuf</span>
+<span id="L81"><span class="lineNum">      81</span>              :     {</span>
+<span id="L82"><span class="lineNum">      82</span>              :         CirBuf buf;</span>
+<span id="L83"><span class="lineNum">      83</span>              :         bool readyForWriting = false;</span>
+<span id="L84"><span class="lineNum">      84</span>              :         std::optional&lt;std::chrono::time_point&lt;std::chrono::steady_clock&gt;&gt; pressuredAt;</span>
+<span id="L85"><span class="lineNum">      85</span>              : </span>
+<span id="L86"><span class="lineNum">      86</span>              :         uint32_t maxOutgoingPacketSize {};</span>
+<span id="L87"><span class="lineNum">      87</span>              :         std::optional&lt;uint32_t&gt; maxBufSizeOverride;</span>
+<span id="L88"><span class="lineNum">      88</span>              : </span>
+<span id="L89"><span class="lineNum">      89</span>              :         WriteBuf(size_t size, uint32_t maxOutgoingPacketSize);</span>
+<span id="L90"><span class="lineNum">      90</span>              : </span>
+<span id="L91"><span class="lineNum">      91</span>              :         void checkPressure(const size_t limit, Client *client);</span>
+<span id="L92"><span class="lineNum">      92</span>              :         void checkPressure(Client *client);</span>
+<span id="L93"><span class="lineNum">      93</span>              :         void forceResetUnderPressureWhenEmpty();</span>
+<span id="L94"><span class="lineNum">      94</span>              :         uint32_t getMaxBufSize() const;</span>
+<span id="L95"><span class="lineNum">      95</span>              :     };</span>
+<span id="L96"><span class="lineNum">      96</span>              : </span>
+<span id="L97"><span class="lineNum">      97</span>              :     friend class IoWrapper;</span>
+<span id="L98"><span class="lineNum">      98</span>              : </span>
+<span id="L99"><span class="lineNum">      99</span>              :     FdManaged fd;</span>
+<span id="L100"><span class="lineNum">     100</span>              :     bool fuzzMode = false;</span>
+<span id="L101"><span class="lineNum">     101</span>              : </span>
+<span id="L102"><span class="lineNum">     102</span>              :     ProtocolVersion protocolVersion = ProtocolVersion::None;</span>
+<span id="L103"><span class="lineNum">     103</span>              : </span>
+<span id="L104"><span class="lineNum">     104</span>              :     const uint32_t maxIncomingPacketSize;</span>
+<span id="L105"><span class="lineNum">     105</span>              :     std::optional&lt;uint32_t&gt; maxReadBufSizeOverride;</span>
+<span id="L106"><span class="lineNum">     106</span>              : </span>
+<span id="L107"><span class="lineNum">     107</span>              :     uint8_t maxQos = 2;</span>
+<span id="L108"><span class="lineNum">     108</span>              :     Mqtt3QoSExceedAction mqtt3QoSExceedAction = Mqtt3QoSExceedAction::Disconnect;</span>
+<span id="L109"><span class="lineNum">     109</span>              : </span>
+<span id="L110"><span class="lineNum">     110</span>              :     uint16_t maxOutgoingTopicAliasValue = 0;</span>
+<span id="L111"><span class="lineNum">     111</span>              :     uint16_t maxIncomingTopicAliasValue = 0;</span>
+<span id="L112"><span class="lineNum">     112</span>              : </span>
+<span id="L113"><span class="lineNum">     113</span>              :     IoWrapper ioWrapper;</span>
+<span id="L114"><span class="lineNum">     114</span>              :     std::string transportStr;</span>
+<span id="L115"><span class="lineNum">     115</span>              : </span>
+<span id="L116"><span class="lineNum">     116</span>              :     CirBuf readbuf;</span>
+<span id="L117"><span class="lineNum">     117</span>              :     MutexOwned&lt;WriteBuf&gt; writebuf;</span>
+<span id="L118"><span class="lineNum">     118</span>              : </span>
+<span id="L119"><span class="lineNum">     119</span>              :     bool authenticated = false;</span>
+<span id="L120"><span class="lineNum">     120</span>              :     bool connectPacketSeen = false;</span>
+<span id="L121"><span class="lineNum">     121</span>              :     bool readyForReading = true;</span>
+<span id="L122"><span class="lineNum">     122</span>              :     DisconnectStage disconnectStage = DisconnectStage::NotInitiated;</span>
+<span id="L123"><span class="lineNum">     123</span>              :     bool outgoingConnection = false;</span>
+<span id="L124"><span class="lineNum">     124</span>              :     bool outgoingConnectionEstablished = false;</span>
+<span id="L125"><span class="lineNum">     125</span>              :     ClientType clientType = ClientType::Normal;</span>
+<span id="L126"><span class="lineNum">     126</span>              :     bool supportsRetained = true; // Interestingly, only SERVERS can tell CLIENTS they don't support it (in CONNACK). The CONNECT packet has no field for it.</span>
+<span id="L127"><span class="lineNum">     127</span>              :     std::string disconnectReason;</span>
+<span id="L128"><span class="lineNum">     128</span>              :     int disconnectReasonLogLevel = LOG_NOTICE;</span>
+<span id="L129"><span class="lineNum">     129</span>              :     std::chrono::time_point&lt;std::chrono::steady_clock&gt; lastActivity = std::chrono::steady_clock::now();</span>
+<span id="L130"><span class="lineNum">     130</span>              : </span>
+<span id="L131"><span class="lineNum">     131</span>              :     std::string ssl_version;</span>
+<span id="L132"><span class="lineNum">     132</span>              :     std::string clientid;</span>
+<span id="L133"><span class="lineNum">     133</span>              :     std::string username;</span>
+<span id="L134"><span class="lineNum">     134</span>              :     std::optional&lt;std::string&gt; fmq_client_group_id;</span>
+<span id="L135"><span class="lineNum">     135</span>              :     std::optional&lt;std::string&gt; client_id_prefix;</span>
+<span id="L136"><span class="lineNum">     136</span>              :     uint16_t keepalive = 10;</span>
+<span id="L137"><span class="lineNum">     137</span>              :     bool clean_start = false;</span>
+<span id="L138"><span class="lineNum">     138</span>              :     X509ClientVerification x509ClientVerification = X509ClientVerification::None;</span>
+<span id="L139"><span class="lineNum">     139</span>              :     AllowListenerAnonymous allowAnonymousOverride = AllowListenerAnonymous::None;</span>
+<span id="L140"><span class="lineNum">     140</span>              :     HaProxyMode mHaProxyMode = HaProxyMode::Off;</span>
+<span id="L141"><span class="lineNum">     141</span>              : </span>
+<span id="L142"><span class="lineNum">     142</span>              :     std::unique_ptr&lt;std::string&gt; acmeRedirectUrl;</span>
+<span id="L143"><span class="lineNum">     143</span>              : </span>
+<span id="L144"><span class="lineNum">     144</span>              :     std::shared_ptr&lt;WillPublish&gt; stagedWillPublish;</span>
+<span id="L145"><span class="lineNum">     145</span>              :     std::shared_ptr&lt;WillPublish&gt; willPublish;</span>
+<span id="L146"><span class="lineNum">     146</span>              : </span>
+<span id="L147"><span class="lineNum">     147</span>              :     int epoll_fd = -1;</span>
+<span id="L148"><span class="lineNum">     148</span>              :     LockedWeakPtr&lt;ThreadData&gt; threadData; // The thread (data) that this client 'lives' in.</span>
+<span id="L149"><span class="lineNum">     149</span>              : </span>
+<span id="L150"><span class="lineNum">     150</span>              :     std::shared_ptr&lt;Session&gt; session;</span>
+<span id="L151"><span class="lineNum">     151</span>              : </span>
+<span id="L152"><span class="lineNum">     152</span>              :     std::unordered_map&lt;uint16_t, std::string&gt; incomingTopicAliases;</span>
+<span id="L153"><span class="lineNum">     153</span>              : </span>
+<span id="L154"><span class="lineNum">     154</span>              :     MutexOwned&lt;OutgoingTopicAliases&gt; outgoingTopicAliases;</span>
+<span id="L155"><span class="lineNum">     155</span>              : </span>
+<span id="L156"><span class="lineNum">     156</span>              :     std::string extendedAuthenticationMethod;</span>
+<span id="L157"><span class="lineNum">     157</span>              :     std::unique_ptr&lt;ConnAck&gt; stagedConnack;</span>
+<span id="L158"><span class="lineNum">     158</span>              : </span>
+<span id="L159"><span class="lineNum">     159</span>              :     std::unique_ptr&lt;StowedClientRegistrationData&gt; registrationData;</span>
+<span id="L160"><span class="lineNum">     160</span>              : </span>
+<span id="L161"><span class="lineNum">     161</span>              :     Logger *logger = Logger::getInstance();</span>
+<span id="L162"><span class="lineNum">     162</span>              : </span>
+<span id="L163"><span class="lineNum">     163</span>              :     FMQSockaddr addr;</span>
+<span id="L164"><span class="lineNum">     164</span>              : </span>
+<span id="L165"><span class="lineNum">     165</span>              :     std::weak_ptr&lt;BridgeState&gt; bridgeState;</span>
+<span id="L166"><span class="lineNum">     166</span>              : </span>
+<span id="L167"><span class="lineNum">     167</span>              :     bool asyncAuthenticating = false;</span>
+<span id="L168"><span class="lineNum">     168</span>              :     std::unique_ptr&lt;std::vector&lt;MqttPacket&gt;&gt; packetQueueAfterAsync;</span>
+<span id="L169"><span class="lineNum">     169</span>              :     std::unique_ptr&lt;AsyncAuthResult&gt; asyncAuthResult;</span>
+<span id="L170"><span class="lineNum">     170</span>              : </span>
+<span id="L171"><span class="lineNum">     171</span>              :     void setReadyForWriting(bool val);</span>
+<span id="L172"><span class="lineNum">     172</span>              :     void setReadyForWriting(bool val, MutexLocked&lt;WriteBuf&gt; &amp;writebuf);</span>
+<span id="L173"><span class="lineNum">     173</span>              :     void setReadyForReading(bool val);</span>
+<span id="L174"><span class="lineNum">     174</span>              :     void setAddr(const std::string &amp;address);</span>
+<span id="L175"><span class="lineNum">     175</span>              : </span>
+<span id="L176"><span class="lineNum">     176</span>              : public:</span>
+<span id="L177"><span class="lineNum">     177</span>              :     uint8_t preAuthPacketCounter = 0;</span>
+<span id="L178"><span class="lineNum">     178</span>              : </span>
+<span id="L179"><span class="lineNum">     179</span>              :     Client(</span>
+<span id="L180"><span class="lineNum">     180</span>              :         ClientType type, int fd, std::shared_ptr&lt;ThreadData&gt; threadData, FmqSsl &amp;&amp;ssl, ConnectionProtocol connectionProtocol, HaProxyMode haProxyMode,</span>
+<span id="L181"><span class="lineNum">     181</span>              :         const struct sockaddr *addr, const Settings &amp;settings, bool fuzzMode=false);</span>
+<span id="L182"><span class="lineNum">     182</span>              :     Client(const Client &amp;other) = delete;</span>
+<span id="L183"><span class="lineNum">     183</span>              :     Client(Client &amp;&amp;other) = delete;</span>
+<span id="L184"><span class="lineNum">     184</span>              :     ~Client();</span>
+<span id="L185"><span class="lineNum">     185</span>              : </span>
+<span id="L186"><span class="lineNum">     186</span>              :     void addToEpoll(uint32_t events);</span>
+<span id="L187"><span class="lineNum">     187</span> <span class="tlaUNC">           0 :     int getFd() { return fd.get();}</span></span>
+<span id="L188"><span class="lineNum">     188</span>              :     bool isSslAccepted() const;</span>
+<span id="L189"><span class="lineNum">     189</span>              :     bool isSsl() const;</span>
+<span id="L190"><span class="lineNum">     190</span> <span class="tlaUNC">           0 :     const std::optional&lt;std::string&gt; &amp;getHaProxySslCnName() const { return this-&gt;ioWrapper.getHaProxySslCnName(); }</span></span>
+<span id="L191"><span class="lineNum">     191</span> <span class="tlaUNC">           0 :     HaProxyMode getHaProxyMode() const { return this-&gt;mHaProxyMode; }</span></span>
+<span id="L192"><span class="lineNum">     192</span> <span class="tlaUNC">           0 :     HaProxyStage getHaProxyStage() const { return this-&gt;ioWrapper.getHaProxyStage();};</span></span>
+<span id="L193"><span class="lineNum">     193</span> <span class="tlaUNC">           0 :     HaProxyConnectionType getHaProxyConnectionType() const { return this-&gt;ioWrapper.getHaProxyConnectionType(); }</span></span>
+<span id="L194"><span class="lineNum">     194</span>              :     HaProxyStage readHaProxyData();</span>
+<span id="L195"><span class="lineNum">     195</span>              :     bool getSslReadWantsWrite() const;</span>
+<span id="L196"><span class="lineNum">     196</span>              :     bool getSslWriteWantsRead() const;</span>
+<span id="L197"><span class="lineNum">     197</span>              :     ProtocolVersion getProtocolVersion() const;</span>
+<span id="L198"><span class="lineNum">     198</span> <span class="tlaUNC">           0 :     ConnectionProtocol getConnectionProtocol() const { return this-&gt;ioWrapper.getConnectionProtocol(); }</span></span>
+<span id="L199"><span class="lineNum">     199</span>              :     void setProtocolVersion(ProtocolVersion version);</span>
+<span id="L200"><span class="lineNum">     200</span>              :     void connectToBridgeTarget(FMQSockaddr addr);</span>
+<span id="L201"><span class="lineNum">     201</span>              : </span>
+<span id="L202"><span class="lineNum">     202</span>              :     void setMaxBufSizeOverride(uint32_t val);</span>
+<span id="L203"><span class="lineNum">     203</span>              :     void startOrContinueSslHandshake();</span>
+<span id="L204"><span class="lineNum">     204</span>              :     void setDisconnectStage(DisconnectStage val);</span>
+<span id="L205"><span class="lineNum">     205</span>              :     DisconnectStage readFdIntoBuffer();</span>
+<span id="L206"><span class="lineNum">     206</span>              :     bool tryAcmeRedirect();</span>
+<span id="L207"><span class="lineNum">     207</span>              :     void respondWithRedirectURL(const std::string &amp;request);</span>
+<span id="L208"><span class="lineNum">     208</span>              :     void bufferToMqttPackets(std::vector&lt;MqttPacket&gt; &amp;packetQueueIn, std::shared_ptr&lt;Client&gt; &amp;sender);</span>
+<span id="L209"><span class="lineNum">     209</span>              :     void setClientProperties(ProtocolVersion protocolVersion, const std::string &amp;clientId, const std::optional&lt;std::string&gt; &amp;fmq_client_group_id,</span>
+<span id="L210"><span class="lineNum">     210</span>              :                              const std::string username, bool connectPacketSeen, uint16_t keepalive);</span>
+<span id="L211"><span class="lineNum">     211</span>              :     void setClientProperties(ProtocolVersion protocolVersion, const std::string &amp;clientId, const std::optional&lt;std::string&gt; &amp;fmq_client_group_id,</span>
+<span id="L212"><span class="lineNum">     212</span>              :                              const std::string username, bool connectPacketSeen, uint16_t keepalive, uint32_t maxOutgoingPacketSize, uint16_t maxOutgoingTopicAliasValue);</span>
+<span id="L213"><span class="lineNum">     213</span>              :     void setClientProperties(bool connectPacketSeen, uint16_t keepalive, uint32_t maxOutgoingPacketSize, uint16_t maxOutgoingTopicAliasValue, bool supportsRetained);</span>
+<span id="L214"><span class="lineNum">     214</span>              :     void setWill(const std::string &amp;topic, const std::string &amp;payload, bool retain, uint8_t qos);</span>
+<span id="L215"><span class="lineNum">     215</span>              :     void stageWill(WillPublish &amp;&amp;willPublish);</span>
+<span id="L216"><span class="lineNum">     216</span>              :     void setWillFromStaged();</span>
+<span id="L217"><span class="lineNum">     217</span>              :     void clearWill();</span>
+<span id="L218"><span class="lineNum">     218</span> <span class="tlaUNC">           0 :     void setAuthenticated(bool value) { authenticated = value;}</span></span>
+<span id="L219"><span class="lineNum">     219</span> <span class="tlaUNC">           0 :     bool getAuthenticated() { return authenticated; }</span></span>
+<span id="L220"><span class="lineNum">     220</span> <span class="tlaUNC">           0 :     bool hasConnectPacketSeen() { return connectPacketSeen; }</span></span>
+<span id="L221"><span class="lineNum">     221</span> <span class="tlaUNC">           0 :     void setHasConnectPacketSeen() { connectPacketSeen = true; }</span></span>
+<span id="L222"><span class="lineNum">     222</span> <span class="tlaUNC">           0 :     const std::string &amp;getClientId() { return this-&gt;clientid; }</span></span>
+<span id="L223"><span class="lineNum">     223</span>              :     std::string getClientIdOrPrefix() const;</span>
+<span id="L224"><span class="lineNum">     224</span>              :     void setClientId(const std::string &amp;id);</span>
+<span id="L225"><span class="lineNum">     225</span>              :     void setClientIdPrefix(const std::optional&lt;std::string&gt; &amp;p);</span>
+<span id="L226"><span class="lineNum">     226</span> <span class="tlaUNC">           0 :     const std::string &amp;getUsername() const { return this-&gt;username; }</span></span>
+<span id="L227"><span class="lineNum">     227</span> <span class="tlaUNC">           0 :     const std::optional&lt;std::string&gt; &amp;getFmqClientGroupId() const { return this-&gt;fmq_client_group_id; }</span></span>
+<span id="L228"><span class="lineNum">     228</span>              :     std::string &amp;getMutableUsername();</span>
+<span id="L229"><span class="lineNum">     229</span> <span class="tlaUNC">           0 :     std::shared_ptr&lt;WillPublish&gt; &amp;getWill() { return this-&gt;willPublish; }</span></span>
+<span id="L230"><span class="lineNum">     230</span> <span class="tlaUNC">           0 :     const std::shared_ptr&lt;WillPublish&gt; &amp;getStagedWill() { return this-&gt;stagedWillPublish; }</span></span>
+<span id="L231"><span class="lineNum">     231</span>              :     void assignSession(const std::shared_ptr&lt;Session&gt; &amp;session);</span>
+<span id="L232"><span class="lineNum">     232</span>              :     std::shared_ptr&lt;Session&gt; getSession();</span>
+<span id="L233"><span class="lineNum">     233</span>              :     void setDisconnectReason(const std::string &amp;reason, const int logLevel=-1);</span>
+<span id="L234"><span class="lineNum">     234</span>              :     void setDisconnectReasonFromSocketError();</span>
+<span id="L235"><span class="lineNum">     235</span>              :     std::chrono::seconds getSecondsTillKeepAliveAction() const;</span>
+<span id="L236"><span class="lineNum">     236</span>              :     const std::optional&lt;std::string&gt; &amp;getLocalPrefix() const;</span>
+<span id="L237"><span class="lineNum">     237</span>              :     const std::optional&lt;std::string&gt; &amp;getRemotePrefix() const;</span>
+<span id="L238"><span class="lineNum">     238</span>              : </span>
+<span id="L239"><span class="lineNum">     239</span>              :     void writeText(const std::string &amp;text);</span>
+<span id="L240"><span class="lineNum">     240</span>              :     void writePing();</span>
+<span id="L241"><span class="lineNum">     241</span>              :     void writePingResp();</span>
+<span id="L242"><span class="lineNum">     242</span>              :     void writeLoginPacket();</span>
+<span id="L243"><span class="lineNum">     243</span>              :     PacketDropReason writeMqttPacket(const MqttPacket &amp;packet);</span>
+<span id="L244"><span class="lineNum">     244</span>              :     PacketDropReason writeMqttPacketAndBlameThisClient(</span>
+<span id="L245"><span class="lineNum">     245</span>              :         PublishCopyFactory &amp;copyFactory, uint8_t max_qos, uint16_t packet_id, bool retain, uint32_t subscriptionIdentifier,</span>
+<span id="L246"><span class="lineNum">     246</span>              :         const std::optional&lt;std::string&gt; &amp;topic_override);</span>
+<span id="L247"><span class="lineNum">     247</span>              :     PacketDropReason writeMqttPacketAndBlameThisClient(const MqttPacket &amp;packet);</span>
+<span id="L248"><span class="lineNum">     248</span>              :     void writeBufIntoFd();</span>
+<span id="L249"><span class="lineNum">     249</span> <span class="tlaUNC">           0 :     DisconnectStage getDisconnectStage() const { return disconnectStage; }</span></span>
+<span id="L250"><span class="lineNum">     250</span>              : </span>
+<span id="L251"><span class="lineNum">     251</span>              :     const FMQSockaddr &amp;getAddr() const;</span>
+<span id="L252"><span class="lineNum">     252</span>              :     std::string repr();</span>
+<span id="L253"><span class="lineNum">     253</span>              :     std::string repr_endpoint();</span>
+<span id="L254"><span class="lineNum">     254</span>              :     bool keepAliveExpired();</span>
+<span id="L255"><span class="lineNum">     255</span>              :     std::string getKeepAliveInfoString() const;</span>
+<span id="L256"><span class="lineNum">     256</span>              :     void resetBuffersIfEligible();</span>
+<span id="L257"><span class="lineNum">     257</span>              : </span>
+<span id="L258"><span class="lineNum">     258</span>              :     void setTopicAlias(const uint16_t alias_id, const std::string &amp;topic);</span>
+<span id="L259"><span class="lineNum">     259</span>              :     const std::string &amp;getTopicAlias(const uint16_t id) const;</span>
+<span id="L260"><span class="lineNum">     260</span>              : </span>
+<span id="L261"><span class="lineNum">     261</span>              :     uint32_t getMaxIncomingPacketSize() const;</span>
+<span id="L262"><span class="lineNum">     262</span>              :     uint16_t getMaxIncomingTopicAliasValue() const;</span>
+<span id="L263"><span class="lineNum">     263</span>              : </span>
+<span id="L264"><span class="lineNum">     264</span>              :     void sendOrQueueWill();</span>
+<span id="L265"><span class="lineNum">     265</span>              : </span>
+<span id="L266"><span class="lineNum">     266</span>              :     void setRegistrationData(bool clean_start, uint16_t client_receive_max, uint32_t sessionExpiryInterval);</span>
+<span id="L267"><span class="lineNum">     267</span>              :     const std::unique_ptr&lt;StowedClientRegistrationData&gt; &amp;getRegistrationData() const;</span>
+<span id="L268"><span class="lineNum">     268</span>              :     void clearRegistrationData();</span>
+<span id="L269"><span class="lineNum">     269</span>              : </span>
+<span id="L270"><span class="lineNum">     270</span>              :     void stageConnack(std::unique_ptr&lt;ConnAck&gt; &amp;&amp;c);</span>
+<span id="L271"><span class="lineNum">     271</span>              :     void sendConnackSuccess();</span>
+<span id="L272"><span class="lineNum">     272</span>              :     void sendConnackDeny(ReasonCodes reason);</span>
+<span id="L273"><span class="lineNum">     273</span>              :     void addAuthReturnDataToStagedConnAck(const std::string &amp;authData);</span>
+<span id="L274"><span class="lineNum">     274</span>              : </span>
+<span id="L275"><span class="lineNum">     275</span>              :     void setExtendedAuthenticationMethod(const std::string &amp;authMethod);</span>
+<span id="L276"><span class="lineNum">     276</span>              :     const std::string &amp;getExtendedAuthenticationMethod() const;</span>
+<span id="L277"><span class="lineNum">     277</span>              : </span>
+<span id="L278"><span class="lineNum">     278</span>              :     std::shared_ptr&lt;ThreadData&gt; lockThreadData();</span>
+<span id="L279"><span class="lineNum">     279</span>              : </span>
+<span id="L280"><span class="lineNum">     280</span>              :     void setBridgeState(std::shared_ptr&lt;BridgeState&gt; bridgeState);</span>
+<span id="L281"><span class="lineNum">     281</span>              :     bool isOutgoingConnection() const;</span>
+<span id="L282"><span class="lineNum">     282</span>              :     std::shared_ptr&lt;BridgeState&gt; getBridgeState();</span>
+<span id="L283"><span class="lineNum">     283</span>              :     void setBridgeConnected();</span>
+<span id="L284"><span class="lineNum">     284</span>              :     void detectOutgoingConnectionEstablished();</span>
+<span id="L285"><span class="lineNum">     285</span>              :     bool getOutgoingConnectionEstablished() const;</span>
+<span id="L286"><span class="lineNum">     286</span> <span class="tlaUNC">           0 :     ClientType getClientType() const { return clientType; }</span></span>
+<span id="L287"><span class="lineNum">     287</span>              :     void setClientType(ClientType val);</span>
+<span id="L288"><span class="lineNum">     288</span> <span class="tlaUNC">           0 :     bool isRetainedAvailable() const {return supportsRetained; };</span></span>
+<span id="L289"><span class="lineNum">     289</span>              : </span>
+<span id="L290"><span class="lineNum">     290</span>              : #ifdef TESTING</span>
+<span id="L291"><span class="lineNum">     291</span>              :     std::function&lt;void(MqttPacket &amp;packet)&gt; onPacketReceived;</span>
+<span id="L292"><span class="lineNum">     292</span>              : #endif</span>
+<span id="L293"><span class="lineNum">     293</span>              : </span>
+<span id="L294"><span class="lineNum">     294</span>              : #ifndef NDEBUG</span>
+<span id="L295"><span class="lineNum">     295</span>              :     void setFakeUpgraded();</span>
+<span id="L296"><span class="lineNum">     296</span>              : #endif</span>
+<span id="L297"><span class="lineNum">     297</span>              : </span>
+<span id="L298"><span class="lineNum">     298</span>              :     void setSslVerify(X509ClientVerification verificationMode);</span>
+<span id="L299"><span class="lineNum">     299</span>              :     std::optional&lt;std::string&gt; getUsernameFromPeerCertificate();</span>
+<span id="L300"><span class="lineNum">     300</span>              :     X509ClientVerification getX509ClientVerification() const;</span>
+<span id="L301"><span class="lineNum">     301</span>              :     void setAllowAnonymousOverride(const AllowListenerAnonymous allow);</span>
+<span id="L302"><span class="lineNum">     302</span>              :     AllowListenerAnonymous getAllowAnonymousOverride() const;</span>
+<span id="L303"><span class="lineNum">     303</span>              :     void setAcmeRedirect(const std::optional&lt;std::string&gt; &amp;url);</span>
+<span id="L304"><span class="lineNum">     304</span> <span class="tlaUNC">           0 :     const std::unique_ptr&lt;std::string&gt; &amp;getAcmeRedirectUrl() const { return this-&gt;acmeRedirectUrl; };</span></span>
+<span id="L305"><span class="lineNum">     305</span>              : </span>
+<span id="L306"><span class="lineNum">     306</span> <span class="tlaUNC">           0 :     void setAsyncAuthenticating() { this-&gt;asyncAuthenticating = true; }</span></span>
+<span id="L307"><span class="lineNum">     307</span> <span class="tlaUNC">           0 :     bool getAsyncAuthenticating() const { return this-&gt;asyncAuthenticating; }</span></span>
+<span id="L308"><span class="lineNum">     308</span>              :     void addPacketToAfterAsyncQueue(MqttPacket &amp;&amp;p);</span>
+<span id="L309"><span class="lineNum">     309</span>              :     void handleAfterAsyncQueue(std::shared_ptr&lt;Client&gt; &amp;sender);</span>
+<span id="L310"><span class="lineNum">     310</span>              :     void setAsyncAuthResult(const AsyncAuthResult &amp;v);</span>
+<span id="L311"><span class="lineNum">     311</span> <span class="tlaUNC">           0 :     bool hasAsyncAuthResult() const { return this-&gt;asyncAuthResult.operator bool() ; }</span></span>
+<span id="L312"><span class="lineNum">     312</span>              :     std::unique_ptr&lt;AsyncAuthResult&gt; stealAsyncAuthResult();</span>
+<span id="L313"><span class="lineNum">     313</span> <span class="tlaUNC">           0 :     bool getCleanStart() const { return clean_start;}</span></span>
+<span id="L314"><span class="lineNum">     314</span> <span class="tlaUNC">           0 :     Mqtt3QoSExceedAction getMqtt3QoSExceedAction() const { return this-&gt;mqtt3QoSExceedAction;}</span></span>
+<span id="L315"><span class="lineNum">     315</span> <span class="tlaUNC">           0 :     void setMqtt3QoSExceedAction(Mqtt3QoSExceedAction action) { this-&gt;mqtt3QoSExceedAction = action;}</span></span>
+<span id="L316"><span class="lineNum">     316</span> <span class="tlaUNC">           0 :     uint8_t getMaxQos() const { return this-&gt;maxQos; }</span></span>
+<span id="L317"><span class="lineNum">     317</span> <span class="tlaUNC">           0 :     void setMaxQos(uint8_t qos) { this-&gt;maxQos = qos; }</span></span>
+<span id="L318"><span class="lineNum">     318</span>              : </span>
+<span id="L319"><span class="lineNum">     319</span>              :     template&lt;typename... Args&gt;</span>
+<span id="L320"><span class="lineNum">     320</span> <span class="tlaUNC">           0 :     void logFormatStringQueued(int level, Args... args)</span></span>
+<span id="L321"><span class="lineNum">     321</span>              :     {</span>
+<span id="L322"><span class="lineNum">     322</span> <span class="tlaUNC">           0 :         auto td = this-&gt;threadData.lock();</span></span>
+<span id="L323"><span class="lineNum">     323</span>              : </span>
+<span id="L324"><span class="lineNum">     324</span> <span class="tlaUNC">           0 :         if (!td)</span></span>
+<span id="L325"><span class="lineNum">     325</span> <span class="tlaUNC">           0 :             return;</span></span>
+<span id="L326"><span class="lineNum">     326</span>              : </span>
+<span id="L327"><span class="lineNum">     327</span> <span class="tlaUNC">           0 :         td-&gt;logStringQueued(fd.get(), this, level, args...);</span></span>
+<span id="L328"><span class="lineNum">     328</span> <span class="tlaUNC">           0 :     }</span></span>
+<span id="L329"><span class="lineNum">     329</span>              : };</span>
+<span id="L330"><span class="lineNum">     330</span>              : </span>
+<span id="L331"><span class="lineNum">     331</span>              : #endif // CLIENT_H</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.0-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Mosquitto v2.1.2 Coverage - Seed Corpus - src/plugin_message.c</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory src">src</a> - plugin_message.c<span style="font-size: 80%;"> (source / <a href="plugin_message.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Mosquitto v2.1.2 Coverage - Seed Corpus</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">52</td>
+            <td class="headerCovTableEntry">0</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2026-09-18 19:04:10</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">0</td>
+          </tr>
+                  <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span>              : /*</span>
+<span id="L2"><span class="lineNum">       2</span>              : Copyright (c) 2016-2021 Roger Light &lt;roger@atchoo.org&gt;</span>
+<span id="L3"><span class="lineNum">       3</span>              : </span>
+<span id="L4"><span class="lineNum">       4</span>              : All rights reserved. This program and the accompanying materials</span>
+<span id="L5"><span class="lineNum">       5</span>              : are made available under the terms of the Eclipse Public License 2.0</span>
+<span id="L6"><span class="lineNum">       6</span>              : and Eclipse Distribution License v1.0 which accompany this distribution.</span>
+<span id="L7"><span class="lineNum">       7</span>              : </span>
+<span id="L8"><span class="lineNum">       8</span>              : The Eclipse Public License is available at</span>
+<span id="L9"><span class="lineNum">       9</span>              :    https://www.eclipse.org/legal/epl-2.0/</span>
+<span id="L10"><span class="lineNum">      10</span>              : and the Eclipse Distribution License is available at</span>
+<span id="L11"><span class="lineNum">      11</span>              :   http://www.eclipse.org/org/documents/edl-v10.php.</span>
+<span id="L12"><span class="lineNum">      12</span>              : </span>
+<span id="L13"><span class="lineNum">      13</span>              : SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause</span>
+<span id="L14"><span class="lineNum">      14</span>              : </span>
+<span id="L15"><span class="lineNum">      15</span>              : Contributors:</span>
+<span id="L16"><span class="lineNum">      16</span>              :    Roger Light - initial implementation and documentation.</span>
+<span id="L17"><span class="lineNum">      17</span>              : */</span>
+<span id="L18"><span class="lineNum">      18</span>              : </span>
+<span id="L19"><span class="lineNum">      19</span>              : #include &quot;config.h&quot;</span>
+<span id="L20"><span class="lineNum">      20</span>              : </span>
+<span id="L21"><span class="lineNum">      21</span>              : #include &quot;mosquitto_broker_internal.h&quot;</span>
+<span id="L22"><span class="lineNum">      22</span>              : #include &quot;utlist.h&quot;</span>
+<span id="L23"><span class="lineNum">      23</span>              : </span>
+<span id="L24"><span class="lineNum">      24</span>              : struct should_free {</span>
+<span id="L25"><span class="lineNum">      25</span>              :         bool topic;</span>
+<span id="L26"><span class="lineNum">      26</span>              :         bool payload;</span>
+<span id="L27"><span class="lineNum">      27</span>              :         bool properties;</span>
+<span id="L28"><span class="lineNum">      28</span>              : };</span>
+<span id="L29"><span class="lineNum">      29</span>              : </span>
+<span id="L30"><span class="lineNum">      30</span>              : </span>
+<span id="L31"><span class="lineNum">      31</span> <span class="tlaUNC">           0 : static int plugin__handle_message_single(struct mosquitto__callback *callbacks, enum mosquitto_plugin_event ev_type, struct should_free *to_free, struct mosquitto *context, struct mosquitto_base_msg *stored)</span></span>
+<span id="L32"><span class="lineNum">      32</span>              : {</span>
+<span id="L33"><span class="lineNum">      33</span>              :         struct mosquitto_evt_message event_data;</span>
+<span id="L34"><span class="lineNum">      34</span>              :         struct mosquitto__callback *cb_base, *cb_next;</span>
+<span id="L35"><span class="lineNum">      35</span> <span class="tlaUNC">           0 :         int rc = MOSQ_ERR_SUCCESS;</span></span>
+<span id="L36"><span class="lineNum">      36</span>              : </span>
+<span id="L37"><span class="lineNum">      37</span> <span class="tlaUNC">           0 :         memset(&amp;event_data, 0, sizeof(event_data));</span></span>
+<span id="L38"><span class="lineNum">      38</span> <span class="tlaUNC">           0 :         event_data.client = context;</span></span>
+<span id="L39"><span class="lineNum">      39</span> <span class="tlaUNC">           0 :         event_data.topic = stored-&gt;topic;</span></span>
+<span id="L40"><span class="lineNum">      40</span> <span class="tlaUNC">           0 :         event_data.payloadlen = stored-&gt;payloadlen;</span></span>
+<span id="L41"><span class="lineNum">      41</span> <span class="tlaUNC">           0 :         event_data.payload = stored-&gt;payload;</span></span>
+<span id="L42"><span class="lineNum">      42</span> <span class="tlaUNC">           0 :         event_data.qos = stored-&gt;qos;</span></span>
+<span id="L43"><span class="lineNum">      43</span> <span class="tlaUNC">           0 :         event_data.retain = stored-&gt;retain;</span></span>
+<span id="L44"><span class="lineNum">      44</span> <span class="tlaUNC">           0 :         event_data.properties = stored-&gt;properties;</span></span>
+<span id="L45"><span class="lineNum">      45</span>              : </span>
+<span id="L46"><span class="lineNum">      46</span> <span class="tlaUNC">           0 :         DL_FOREACH_SAFE(callbacks, cb_base, cb_next){</span></span>
+<span id="L47"><span class="lineNum">      47</span> <span class="tlaUNC">           0 :                 rc = cb_base-&gt;cb((int)ev_type, &amp;event_data, cb_base-&gt;userdata);</span></span>
+<span id="L48"><span class="lineNum">      48</span> <span class="tlaUNC">           0 :                 if(rc != MOSQ_ERR_SUCCESS){</span></span>
+<span id="L49"><span class="lineNum">      49</span> <span class="tlaUNC">           0 :                         break;</span></span>
+<span id="L50"><span class="lineNum">      50</span>              :                 }</span>
+<span id="L51"><span class="lineNum">      51</span>              : </span>
+<span id="L52"><span class="lineNum">      52</span> <span class="tlaUNC">           0 :                 if(stored-&gt;topic != event_data.topic){</span></span>
+<span id="L53"><span class="lineNum">      53</span> <span class="tlaUNC">           0 :                         if(to_free-&gt;topic){</span></span>
+<span id="L54"><span class="lineNum">      54</span> <span class="tlaUNC">           0 :                                 mosquitto_FREE(stored-&gt;topic);</span></span>
+<span id="L55"><span class="lineNum">      55</span>              :                         }</span>
+<span id="L56"><span class="lineNum">      56</span> <span class="tlaUNC">           0 :                         stored-&gt;topic = event_data.topic;</span></span>
+<span id="L57"><span class="lineNum">      57</span> <span class="tlaUNC">           0 :                         to_free-&gt;topic = true;</span></span>
+<span id="L58"><span class="lineNum">      58</span>              :                 }</span>
+<span id="L59"><span class="lineNum">      59</span>              : </span>
+<span id="L60"><span class="lineNum">      60</span> <span class="tlaUNC">           0 :                 if(stored-&gt;payload != event_data.payload){</span></span>
+<span id="L61"><span class="lineNum">      61</span> <span class="tlaUNC">           0 :                         if(to_free-&gt;payload){</span></span>
+<span id="L62"><span class="lineNum">      62</span> <span class="tlaUNC">           0 :                                 mosquitto_FREE(stored-&gt;payload);</span></span>
+<span id="L63"><span class="lineNum">      63</span>              :                         }</span>
+<span id="L64"><span class="lineNum">      64</span> <span class="tlaUNC">           0 :                         stored-&gt;payload = event_data.payload;</span></span>
+<span id="L65"><span class="lineNum">      65</span> <span class="tlaUNC">           0 :                         stored-&gt;payloadlen = event_data.payloadlen;</span></span>
+<span id="L66"><span class="lineNum">      66</span> <span class="tlaUNC">           0 :                         to_free-&gt;payload = true;</span></span>
+<span id="L67"><span class="lineNum">      67</span>              :                 }</span>
+<span id="L68"><span class="lineNum">      68</span>              : </span>
+<span id="L69"><span class="lineNum">      69</span> <span class="tlaUNC">           0 :                 if(stored-&gt;properties != event_data.properties){</span></span>
+<span id="L70"><span class="lineNum">      70</span> <span class="tlaUNC">           0 :                         if(to_free-&gt;properties){</span></span>
+<span id="L71"><span class="lineNum">      71</span> <span class="tlaUNC">           0 :                                 mosquitto_property_free_all(&amp;stored-&gt;properties);</span></span>
+<span id="L72"><span class="lineNum">      72</span>              :                         }</span>
+<span id="L73"><span class="lineNum">      73</span> <span class="tlaUNC">           0 :                         stored-&gt;properties = event_data.properties;</span></span>
+<span id="L74"><span class="lineNum">      74</span> <span class="tlaUNC">           0 :                         to_free-&gt;properties = true;</span></span>
+<span id="L75"><span class="lineNum">      75</span>              :                 }</span>
+<span id="L76"><span class="lineNum">      76</span>              :         }</span>
+<span id="L77"><span class="lineNum">      77</span>              : </span>
+<span id="L78"><span class="lineNum">      78</span> <span class="tlaUNC">           0 :         stored-&gt;retain = event_data.retain;</span></span>
+<span id="L79"><span class="lineNum">      79</span> <span class="tlaUNC">           0 :         if(ev_type == MOSQ_EVT_MESSAGE_OUT){</span></span>
+<span id="L80"><span class="lineNum">      80</span> <span class="tlaUNC">           0 :                 stored-&gt;qos = event_data.qos;</span></span>
+<span id="L81"><span class="lineNum">      81</span>              :         }</span>
+<span id="L82"><span class="lineNum">      82</span>              : </span>
+<span id="L83"><span class="lineNum">      83</span> <span class="tlaUNC">           0 :         return rc;</span></span>
+<span id="L84"><span class="lineNum">      84</span>              : }</span>
+<span id="L85"><span class="lineNum">      85</span>              : </span>
+<span id="L86"><span class="lineNum">      86</span>              : </span>
+<span id="L87"><span class="lineNum">      87</span> <span class="tlaUNC">           0 : int plugin__handle_message_out(struct mosquitto *context, struct mosquitto_base_msg *stored)</span></span>
+<span id="L88"><span class="lineNum">      88</span>              : {</span>
+<span id="L89"><span class="lineNum">      89</span> <span class="tlaUNC">           0 :         int rc = MOSQ_ERR_SUCCESS;</span></span>
+<span id="L90"><span class="lineNum">      90</span> <span class="tlaUNC">           0 :         struct should_free to_free = {false, false, false}; /* in msg_out, original data will be freed later */</span></span>
+<span id="L91"><span class="lineNum">      91</span>              : </span>
+<span id="L92"><span class="lineNum">      92</span>              :         /* Global plugins */</span>
+<span id="L93"><span class="lineNum">      93</span> <span class="tlaUNC">           0 :         rc = plugin__handle_message_single(db.config-&gt;security_options.plugin_callbacks.message_out,</span></span>
+<span id="L94"><span class="lineNum">      94</span>              :                         MOSQ_EVT_MESSAGE_OUT, &amp;to_free, context, stored);</span>
+<span id="L95"><span class="lineNum">      95</span> <span class="tlaUNC">           0 :         if(rc){</span></span>
+<span id="L96"><span class="lineNum">      96</span> <span class="tlaUNC">           0 :                 return rc;</span></span>
+<span id="L97"><span class="lineNum">      97</span>              :         }</span>
+<span id="L98"><span class="lineNum">      98</span>              : </span>
+<span id="L99"><span class="lineNum">      99</span> <span class="tlaUNC">           0 :         if(context-&gt;listener){</span></span>
+<span id="L100"><span class="lineNum">     100</span> <span class="tlaUNC">           0 :                 rc = plugin__handle_message_single(context-&gt;listener-&gt;security_options-&gt;plugin_callbacks.message_out,</span></span>
+<span id="L101"><span class="lineNum">     101</span>              :                                 MOSQ_EVT_MESSAGE_OUT, &amp;to_free, context, stored);</span>
+<span id="L102"><span class="lineNum">     102</span>              :         }</span>
+<span id="L103"><span class="lineNum">     103</span>              : </span>
+<span id="L104"><span class="lineNum">     104</span> <span class="tlaUNC">           0 :         return rc;</span></span>
+<span id="L105"><span class="lineNum">     105</span>              : }</span>
+<span id="L106"><span class="lineNum">     106</span>              : </span>
+<span id="L107"><span class="lineNum">     107</span>              : </span>
+<span id="L108"><span class="lineNum">     108</span> <span class="tlaUNC">           0 : int plugin__handle_message_in(struct mosquitto *context, struct mosquitto_base_msg *stored)</span></span>
+<span id="L109"><span class="lineNum">     109</span>              : {</span>
+<span id="L110"><span class="lineNum">     110</span> <span class="tlaUNC">           0 :         int rc = MOSQ_ERR_SUCCESS;</span></span>
+<span id="L111"><span class="lineNum">     111</span> <span class="tlaUNC">           0 :         struct should_free to_free = {true, true, true}; /* in msg_in, original data should be freed */</span></span>
+<span id="L112"><span class="lineNum">     112</span>              : </span>
+<span id="L113"><span class="lineNum">     113</span>              :         /* Global plugins */</span>
+<span id="L114"><span class="lineNum">     114</span> <span class="tlaUNC">           0 :         rc = plugin__handle_message_single(db.config-&gt;security_options.plugin_callbacks.message_in,</span></span>
+<span id="L115"><span class="lineNum">     115</span>              :                         MOSQ_EVT_MESSAGE_IN, &amp;to_free, context, stored);</span>
+<span id="L116"><span class="lineNum">     116</span> <span class="tlaUNC">           0 :         if(rc){</span></span>
+<span id="L117"><span class="lineNum">     117</span> <span class="tlaUNC">           0 :                 return rc;</span></span>
+<span id="L118"><span class="lineNum">     118</span>              :         }</span>
+<span id="L119"><span class="lineNum">     119</span>              : </span>
+<span id="L120"><span class="lineNum">     120</span> <span class="tlaUNC">           0 :         if(context-&gt;listener){</span></span>
+<span id="L121"><span class="lineNum">     121</span> <span class="tlaUNC">           0 :                 rc = plugin__handle_message_single(context-&gt;listener-&gt;security_options-&gt;plugin_callbacks.message_in,</span></span>
+<span id="L122"><span class="lineNum">     122</span>              :                                 MOSQ_EVT_MESSAGE_IN, &amp;to_free, context, stored);</span>
+<span id="L123"><span class="lineNum">     123</span>              :         }</span>
+<span id="L124"><span class="lineNum">     124</span>              : </span>
+<span id="L125"><span class="lineNum">     125</span> <span class="tlaUNC">           0 :         return rc;</span></span>
+<span id="L126"><span class="lineNum">     126</span>              : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.0-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>
