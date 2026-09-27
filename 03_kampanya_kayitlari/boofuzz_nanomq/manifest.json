@@ -1,0 +1,11 @@
+{
+  "broker": "nanomq",
+  "tool": "boofuzz",
+  "duration_s": 18000,
+  "start_utc": "2026-09-16T22:18:00.528Z",
+  "broker_cmd": "./builds/nanomq-asan/build/nanomq/nanomq start --url nmq-tcp://0.0.0.0:1883",
+  "broker_pid": 2269265,
+  "end_utc": "2026-09-17T03:18:00.536Z",
+  "sent": 2499837,
+  "anomalies": 0
+}

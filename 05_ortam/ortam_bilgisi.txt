@@ -1,0 +1,36 @@
+### Donanim ve yazilim ortami
+Tarih: 2026-09-19T00:20:35+03:00
+
+--- Cekirdek ---
+Linux kadir 6.12.107+deb13-arm64 #1 SMP Debian 6.12.107-1 (2026-08-29) aarch64 GNU/Linux
+
+--- OS ---
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+
+--- Islemci ---
+Architecture:                            aarch64
+CPU(s):                                  4
+Model name:                              Cortex-A53
+CPU(s) scaling MHz:                      52%
+CPU max MHz:                             1400.0000
+CPU min MHz:                             600.0000
+NUMA node0 CPU(s):                       0-3
+
+--- Bellek ---
+               total        used        free      shared  buff/cache   available
+Mem:           892Mi       191Mi        31Mi       348Ki       734Mi       701Mi
+Swap:          2.9Gi        84Mi       2.8Gi
+
+--- Derleyiciler ---
+gcc (Debian 14.2.0-19) 14.2.0
+Debian clang version 19.1.7 (3+b1)
+cmake version 3.31.6
+
+--- Araclar ---
+lcov: LCOV version 2.0-1
+gcovr 7.2
+
+--- Brokerlar ---
+Mosquitto v2.1.2 | NanoMQ 0.25.6 | FlashMQ v1.27.1

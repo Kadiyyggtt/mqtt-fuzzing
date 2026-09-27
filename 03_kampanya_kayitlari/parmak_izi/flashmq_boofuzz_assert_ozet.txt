@@ -1,0 +1,12 @@
+dosya: runs/boofuzz_flashmq/broker_stdout.log (full, untruncated log on the measurement host)
+toplam satir: 5038426
+subscriptionstore.cpp:993 sayisi: 2126
+Assertion iceren satir sayisi: 2126
+konum dagilimi:
+   2126 subscriptionstore.cpp:993
+farkli Assertion metinleri:
+   2123 Assertion `recompose_topic(subtopics) == publish.topic' failed
+ilk 3 ornek:
+flashmq: /home/kadir/mqtt-fuzzing/builds/flashmq-asan/subscriptionstore.cpp:993: bool SubscriptionStore::setRetainedMessage(const Publish&, const std::vector<std::__cxx11::basic_string<char> >&, bool, bool): Assertion `recompose_topic(subtopics) == publish.topic' failed.
+flashmq: /home/kadir/mqtt-fuzzing/builds/flashmq-asan/subscriptionstore.cpp:993: bool SubscriptionStore::setRetainedMessage(const Publish&, const std::vector<std::__cxx11::basic_string<char> >&, bool, bool): Assertion `recompose_topic(subtopics) == publish.topic' failed.
+flashmq: /home/kadir/mqtt-fuzzing/builds/flashmq-asan/subscriptionstore.cpp:993: bool SubscriptionStore::setRetainedMessage(const Publish&, const std::vector<std::__cxx11::basic_string<char> >&, bool, bool): Assertion `recompose_topic(subtopics) == publish.topic' failed.

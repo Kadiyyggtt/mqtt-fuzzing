@@ -1,0 +1,1 @@
+gcovr --root builds/mosquitto-cov --filter 'builds/mosquitto-cov/(src|lib|libcommon|common)/' --exclude 'builds/mosquitto-cov/.*(apps|client|plugins|test|www|build)/' --exclude-unreachable-branches --print-summary --json 04_kapsama/mosquitto_gcovr.json --txt 04_kapsama/mosquitto_gcovr.txt --html-details 04_kapsama/mosquitto_gcovr_html/index.html builds/mosquitto-cov

@@ -3,4 +3,7 @@ tools/
 runs/*/crashes/
 venv/
 *.o
-*.so*
+*.so
+*.so.[0-9]*
+.DS_Store
+__pycache__/

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite it as below."
+type: dataset
+title: "Gömülü donanımda MQTT brokerlarının fuzzing ile dayanıklılık ve kaynak kullanımı eğilimlerinin incelenmesi — replication package"
+authors:
+  - family-names: "Yiğit"
+    given-names: "Abdulkadir"
+    orcid: "https://orcid.org/0009-0000-7699-9090"
+    affiliation: "İnönü University, Institute of Science, Cyber Security"
+version: "2.0"
+date-released: "2026-09-27"
+doi: "10.5281/zenodo.22845163"
+repository-code: "https://github.com/Kadiyyggtt/mqtt-fuzzing"
+license: "CC-BY-4.0"
+keywords:
+  - MQTT
+  - fuzzing
+  - embedded systems security
+  - Raspberry Pi
+  - code coverage

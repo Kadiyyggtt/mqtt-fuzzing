@@ -1,0 +1,11 @@
+{
+  "broker": "mosquitto",
+  "tool": "boofuzz",
+  "duration_s": 18000,
+  "start_utc": "2026-09-16T17:16:33.069Z",
+  "broker_cmd": "./builds/mosquitto-asan/src/mosquitto -p 1883",
+  "broker_pid": 3956511,
+  "end_utc": "2026-09-16T22:16:33.079Z",
+  "sent": 2502572,
+  "anomalies": 0
+}

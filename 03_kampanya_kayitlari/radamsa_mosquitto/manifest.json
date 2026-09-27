@@ -1,0 +1,14 @@
+{
+  "broker": "mosquitto",
+  "tool": "radamsa",
+  "seed": 1001,
+  "duration_s": 18000,
+  "start_utc": "2026-09-15T17:02:58.999Z",
+  "seed_count": 39,
+  "broker_cmd": "./builds/mosquitto-asan/src/mosquitto -p 1883",
+  "broker_pid": 6510,
+  "batch": 2000,
+  "end_utc": "2026-09-15T22:02:59.005Z",
+  "sent": 1333442,
+  "anomalies": 0
+}

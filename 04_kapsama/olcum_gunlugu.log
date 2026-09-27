@@ -1,0 +1,105 @@
+=== kapsam_yeniden.sh  2026-09-26T23:48:48+03:00 ===
+conf ve parmak izi kaydedildi.
+
+################ mosquitto  23:55 ################
+Note: switching to '99fa50f30e325609394c324c8ff71cfbbe95d8ab'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+commit: 99fa50f3  (asan: 99fa50f3, etiket v2.1.2)
+derleniyor: make -j$J WITH_TLS=no WITH_WEBSOCKETS=no WITH_CJSON=no WITH_DOCS=no WITH_SRV=no CFLAGS="--coverage -O0 -g" LDFLAGS="--coverage"
+gcno: 233
+  39 tohum gonderildi
+gcda: 106
+KOMUT: gcovr --root /home/kadir/mqtt-fuzzing/builds/mosquitto-cov --filter '/home/kadir/mqtt-fuzzing/builds/mosquitto-cov/(src|lib|libcommon|common)/' --exclude '/home/kadir/mqtt-fuzzing/builds/mosquitto-cov/.*(apps|client|plugins|test|www|build)/' --exclude-unreachable-branches --print-summary --json /home/kadir/zenodo_ek/kapsama_yeni/mosquitto_gcovr.json --txt /home/kadir/zenodo_ek/kapsama_yeni/mosquitto_gcovr.txt --html-details /home/kadir/zenodo_ek/kapsama_yeni/mosquitto_gcovr_html/index.html /home/kadir/mqtt-fuzzing/builds/mosquitto-cov
+(INFO) Reading coverage data...
+(INFO) Writing coverage report...
+lines: 22.5% (3596 out of 15969)
+functions: 41.2% (331 out of 803)
+branches: 13.7% (1834 out of 13345)
+
+################ nanomq  23:57 ################
+Note: switching to '926179ec41adbb8dbc0a191746ea78d91d53c463'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+commit: 926179ec  (asan: 926179ec, etiket 0.25.6)
+derleniyor: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_FLAGS="--coverage -O0 -g" -DCMAKE_CXX_FLAGS="--coverage -O0 -g" -DCMAKE_EXE_LINKER_FLAGS="--coverage" -DCMAKE_SHARED_LINKER_FLAGS="--coverage" -DNNG_ENABLE_TLS=OFF && cmake --build build -j$J
+gcno: 440
+  39 tohum gonderildi
+gcda: 125
+KOMUT: gcovr --root /home/kadir/mqtt-fuzzing/builds/nanomq-cov --filter '/home/kadir/mqtt-fuzzing/builds/nanomq-cov/(nanomq|nng/src)/' --exclude '/home/kadir/mqtt-fuzzing/builds/nanomq-cov/.*(nanomq_cli|build|tests?|demo)/|CMakeFiles|/Users/' --exclude-unreachable-branches --print-summary --json /home/kadir/zenodo_ek/kapsama_yeni/nanomq_gcovr.json --txt /home/kadir/zenodo_ek/kapsama_yeni/nanomq_gcovr.txt --html-details /home/kadir/zenodo_ek/kapsama_yeni/nanomq_gcovr_html/index.html /home/kadir/mqtt-fuzzing/builds/nanomq-cov
+	In directory /:
+Could not open output file 'mqtt_parser.c##8b24c404cc9c3ac0443c49ab187fa2f4.gcov'
+Could not open output file 'uintn-identity.h##c68fc5d418683588a2a645ceff33e889.gcov'
+
+	(gcovr could not infer a working directory that resolved it.)
+To ignore this error use option --gcov-ignore-errors=no_working_dir_found.
+
+################ flashmq  00:16 ################
+Note: switching to 'c371f4e610a56e20a86d21e1801aa4b82b07e3b1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+commit: c371f4e  (asan: c371f4e, etiket v1.27.1)
+derleniyor: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS="--coverage -O0 -g" -DCMAKE_EXE_LINKER_FLAGS="--coverage" && cmake --build build -j$J
+gcno: 68
+  39 tohum gonderildi
+gcda: 63
+KOMUT: gcovr --root /home/kadir/mqtt-fuzzing/builds/flashmq-cov --filter '/home/kadir/mqtt-fuzzing/builds/flashmq-cov/[^/]+\.(cpp|h)$' --exclude '/home/kadir/mqtt-fuzzing/builds/flashmq-cov/.*(build|FlashMQTests|tests?)/|CMakeFiles' --exclude-unreachable-branches --print-summary --json /home/kadir/zenodo_ek/kapsama_yeni/flashmq_gcovr.json --txt /home/kadir/zenodo_ek/kapsama_yeni/flashmq_gcovr.txt --html-details /home/kadir/zenodo_ek/kapsama_yeni/flashmq_gcovr_html/index.html /home/kadir/mqtt-fuzzing/builds/flashmq-cov
+Could not open output file 'new##575825e1b0bf1aa4cc296a7a4ded0efe.gcov'
+Could not open output file 'exception.h##5cf3e17a54db9cd1c25e05e33b48adb8.gcov'
+Could not open output file 'type_traits##b1affaa74a0d0d47a789d9cefce14149.gcov'
+
+	(gcovr could not infer a working directory that resolved it.)
+To ignore this error use option --gcov-ignore-errors=no_working_dir_found.
+
+=================== TABLO 10 (yeni) ===================
+-- mosquitto
+lines: 22.5% (3596 out of 15969)
+functions: 41.2% (331 out of 803)
+branches: 13.7% (1834 out of 13345)
+-- nanomq
+   (ölçüm yok — logu kontrol et)
+-- flashmq
+   (ölçüm yok — logu kontrol et)
+BITTI 2026-09-27T00:44:29+03:00. Mac'e: scp -r kadir@192.168.1.103:~/zenodo_ek ~/Desktop/

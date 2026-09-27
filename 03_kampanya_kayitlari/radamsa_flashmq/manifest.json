@@ -1,0 +1,14 @@
+{
+  "broker": "flashmq",
+  "tool": "radamsa",
+  "seed": 1003,
+  "duration_s": 18000,
+  "start_utc": "2026-09-16T03:04:47.119Z",
+  "seed_count": 39,
+  "broker_cmd": "./builds/flashmq-asan/build/flashmq --config-file ./scripts/flashmq.conf",
+  "broker_pid": 2657166,
+  "batch": 2000,
+  "end_utc": "2026-09-16T08:04:48.499Z",
+  "sent": 1283989,
+  "anomalies": 11
+}

@@ -1,0 +1,22 @@
+(INFO) Reading coverage data...
+(WARNING) Unrecognized GCOV output for /home/kadir/mqtt-fuzzing/builds/flashmq-cov/threadloop.cpp
+	  branch  2 taken -2 (fallthrough)
+	  branch  2 taken -4
+	This is indicative of a gcov output parse error.
+	Please report this to the gcovr developers
+	at <https://github.com/gcovr/gcovr/issues>.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  2 taken -2 (fallthrough)' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  2 taken -4' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(WARNING) Unrecognized GCOV output for /home/kadir/mqtt-fuzzing/builds/flashmq-cov/plugin.cpp
+	  branch  2 taken -2
+	This is indicative of a gcov output parse error.
+	Please report this to the gcovr developers
+	at <https://github.com/gcovr/gcovr/issues>.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  2 taken -2' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(INFO) Writing coverage report...
+lines: 35.5% (4350 out of 12257)
+functions: 53.0% (662 out of 1248)
+branches: 16.7% (3171 out of 18936)

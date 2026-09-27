@@ -1,0 +1,14 @@
+{
+  "broker": "nanomq",
+  "tool": "radamsa",
+  "seed": 1002,
+  "duration_s": 18000,
+  "start_utc": "2026-09-15T22:03:28.547Z",
+  "seed_count": 39,
+  "broker_cmd": "./builds/nanomq-asan/build/nanomq/nanomq start --url nmq-tcp://0.0.0.0:1883",
+  "broker_pid": 1345533,
+  "batch": 2000,
+  "end_utc": "2026-09-16T03:03:28.557Z",
+  "sent": 1306065,
+  "anomalies": 0
+}

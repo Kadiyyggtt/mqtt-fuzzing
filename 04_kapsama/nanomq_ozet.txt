@@ -1,0 +1,479 @@
+(INFO) Reading coverage data...
+(ERROR) GCOV produced the following errors processing /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/scanner.c.gcno:
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov:
+build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib:
+./scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental:
+nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src:
+supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir:
+src/supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles:
+nng_testing.dir/src/supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng:
+CMakeFiles/nng_testing.dir/src/supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build:
+nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov:
+build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds:
+nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing:
+builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir:
+mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home:
+kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Could not open output file 'scanner.l##9e8a3b755dedf4d3544f74066cfd7748.gcov'
+Could not open output file 'scanner.c##e019afa874677b34cff14a5f258eab4f.gcov'
+Could not open output file 'scanner.c##23a689b8251af3b17a5f1f38242a994a.gcov'
+Could not open output file 'scanner.l##f1850da435314f881dbaace58ecb30bb.gcov'
+
+	In directory /:
+home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/scanner.c.gcda:cannot open data file, assuming not executed
+Could not open output file 'scanner.l##9e8a3b755dedf4d3544f74066cfd7748.gcov'
+Could not open output file 'scanner.c##e019afa874677b34cff14a5f258eab4f.gcov'
+Could not open output file 'scanner.c##23a689b8251af3b17a5f1f38242a994a.gcov'
+Could not open output file 'scanner.l##f1850da435314f881dbaace58ecb30bb.gcov'
+
+	(gcovr could not infer a working directory that resolved it.)
+To ignore this error use option --gcov-ignore-errors=no_working_dir_found.
+(WARNING) Unrecognized GCOV output for /home/kadir/mqtt-fuzzing/builds/nanomq-cov/nng/src/sp/protocol/mqtt/mqtt_parser.c
+	  branch  1 taken -1 (fallthrough)
+	This is indicative of a gcov output parse error.
+	Please report this to the gcovr developers
+	at <https://github.com/gcovr/gcovr/issues>.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  1 taken -1 (fallthrough)' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(WARNING) Unrecognized GCOV output for /home/kadir/mqtt-fuzzing/builds/nanomq-cov/nanomq/pub_handler.c
+	  branch  1 taken -2
+	  branch  1 taken -2
+	This is indicative of a gcov output parse error.
+	Please report this to the gcovr developers
+	at <https://github.com/gcovr/gcovr/issues>.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  1 taken -2' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  1 taken -2' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(WARNING) Unrecognized GCOV output for /home/kadir/mqtt-fuzzing/builds/nanomq-cov/nng/src/core/message.c
+	  branch  1 taken -2
+	  branch  1 taken -1
+	  branch  1 taken -3
+	  branch  1 taken -1
+	This is indicative of a gcov output parse error.
+	Please report this to the gcovr developers
+	at <https://github.com/gcovr/gcovr/issues>.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  1 taken -2' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  1 taken -1' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  1 taken -3' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  1 taken -1' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(ERROR) GCOV produced the following errors processing /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng.dir/src/supplemental/nanolib/scanner.c.gcda:
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng.dir/src/supplemental/nanolib:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng.dir/src/supplemental:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng.dir/src:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng.dir:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing/builds:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir/mqtt-fuzzing:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home/kadir:
+Cannot open source file scanner.l
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/build/scanner.c
+Cannot open source file nanomq/nng/src/supplemental/nanolib/scanner.l
+
+	In directory /home:
+Could not open output file 'scanner.l##9e8a3b755dedf4d3544f74066cfd7748.gcov'
+Could not open output file 'scanner.c##e019afa874677b34cff14a5f258eab4f.gcov'
+Could not open output file 'scanner.c##23a689b8251af3b17a5f1f38242a994a.gcov'
+Could not open output file 'scanner.l##f1850da435314f881dbaace58ecb30bb.gcov'
+
+	In directory /:
+Could not open output file 'scanner.l##9e8a3b755dedf4d3544f74066cfd7748.gcov'
+Could not open output file 'scanner.c##e019afa874677b34cff14a5f258eab4f.gcov'
+Could not open output file 'scanner.c##23a689b8251af3b17a5f1f38242a994a.gcov'
+Could not open output file 'scanner.l##f1850da435314f881dbaace58ecb30bb.gcov'
+
+	(gcovr could not infer a working directory that resolved it.)
+To ignore this error use option --gcov-ignore-errors=no_working_dir_found.
+(ERROR) GCOV produced the following errors processing /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/parser.c.gcno:
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov:
+build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib:
+./parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental:
+nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src:
+supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir:
+src/supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles:
+nng_testing.dir/src/supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng:
+CMakeFiles/nng_testing.dir/src/supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build:
+nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov:
+build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds:
+nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing:
+builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir:
+mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home:
+kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Could not open output file 'parser.y##966f3247252fb3ffd7810a3b943884f0.gcov'
+Could not open output file 'parser.c##79c3c5219592ebbd5ec7d60c00859952.gcov'
+Could not open output file 'parser.c##eadf89bc64b316398fbd9b39ab2c37c1.gcov'
+Could not open output file 'parser.c##8c13b08f383d8a422dd547ff870d25c1.gcov'
+Could not open output file 'parser.c##40b52c67473df1545465cbc8af05f054.gcov'
+Could not open output file 'parser.y##5767c7811645ae04d19c7506304e5ac8.gcov'
+
+	In directory /:
+home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng_testing.dir/src/supplemental/nanolib/parser.c.gcda:cannot open data file, assuming not executed
+Could not open output file 'parser.y##966f3247252fb3ffd7810a3b943884f0.gcov'
+Could not open output file 'parser.c##79c3c5219592ebbd5ec7d60c00859952.gcov'
+Could not open output file 'parser.c##eadf89bc64b316398fbd9b39ab2c37c1.gcov'
+Could not open output file 'parser.c##8c13b08f383d8a422dd547ff870d25c1.gcov'
+Could not open output file 'parser.c##40b52c67473df1545465cbc8af05f054.gcov'
+Could not open output file 'parser.y##5767c7811645ae04d19c7506304e5ac8.gcov'
+
+	(gcovr could not infer a working directory that resolved it.)
+To ignore this error use option --gcov-ignore-errors=no_working_dir_found.
+(WARNING) Unrecognized GCOV output for /home/kadir/mqtt-fuzzing/builds/nanomq-cov/nanomq/apps/broker.c
+	  branch  2 taken -1
+	  branch  1 taken -1
+	  branch  4 taken -1 (fallthrough)
+	This is indicative of a gcov output parse error.
+	Please report this to the gcovr developers
+	at <https://github.com/gcovr/gcovr/issues>.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  2 taken -1' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  1 taken -1' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(WARNING) Exception during parsing:
+	NegativeHits: Got negative hit value in gcov line 'branch  4 taken -1 (fallthrough)' caused by a bug in gcov tool, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=68080. Use option --gcov-ignore-parse-errors with a value of negative_hits.warn, or negative_hits.warn_once_per_file.
+(ERROR) GCOV produced the following errors processing /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng.dir/src/supplemental/nanolib/parser.c.gcda:
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng.dir/src/supplemental/nanolib:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng.dir/src/supplemental:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng.dir/src:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles/nng.dir:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng/CMakeFiles:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build/nng:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov/build:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds/nanomq-cov:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing/builds:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir/mqtt-fuzzing:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home/kadir:
+Cannot open source file parser.y
+Cannot open source file /home/lee/workspace/hocon/build/parser.c
+Cannot open source file nng/src/supplemental/nanolib/parser.c
+Cannot open source file /Users/hom/workspace/hocon/build/parser.c
+Cannot open source file parser.c
+Cannot open source file /home/lee/workspace/hocon/parser.y
+
+	In directory /home:
+Could not open output file 'parser.y##966f3247252fb3ffd7810a3b943884f0.gcov'
+Could not open output file 'parser.c##79c3c5219592ebbd5ec7d60c00859952.gcov'
+Could not open output file 'parser.c##eadf89bc64b316398fbd9b39ab2c37c1.gcov'
+Could not open output file 'parser.c##8c13b08f383d8a422dd547ff870d25c1.gcov'
+Could not open output file 'parser.c##40b52c67473df1545465cbc8af05f054.gcov'
+Could not open output file 'parser.y##5767c7811645ae04d19c7506304e5ac8.gcov'
+
+	In directory /:
+Could not open output file 'parser.y##966f3247252fb3ffd7810a3b943884f0.gcov'
+Could not open output file 'parser.c##79c3c5219592ebbd5ec7d60c00859952.gcov'
+Could not open output file 'parser.c##eadf89bc64b316398fbd9b39ab2c37c1.gcov'
+Could not open output file 'parser.c##8c13b08f383d8a422dd547ff870d25c1.gcov'
+Could not open output file 'parser.c##40b52c67473df1545465cbc8af05f054.gcov'
+Could not open output file 'parser.y##5767c7811645ae04d19c7506304e5ac8.gcov'
+
+	(gcovr could not infer a working directory that resolved it.)
+To ignore this error use option --gcov-ignore-errors=no_working_dir_found.
+(INFO) Writing coverage report...
+lines: 11.1% (6837 out of 61401)
+functions: 15.6% (731 out of 4697)
+branches: 8.2% (2267 out of 27613)

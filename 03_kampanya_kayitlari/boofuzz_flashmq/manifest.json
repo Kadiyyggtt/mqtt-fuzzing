@@ -1,0 +1,11 @@
+{
+  "broker": "flashmq",
+  "tool": "boofuzz",
+  "duration_s": 18000,
+  "start_utc": "2026-09-17T03:21:25.228Z",
+  "broker_cmd": "./builds/flashmq-asan/build/flashmq --config-file ./scripts/flashmq.conf",
+  "broker_pid": 579359,
+  "end_utc": "2026-09-17T08:21:25.237Z",
+  "sent": 1695532,
+  "anomalies": 2126
+}

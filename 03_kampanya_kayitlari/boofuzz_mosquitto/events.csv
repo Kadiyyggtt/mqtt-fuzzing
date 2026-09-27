@@ -1,0 +1,3 @@
+timestamp,event,detail
+2026-09-16T17:16:33.070Z,CAMPAIGN_START,tool=boofuzz
+2026-09-16T22:16:33.074Z,CAMPAIGN_END,sent=2502572 anomalies=0
