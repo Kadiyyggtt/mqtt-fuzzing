@@ -8,6 +8,8 @@
 # ============================================================
 set -u
 ROOT="$HOME/mqtt-fuzzing"; cd "$ROOT" || exit 1
+# boofuzz venv içinde kurulu: varsa etkinleştir
+[ -f "$ROOT/venv/bin/activate" ] && source "$ROOT/venv/bin/activate"
 BUDGET=${1:-500000}; REPS=${2:-3}; IDLE=600
 OUT="$ROOT/runs_v2"; mkdir -p "$OUT"
 H="$ROOT/scripts/v2/run_v2.py"; SEEDS="$ROOT/seeds/client"
