@@ -216,11 +216,33 @@ def main():
         return subprocess.Popen(args.broker_cmd, shell=True, env=env,
                                 stdout=open(os.path.join(args.outdir, "broker_stdout.log"), mode),
                                 stderr=subprocess.STDOUT, preexec_fn=os.setsid)
+    def port_free(timeout=60):
+        """Önceki broker portu bırakana kadar bekler."""
+        t = time.time()
+        while time.time() - t < timeout:
+            try:
+                c = socket.create_connection((args.host, args.port), timeout=1); c.close()
+                time.sleep(2)
+            except Exception:
+                return True
+        return False
+
     start_marker = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    shell = start_broker("w"); time.sleep(3)
-    bpid = broker_pid_of(shell)
+    shell = bpid = None
+    for attempt in range(1, 4):                      # 3 deneme
+        if not port_free():
+            print(f"UYARI: {args.port} portu 60 sn içinde boşalmadı (deneme {attempt})")
+        shell = start_broker("w" if attempt == 1 else "a"); time.sleep(3 + 2 * attempt)
+        bpid = broker_pid_of(shell)
+        if bpid is not None and liveness_ok(args.host, args.port):
+            break
+        try:
+            os.killpg(shell.pid, signal.SIGTERM)
+        except Exception:
+            pass
+        bpid = None; time.sleep(5)
     if bpid is None:
-        sys.exit("HATA: broker başlamadı")
+        sys.exit("HATA: broker 3 denemede başlamadı (broker_stdout.log'a bakın)")
     state = {"pid": bpid, "restarts": 0, "shell": shell}
 
     mon = Monitor(lambda: state["pid"], os.path.join(args.outdir, "resources.csv")); mon.start()
@@ -245,6 +267,7 @@ def main():
             for lg in glob.glob(asan_log + ".*"):
                 dst = os.path.join(args.outdir, "crashes", f"asan_{int(time.time())}_{os.path.basename(lg)}")
                 os.rename(lg, dst); log_event("O2_ASAN", os.path.basename(dst))
+        port_free(30)
         sh2 = start_broker("a"); time.sleep(2)
         np = broker_pid_of(sh2)
         if np:
@@ -295,7 +318,7 @@ def main():
                 os.killpg(sh.pid, signal.SIGTERM)
             except Exception:
                 pass
-        time.sleep(2)
+        port_free(30)
         events.close()
         print(f"\nBitti [{args.tool}/{args.broker}/rep{args.rep}]: {sent} girdi, {anomalies} anomali, "
               f"{state['restarts']} yeniden başlatma, {elapsed/3600:.2f} saat. Tamamlandı={complete}")
