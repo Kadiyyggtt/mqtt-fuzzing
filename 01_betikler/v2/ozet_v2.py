@@ -23,10 +23,10 @@ def res_stats(d):
             "temp_max": max(temp) if temp else None, "swap_max_kb": max(swap) if swap else None,
             "samples": len(rows)}
 
-def ms(v):
+def ms(v, d=1):
     v = [x for x in v if x is not None]
     if not v: return "—"
-    return f"{st.mean(v):.1f}" if len(v) == 1 else f"{st.mean(v):.1f} ± {st.stdev(v):.1f}"
+    return f"{st.mean(v):.{d}f}" if len(v) == 1 else f"{st.mean(v):.{d}f} ± {st.stdev(v):.{d}f}"
 
 runs = {}
 for d in sorted(glob.glob(os.path.join(root, "rep*_*_*"))):
@@ -73,6 +73,23 @@ for b in BROKERS:
         rowsB.append(line)
         print(f"{line[0]:18} {line[1]:>9} {line[2]:>13} {line[3]:>13} {line[4]:>10} {line[5]:>12} {line[6]:>12} {line[7]:>7}")
 
+# Tablo C: süre (eşit yükün ne kadar sürede gönderildiği)
+print("\nTABLO C — Eşit yükün (bütçe) gönderim süresi")
+print(f"{'Broker':10} {'Araç':8} {'Süre (saat, ort ± ss)':>22} {'Tekrar süreleri (saat)':>30} {'Yeniden başlatma':>17}")
+rowsC = []
+for b in BROKERS:
+    for t in TOOLS:
+        R = [runs[(r, b, t)] for r in reps if (r, b, t) in runs]
+        if not R: continue
+        hrs = [x["elapsed_s"] / 3600 for x in R]
+        line = [b, t, ms(hrs, 2), " / ".join(f"{h:.2f}" for h in hrs), ms([x.get("restarts", 0) for x in R])]
+        rowsC.append(line)
+        print(f"{line[0]:10} {line[1]:8} {line[2]:>22} {line[3]:>30} {line[4]:>17}")
+tot = sum(x.get("elapsed_s", 0) for x in runs.values()) / 3600
+print(f"Toplam deney süresi (boşta ölçümler dahil): {tot:.1f} saat")
+with open(os.path.join(root, "tablo_C_sure.csv"), "w", newline="") as f:
+    w = csv.writer(f); w.writerow(["broker", "arac", "sure_saat", "tekrar_sureleri", "yeniden_baslatma"]); w.writerows(rowsC)
+
 print("\nNot: RSS MB (1 MB=1000 kB). CPU 'cpu_inst' = aralık başına anlık CPU (%, tek çekirdek=100).")
 print("Takas kullanımı (en yüksek):", max((x.get("swap_max_kb") or 0) for x in runs.values()), "kB")
 
@@ -80,4 +97,4 @@ with open(os.path.join(root, "tablo_A_kusur.csv"), "w", newline="") as f:
     w = csv.writer(f); w.writerow(["broker", "arac", "girdi", "O1", "O1_per_1e5", "O2", "O3", "hiz"]); w.writerows(rowsA)
 with open(os.path.join(root, "tablo_B_kaynak.csv"), "w", newline="") as f:
     w = csv.writer(f); w.writerow(["broker_arac", "bosta_rss", "tepe_rss", "net_artis", "bosta_cpu", "yuk_cpu_med", "yuk_cpu_p95", "max_c"]); w.writerows(rowsB)
-print("\nCSV:", os.path.join(root, "tablo_A_kusur.csv"), "ve tablo_B_kaynak.csv")
+print("\nCSV:", os.path.join(root, "tablo_A_kusur.csv"), ", tablo_B_kaynak.csv ve tablo_C_sure.csv")
